@@ -24,6 +24,7 @@ Abrimos una nueva terminal en VSCode para correr el programa: **barra superior>T
 ### Extensión de Python para "Run Button"
 Nos dirigimos al símbolo de extensiones de VSCode y buscamos: **python**. Ahora si cambiamos la extensión del archivo de .txt a .py veremos que aparece el botón de "correr".
 <br/>
+<br/>
 Posteriormente nos dirigimos a la parte inferior de VSC en la barra azul (habiendo seleccionado el archivo .py y clicamos en "**Python{}**) y seleccionamos el intérprete de Python.
 
 ## Clase 6
