@@ -122,3 +122,8 @@ print(type(x), type(y), type(z))
 20 1010
 <class 'int'> <class 'str'> <class 'float'>
 ```
+## Clase 16
+### List Types
+```html
+students_grades = [9.1, 8.8, 7.5]
+```
