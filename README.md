@@ -106,3 +106,19 @@ Tip: Podemos limpiar la temrinal escribiendo **cls** (en la temrinal Run) o **cl
 
 ## Clase 15
 ### Tipos: Integers, Strings y Floats
+Trabajaremos sobre un nuevo archivo **basics.py** para ver los tipos de varaibles:
+```html
+x = 10
+y = "10"
+z = 10.1
+
+sum1 = x + x
+sum2 = y + y
+
+print(sum1, sum2)
+print(type(x), type(y), type(z))
+
+# Output:
+20 1010
+<class 'int'> <class 'str'> <class 'float'>
+```
