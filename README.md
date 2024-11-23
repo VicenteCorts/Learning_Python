@@ -97,5 +97,12 @@ Tambiém destacar que en la terminal python no es necesario escribir "print"; di
 ```
 **Importante:** si alternamos el uso de "Run" del archivo y el uso de la terminal de forma nativa, debemos escribir **exit()**  y **py -3** para poder retomar el uso normal de la temrinal con código nativo o el "Run" de los archvios.
 
-## Clase 13
+## Clase 14
 ### Terminal
+Por normal general los programadores abren dos temrinales una para el "Run" y otra para usar la Python Interactive Shell. Para ello clicamos en la temrinal en la dobre ventana para que esta se divida en dos. Luego damos a **"RUN"** en una de ellas y en la otra escribimos el comando: **py -3** para hacer uso de la PIS (Python Interactive Shell).
+<br>
+<br>
+Tip: Podemos limpiar la temrinal escribiendo **cls** (en la temrinal Run) o **clear** en la temrinal py -3
+
+## Clase 15
+### Tipos: Integers, Strings y Floats
