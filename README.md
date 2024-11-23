@@ -74,3 +74,28 @@ Output: 20 10 2
 ```
 #### Comentarios en python
 Se declaran con el símbolo "#" al principio de la línea de código
+
+## Clase 13
+### Python Interactive Shell
+Nos dirigimos a la temrinal de python dentro de VSCode; para ello escribimos: **py -3** --> Output: >>>
+```html
+>>> items = 3
+>>> price = 2
+>>> total = items *price
+>>> print(total)
+6
+>>> 
+```
+La principal diferencia con la elaboración de código en archivos .py es que el código de la temrinal no se guarda en ningún sitio, mientras que el de archivo si queda con permanencia.
+<br>
+<br>
+Tambiém destacar que en la terminal python no es necesario escribir "print"; directamente escribiendo la variable que queremos imprimir nos arroja el valor de esta:
+```html
+>>> total
+6
+>>> 
+```
+**Importante:** si alternamos el uso de "Run" del archivo y el uso de la terminal de forma nativa, debemos escribir **exit()**  y **py -3** para poder retomar el uso normal de la temrinal con código nativo o el "Run" de los archvios.
+
+## Clase 13
+### Terminal
