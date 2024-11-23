@@ -58,3 +58,19 @@ print(total)
 Se debe evitar poner números al principio de las variables, tampoco se pueden poner espacios, si puede haber espacios entre la variable el operador "=" y el valor, pero lo correcto es un espacio.
 <br/>
 <br/>
+
+## Clase 12
+###  Tip
+#### Imprimir múltiples variables
+```html
+items = 10
+price = 2
+ 
+total_price = items * price
+ 
+# Below we print out three variables
+print(total_price, items, price) 
+Output: 20 10 2
+```
+#### Comentarios en python
+Se declaran con el símbolo "#" al principio de la línea de código
