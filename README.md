@@ -46,3 +46,15 @@ CTRL+, (Configuración de VSCode)
 ## Clase 8
 ### What (surprisingly) is Python?
 Documentación de Python: https://docs.python.org/3/
+
+## Clase 11
+### Variables
+```html
+spent = 3
+donated = 4
+total = spent + donated
+print(total)
+```
+Se debe evitar poner números al principio de las variables, tampoco se pueden poner espacios, si puede haber espacios entre la variable el operador "=" y el valor, pero lo correcto es un espacio.
+<br/>
+<br/>
