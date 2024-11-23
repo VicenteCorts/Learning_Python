@@ -127,3 +127,38 @@ print(type(x), type(y), type(z))
 ```html
 students_grades = [9.1, 8.8, 7.5]
 ```
+
+## Clase 17
+###  Ranges
+Haciendo pruebas con la variable students_grade de la clase anterior
+```html
+students_grades = [9, "Hello", [1,2,4.33]]
+print(students_grades *3)
+    # Output: [9, 'Hello', [1, 2, 4.33], 9, 'Hello', [1, 2, 4.33], 9, 'Hello', [1, 2, 4.33]]
+print(students_grades + 3)
+    # Output: Error syntax "+"cls
+print(students_grades + students_grades)
+    # Output: [9, 'Hello', [1, 2, 4.33], 9, 'Hello', [1, 2, 4.33]]
+```
+Ahora modificamos la variable por: **students_grades = range(0, 11)**
+```html
+students_grades = range(0, 11)
+print(students_grades)
+# Output: range(0,11)
+```
+A continuación cambiamos la variable por: **students_grades = list(range(0, 11))**
+```html 
+students_grades = list(range(0, 11))
+print(students_grades)
+# Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+students_grades = list(range(1, 9))
+print(students_grades)
+# Output: [1, 2, 3, 4, 5, 6, 7, 8]
+```
+Podemos añadir un tercer argumento a la variable y ver como varía el output:
+```html
+students_grades = list(range(1, 9, 2))
+print(students_grades)
+# Output: [1, 3, 5, 7] -> da saltos de 2 en 2; siendo 2 el tercer argumento añadido
+```
