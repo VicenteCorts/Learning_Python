@@ -89,3 +89,5 @@ media = mysum/mylen
 print(media)
 print(students_grades.keys())
 
+# Dictionary - ejercicio
+day_temperatures = {"morning": 5.1, "noon": 6.0, "evening": 12.2}
