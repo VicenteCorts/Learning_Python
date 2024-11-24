@@ -363,8 +363,8 @@ print("totai".relpace("i","y"))
 ```
 En cada uno de los ejemplos la temrinal nos arroja un error con una explicación que puede ser la solución directa al error que hemos generado.
 
-# Clase 30
-## Operadores con Listas
+## Clase 30
+### Operadores con Listas
 Empleamos dir(list) en la consola **py -3** y vemos la lista de operaciones posibles con los datos "Lista":
 <br><br>
 ['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', 
@@ -385,8 +385,8 @@ Hacemos uso de algunos de estos directamente en la temrinal **py -3**
 >>> 
 ```
 
-# Clase 31
-## Acceder a un item de la lista
+## Clase 31
+### Acceder a un item de la lista
 Para acceder a un item concreto emplearíamos el método **'getitem'**; veámoslo en la temrinal **py -3**:
 ```html
 >>> monday_temperature = [9.1, 8.8, 7.5]
@@ -399,3 +399,30 @@ Pero para hacerlo de modo más sencillo podemos emplear la siguiente sintaxis:
 8.8
 ```
 
+## Clase 31
+### Accessing List Slices
+Trabajaremos con una lista de 5 elementos a través de la temrinal de comandos **py -3**; estaremos trabajando con "slices", es decir, fragmentos extraídos de la lista por bloques:
+```html
+>>> monday_temperature = [9.1, 8.8, 7.5, 6.6, 9.9]
+>>> len(monday_temperature)
+5
+>>> monday_temperature[3]
+6.6
+>>> monday_temperature[1:3]
+[8.8, 7.5]
+>>> monday_temperature[1:4]
+[8.8, 7.5, 6.6]
+>>> 
+```
+El ultimo valor del Slice no se incluye en el fragmento extraído: [1:4] extrae el valor del índice 1, 2 y 3.
+<br><br>
+Como último dato, en caso de querer extraer un Slice desde el índice 0, no es necesario indicar el número 0 entre los corchetes (seguríamos la misma sintaxis para extraer desde un índice cualquiera hasta el final de la lista):
+```html
+>>> monday_temperature[:4]
+[9.1, 8.8, 7.5, 6.6]
+>>> monday_temperature[2:]
+[7.5, 6.6, 9.9]
+```
+
+## Clase 31
+### Accessing List Slices whit negative indexes

@@ -33,7 +33,7 @@ print(seconds)
 '''
 monday_temperature = [9.1, 8.8, 7.5]
 print(monday_temperature[1])
-'''
+
 # Access Item (E)
 ## Complete the script so that it prints out the 3rd item of list serials.
 serials = ["RH80810A", "AA899819A", "XYSA9099400", "OOP8988459", "EEO8904882", "KOC9889482"]
@@ -49,6 +49,8 @@ print(serials[0], serials[2], serials[5])
 workdays = ["Mon", "Tue", "Wed", "Thu", "Fri"]
 weekend = ["Sat", "Sun"]
 workdays.append(weekend[0])
+'''
 
-
+# Clase 32 y 33
+monday_temperature = [9.1, 8.8, 7.5, 6.6, 9.9]
 
