@@ -352,3 +352,21 @@ help(str)
 help(str.replace)
 help(dict.values)
 ```
+
+## Clase 29
+###  Tip: Better Error Messages in Python 3.13
+En python 3.13 los "Better Error Messages" ya vienen por defecto, en versiones anteriores a la 3.10 no
+```html
+print("totai".replace("i","y")
+x = [1, 2 3]
+print("totai".relpace("i","y"))
+```
+En cada uno de los ejemplos la temrinal nos arroja un error con una explicación que puede ser la solución directa al error que hemos generado.
+
+# Clase 30
+## Operadores con Listas
+
+
+
+
+
