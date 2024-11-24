@@ -386,5 +386,16 @@ Hacemos uso de algunos de estos directamente en la temrinal **py -3**
 ```
 
 # Clase 31
-## 
+## Acceder a un item de la lista
+Para acceder a un item concreto emplearíamos el método **'getitem'**; veámoslo en la temrinal **py -3**:
+```html
+>>> monday_temperature = [9.1, 8.8, 7.5]
+>>> monday_temperature.__getitem__(1)
+8.8
+```
+Pero para hacerlo de modo más sencillo podemos emplear la siguiente sintaxis:
+```html
+>>> monday_temperature[1]
+8.8
+```
 
