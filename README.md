@@ -272,3 +272,83 @@ print(monday_temperature2)
 Existen formas automatizadas de escribir la información de docuemntos de texto o excels en formato de código, para ello es importante determinar que datatype debe tener cada tipo de dato o información.
 <br><br>
 Para ello, se hace uso de extensiones específicas de Python para cargar los datos a las variables que deseemos directamente desde los archivos con los que tengamos que trabajar.
+
+## Clase 27
+### Cheatsheet: Data Types
+#### Integers 
+used to represent whole numbers:
+```html
+rank = 10
+eggs = 12
+people = 3
+```
+
+#### Floats 
+represent decimal numbers:
+```html
+temperature = 10.2
+rainfall = 5.98
+elevation = 1031.88
+```
+
+#### Strings 
+represent text:
+```html
+message = "Welcome to our online shop!"
+name = "John"
+serial = "R001991981SW"
+```
+
+#### Lists 
+represent arrays of values that may change during the course of the program:
+```html
+members = ["Sim Soony", "Marry Roundknee", "Jack Corridor"]
+pixel_values = [252, 251, 251, 253, 250, 248, 247]
+```
+
+#### Dictionaries 
+represent pairs of keys and values:
+```html
+phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+volcano_elevations = {"Glacier Peak": 3213.9, "Rainer": 4392.1}
+```
+
+#### Keys of a dictionary 
+can be extracted with:
+```html
+phone_numbers.keys()
+```
+
+#### Values of a dictionary 
+can be extracted with:
+```html
+phone_numbers.values()
+```
+
+#### Tuples 
+represent arrays of values that are not to be changed during the course of the program:
+```html
+vowels = ('a', 'e', 'i', 'o', 'u')
+one_digits = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+```
+
+#### dir()
+You can get a list of attributes of a data type has using:
+```html
+dir(str)
+dir(list)
+dir(dict)
+```
+
+#### dir(__builtins__)
+You can get a list of Python builtin functions using:
+```html
+dir(__builtins__)
+```
+#### help()
+You can get the documentation of a Python data type using:
+```html
+help(str)
+help(str.replace)
+help(dict.values)
+```
