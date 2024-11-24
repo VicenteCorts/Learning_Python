@@ -266,3 +266,9 @@ monday_temperature2 = [1, 4, 5]
 monday_temperature2.append(6)
 print(monday_temperature2)
 ```
+
+## Clase 26
+### Usando Datatypes en el mundo real
+Existen formas automatizadas de escribir la información de docuemntos de texto o excels en formato de código, para ello es importante determinar que datatype debe tener cada tipo de dato o información.
+<br><br>
+Para ello, se hace uso de extensiones específicas de Python para cargar los datos a las variables que deseemos directamente desde los archivos con los que tengamos que trabajar.
