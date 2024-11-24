@@ -243,3 +243,26 @@ En el ejemplo anterior prestad atención a **students_grades.values()** y **stud
 - Syntaxis: paréntsis, comas, llaves, puntos, etc...
 - Data structure: saber el tipo correcto de la variable que estás creando
 - Algorithm: creación de métodos que ejecuten la acción que queremos
+
+## Clase 25
+### Tuplas
+Una tupla se diferencia de una lista por la forma de declararlos: tuplas con paréntesis y listas con braquets:
+```html
+# LIST
+monday_temperature = [1, 4, 5]
+# DICT
+monday_temperature = ["morning": 1, "noon": 4, "evening": 5]
+# TUPLA
+monday_temperature = (1, 4, 5)
+```
+Esta sería la principal diferencia en cuanto a syntaxis pero, la verdadera diferencia reside en que las **Tuplas** son inmutables, mientras que las listas son mutables. **Algo inmutable significa que no se le pueden añadir más elementos** por ejemplo:
+```html
+## Tupla -> inmutable, no se le pueden añadir más elementos
+monday_temperature = (1, 4, 5)
+print(monday_temperature)
+
+## Lista -> se pueden añadir más elementos
+monday_temperature2 = [1, 4, 5]
+monday_temperature2.append(6)
+print(monday_temperature2)
+```

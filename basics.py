@@ -79,6 +79,7 @@ print(tolowerr)
 '''
 
 # Clase 22
+'''
 monday_temp = [9.1, 8.8, 7.5]
 students_grades = {"Marry": 9.1, "Sim": 8.8, "John": 7.5}
 
@@ -91,3 +92,13 @@ print(students_grades.keys())
 
 # Dictionary - ejercicio
 day_temperatures = {"morning": 5.1, "noon": 6.0, "evening": 12.2}
+'''
+
+# Clase 25
+## Tupla -> inmutable, no se le pueden añadir más elementos
+monday_temperature = (1, 4, 5)
+print(monday_temperature)
+## Lista -> se pueden añadir más elementos
+monday_temperature2 = [1, 4, 5]
+monday_temperature2.append(6)
+print(monday_temperature2)
