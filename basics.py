@@ -102,3 +102,11 @@ print(monday_temperature)
 monday_temperature2 = [1, 4, 5]
 monday_temperature2.append(6)
 print(monday_temperature2)
+
+# Tupla inside Tupla - ejercicio
+## Create a color_codes variable and assign a tuple to it. The tuple should contain three tuples as items. The three tuples can contain any type of data inside them.
+color_codes = ((255, 255, 0), ("Yellow", "#FFFF00"), (True, "Primary", 2))
+
+# Create Complex Dictionary - ejercicio
+## Assign a dictionary to variable day_temperatures. The dictionary should contain three keys: 'morning', 'noon', and 'evening' and each key should contain a tuple as value. Each tuple should contain three floats.
+day_temperatures =  {"morning": (5.1, 4.4, 3.3), "noon": (6.0,1.1,2.3), "evening":( 12.2,0.1,3.4)}
