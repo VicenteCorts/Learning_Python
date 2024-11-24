@@ -399,7 +399,7 @@ Pero para hacerlo de modo más sencillo podemos emplear la siguiente sintaxis:
 8.8
 ```
 
-## Clase 31
+## Clase 32
 ### Accessing List Slices
 Trabajaremos con una lista de 5 elementos a través de la temrinal de comandos **py -3**; estaremos trabajando con "slices", es decir, fragmentos extraídos de la lista por bloques:
 ```html
@@ -424,5 +424,22 @@ Como último dato, en caso de querer extraer un Slice desde el índice 0, no es 
 [7.5, 6.6, 9.9]
 ```
 
-## Clase 31
+## Clase 34
 ### Accessing List Slices whit negative indexes
+Siguiendo la línea del apartado anterior, para acceder a índices de una lista con una gran cantidad de valores, puede ser engorroso contar de valor en valor hasta llegar a un índice del final que nos interese para saber su número. Para ello empleamos **índices negativos**:
+```html
+>>> monday_temperature[-1]
+9.9
+```
+También se pueden hacer Slices empleando índices negativos:
+```html
+>>> monday_temperature[-2:]
+[6.6, 9.9]
+>>> monday_temperature[-4:-2]
+[8.8, 7.5]
+>>> monday_temperature[:-2]
+[9.1, 8.8, 7.5]
+```
+
+## Clase 35
+### 

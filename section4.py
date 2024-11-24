@@ -51,6 +51,9 @@ weekend = ["Sat", "Sun"]
 workdays.append(weekend[0])
 '''
 
-# Clase 32 y 33
+# Clase 32 y 34
+'''
 monday_temperature = [9.1, 8.8, 7.5, 6.6, 9.9]
+'''
+
 
