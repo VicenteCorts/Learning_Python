@@ -6,7 +6,9 @@ x = [1, 2, 3]
 print("totai".replace("i","y"))
 '''
 # Clase 30
+'''
+monday_temperature = [9.1, 8.8, 7.5]
+'''
 
-
-
+# Clase 31
 

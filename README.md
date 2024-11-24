@@ -365,8 +365,26 @@ En cada uno de los ejemplos la temrinal nos arroja un error con una explicación
 
 # Clase 30
 ## Operadores con Listas
+Empleamos dir(list) en la consola **py -3** y vemos la lista de operaciones posibles con los datos "Lista":
+<br><br>
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', 
+'__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+<br><br>
+Hacemos uso de algunos de estos directamente en la temrinal **py -3**
+```html
+>>> monday_temperature = [9.1, 8.8, 7.\5]
+>>> monday_temperature.append(8.1)
+>>> monday_temperature
+[9.1, 8.8, 7.5, 8.1]
+>>> monday_temperature.clear()
+>>> monday_temperature
+[]
+>>> monday_temperature = [9.1, 8.8, 7.5]
+>>> monday_temperature.index(8.8)
+1
+>>> 
+```
 
-
-
-
+# Clase 31
+## 
 
