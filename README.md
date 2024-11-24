@@ -238,5 +238,8 @@ print(students_grades.keys())
 ```
 En el ejemplo anterior prestad atención a **students_grades.values()** y **students_grades.keys()**
 
-## Clase 23
-### 
+## Clase 24
+### Qué hace al programador un buen programador:
+- Syntaxis: paréntsis, comas, llaves, puntos, etc...
+- Data structure: saber el tipo correcto de la variable que estás creando
+- Algorithm: creación de métodos que ejecuten la acción que queremos
