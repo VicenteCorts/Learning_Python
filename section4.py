@@ -76,4 +76,6 @@ letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 print(letters[-3:])
 '''
 
-# Clase 36
+# Clase 37
+student_grades = {"Vicente": 10.0, "Maria": 9.5, "Carlos": 5.0}
+eng_esp = {"rain" : "lluvia", "sun" : "Sol"}

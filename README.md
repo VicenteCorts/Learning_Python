@@ -463,3 +463,24 @@ Otro ejemplo combinado con el datatype "Lista"
 >>> 
 ```
 
+## Clase 37
+###  Accessing Items in Dictionaries
+De igual forma, veremos como acceder a los items de los datatypes "Dictionaries"; en este caso para acceder a los índices no podemos referenciarlos con el número que le corresponde por su orden, sino con el nombre de la **key**:
+```html
+>>> student_grades = {"Vicente": 10.0, "Maria": 9.5, "Carlos":\ 5.0}
+>>> student_grades[1]
+Traceback (most recent call last):
+  File "<python-input-9>", line 1, in <module>
+    student_grades[1]
+    ~~~~~~~~~~~~~~^^^
+KeyError: 1 
+>>> student_grades["Vicente"]
+10.0
+----------------------------------------------------
+>>> eng_esp = {"rain" : "lluvia", "sun" : "Sol"}
+>>> eng_esp["sun"]
+'Sol'
+```
+
+## Clase 38
+### 
