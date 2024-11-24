@@ -56,4 +56,6 @@ workdays.append(weekend[0])
 monday_temperature = [9.1, 8.8, 7.5, 6.6, 9.9]
 '''
 
+# Clase 35
+monday_temperature = ["hello", 1, 2, 3]
 

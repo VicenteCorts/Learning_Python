@@ -442,4 +442,24 @@ También se pueden hacer Slices empleando índices negativos:
 ```
 
 ## Clase 35
-### 
+### Accessing Characters and Slices in Strings
+En caso de los String el mecanismo para acceder a los índices del propio string y los slices funcionan de la mimsa forma, con sus índices positivos, negativos, sus slices, etc... 
+```html
+>>> mystring = "hello"
+>>> mystring[1]
+'e'
+>>> mystring[-1]
+'o'
+>>> mystring[:3]
+'hel'
+```
+Otro ejemplo combinado con el datatype "Lista"
+```html
+>>> monday_temperature = ["hello", 1, 2, 3]
+>>> monday_temperature[0]
+'hello'
+>>> monday_temperature[0][2]
+'l'
+>>> 
+```
+
