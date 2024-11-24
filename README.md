@@ -213,3 +213,30 @@ print(media)
 
 # Output: 8.466666666666667
 ```
+
+## Clase 22
+### Dictionary Types
+Emplearemos el tipo "diccionario" cuando queremos que una lista tenga un tipo de identidad unida a ella; en el ejemplo de la nota media del alumnado, trabajar con listas esta bien para carcular dicha media, pero si queremos atribuírsela a un alumno en concreto debemos hacer uso de los tipos "diccionario":
+```html
+# syntax: student_grades = {}
+
+# LIST
+students_grades = [9.1, 8.8, 7.5]
+# Dictionary
+students_grades = {"Marry": 9.1, "Sim": 8.8, "John": 7.5}
+---------------------------------------------------------
+students_grades = {"Marry": 9.1, "Sim": 8.8, "John": 7.5}
+
+mysum = sum(students_grades.values())
+mylen = len(students_grades)
+
+media = mysum/mylen
+print(media)
+print(students_grades.keys())
+
+# Output: 8.466666666666667 dict_keys(['Marry', 'Sim', 'John'])
+```
+En el ejemplo anterior prestad atención a **students_grades.values()** y **students_grades.keys()**
+
+## Clase 23
+### 
