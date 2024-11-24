@@ -79,3 +79,7 @@ print(letters[-3:])
 # Clase 37
 student_grades = {"Vicente": 10.0, "Maria": 9.5, "Carlos": 5.0}
 eng_esp = {"rain" : "lluvia", "sun" : "Sol"}
+
+# Test final de la sección
+data = {"a":[1,2,3], "b":[4,5,6], "c":[7,8,9]}
+print(data['b'][2])

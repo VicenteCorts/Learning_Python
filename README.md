@@ -565,3 +565,9 @@ phone_numbers = {"John":"+37682929928","Marry":"+423998200919"}
 phone_numbers["Marry"]
 Output: '+423998200919'
 ```
+
+## Clase 40
+### 
+
+
+
