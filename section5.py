@@ -50,7 +50,7 @@ monday_temperature = [9.1, 8.8, 9.9]
 print(media(monday_temperature))
 '''
 
-# Clase 47
+# Clase 49
 
 
 
