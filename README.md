@@ -788,17 +788,33 @@ Input() siempre recoge la información del usuario en **str**.
 
 ## Clase 54
 ### String Formatting
-Ahora veremos como generar respuestas al usuario mediante **String Formatting** --> en el mensaje a mostrar debemos añadir **%s** donde queramos introducir alguna variable ya declarada, es decir, el nombre que introducirá el usuario; seguido de **% nombre_de_la_variable**:
+Ahora veremos como generar respuestas al usuario mediante **String Formatting** --> **(Py 2 & 3)** en el mensaje a mostrar debemos añadir **%s** donde queramos introducir alguna variable ya declarada, es decir, el nombre que introducirá el usuario; seguido de **% nombre_de_la_variable**:
 ```html
 user_input = input("Cuálm es tu nombre compadre? ")
 message = "Hola mi compadre: %s" % user_input
 print(message)
 ```
-Otro modo de hacerlo es mediante el prefijo **f** antes del mensaje y el nombre de la variable que queremos reflejar entre llaves:
+Otro modo de hacerlo es mediante el prefijo **f** antes del mensaje y el nombre de la variable que queremos reflejar entre llaves: **(Py 3.6 & later)**
 ```html
 user_input = input("Cuálm es tu nombre compadre? ")
 message = f"Hola mi compadre: {user_input}"
 print(message)
 ```
 
-
+## Clase 55
+### Strinf Formatting para múltiples variables
+En caso de que queramos plasmar más de una variable en ejemplos como el anterior, debemos escribir nuestro código de la siguiente manera:
+```html
+# (Py 2 & 3)
+name = input("Nombre: ")
+surname = input("Apellido: ")
+message = "Hola: %s %s" % (name, surname)
+print(message)
+-------------------------------------------------
+# (Py 3.6 & later)
+name = input("Nombre: ")
+surname = input("Apellido: ")
+message = f"Hola mi compadre: {name} {surname}"
+print(message)
+```
+En el html anterior mostramos las dos formas para plasmar variables de input.
