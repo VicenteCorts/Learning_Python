@@ -28,7 +28,6 @@ print(message)
 '''
 
 # Clase 56
-
 # Formatting Strings
 ## Implement a function that gets a person's name as a parameter and greets the person with Hi Person. For example, if I called your function using foo("Marry") the function should return Hi Marry .
 def foo(name):
