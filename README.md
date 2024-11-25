@@ -768,7 +768,24 @@ type("abc") == str
 type([1, 2, 3]) == list
 ```
 
+# Sección 6
+## Clase 53
+### User Input
+En ese apartado abordaremos como codificar neustro código para que el ususario objetivo pueda interactuar con él a través de la función **input()**:
+```html
+def foo(temp):
+    if temp > 7:
+        return "Warm"
+    else:
+        return"Cold"
 
+user_input = float(input("Introduce una temperatura:"))
+print(foo(user_input))
+```
+En este caso es necesario transformar el input del ususario en un valor numérico o float mediante la función **float()**, sino nos dará error por incompatibilidad de tipos de datos.
+<br><br>
+Input() siempre recoge la información del usuario en **str**.
 
-
+## Clase 54
+### String Formatting
 
