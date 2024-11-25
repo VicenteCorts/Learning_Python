@@ -671,8 +671,21 @@ That will return Yes since at least one of the conditions is True. In this case 
 ```
 
 ## Clase 49
-### 
+### ELIF
+Ejemplo
+```html
+x = 3
+y = 1
+if x > y:
+    print("x es mayor que y")
+elif x == y:
+    print("x es igual que y")
+else:
+    print ("x es menor que y")
+```
 
+## Clase 50
+### 
 
 
 

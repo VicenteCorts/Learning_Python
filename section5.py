@@ -73,7 +73,14 @@ print(foo('hwjo'))
 '''
 
 # Clase 49
-
+x = 3
+y = 1
+if x > y:
+    print("x es mayor que y")
+elif x == y:
+    print("x es igual que y")
+else:
+    print ("x es menor que y")
 
 
 
