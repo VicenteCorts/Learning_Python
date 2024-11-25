@@ -788,4 +788,17 @@ Input() siempre recoge la información del usuario en **str**.
 
 ## Clase 54
 ### String Formatting
+Ahora veremos como generar respuestas al usuario mediante **String Formatting** --> en el mensaje a mostrar debemos añadir **%s** donde queramos introducir alguna variable ya declarada, es decir, el nombre que introducirá el usuario; seguido de **% nombre_de_la_variable**:
+```html
+user_input = input("Cuálm es tu nombre compadre? ")
+message = "Hola mi compadre: %s" % user_input
+print(message)
+```
+Otro modo de hacerlo es mediante el prefijo **f** antes del mensaje y el nombre de la variable que queremos reflejar entre llaves:
+```html
+user_input = input("Cuálm es tu nombre compadre? ")
+message = f"Hola mi compadre: {user_input}"
+print(message)
+```
+
 
