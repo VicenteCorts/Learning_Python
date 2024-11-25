@@ -818,3 +818,18 @@ message = f"Hola mi compadre: {name} {surname}"
 print(message)
 ```
 En el html anterior mostramos las dos formas para plasmar variables de input.
+
+## Clase 56
+### More String Formatting
+There is also another way to format strings using the "{}".format(variable) form. Here is an example:
+```html
+name = "John"
+surname = "Smith"
+
+message = "Your name is {}. Your surname is {}".format(name, surname)
+print(message)
+Output: Your name is John. Your surname is Smith
+```
+
+
+
