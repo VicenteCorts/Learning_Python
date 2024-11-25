@@ -1,4 +1,5 @@
 # Clase 41
+'''
 def media (mylist):
     la_media = sum(mylist) / len(mylist)
     return la_media
@@ -20,5 +21,18 @@ def foo(ml):
     return vol
     
 print(foo(1))
+'''
 
 # Clase 43
+'''
+def media (mylist):
+    la_media = sum(mylist) / len(mylist)
+    return la_media
+
+mymean = media([0, 3, 4])
+print(mymean)
+'''
+
+# Clase 44
+
+

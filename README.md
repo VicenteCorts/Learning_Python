@@ -589,6 +589,20 @@ print(convert(10))
 ```
 
 ## Clase 43
+### Print or Return?
+Cuando declaramos una función sin return nos devuelve un "None". Es importante que dentro de una función respetemos 4 espacios al comienzo de cada línea de código de la función.
+<br><br>
+Si intentamos emplear un print en vez de **return** dará error, podemos emplear un return "sin uso" para poder acometer la función al menos:
+```html
+def media (mylist):
+    la_media = sum(mylist) / len(mylist)
+    return la_media
+
+mymean = media([0, 3, 4])
+print(mymean)
+```
+
+## Clase 44
 ### 
 
 
