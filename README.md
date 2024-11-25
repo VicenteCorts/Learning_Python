@@ -765,7 +765,7 @@ isinstance([1, 2, 3], list)
 or directly:
 
 type("abc") == str
-type([1, 2, 3]) == lst
+type([1, 2, 3]) == list
 ```
 
 
