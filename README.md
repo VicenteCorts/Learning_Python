@@ -685,8 +685,31 @@ else:
 ```
 
 ## Clase 50
-### 
+### Espacios en blanco
+Ahora veremos cuando es importante usar un espacio en blanco, cuando usar más de uno o cuando no utilizar ninguno:
+```html
+if      3>1:
+    print('a')
 
+print('aa')
+print('aaa')
+
+if 3>1:
+    print('b')
+
+print('bb')
+print('bbb')
+
+if 3 > 1:
+    print('c')
+
+print('cc')
+print('ccc')
+```
+Todos los bloques funcionarían correctamente pero la manera correcta por buenas prácticas sería el bloque **b**.
+
+## Clase 51
+###
 
 
 

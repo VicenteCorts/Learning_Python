@@ -73,6 +73,7 @@ print(foo('hwjo'))
 '''
 
 # Clase 49
+'''
 x = 3
 y = 1
 if x > y:
@@ -81,9 +82,37 @@ elif x == y:
     print("x es igual que y")
 else:
     print ("x es menor que y")
+'''
 
+# Test Condicionales
+'''
+def foo(x, array):
+    if x in array:
+        return True
+    else:
+        return False
+ 
+print(foo(1, [1, 2, 3]))
+print(foo(1, [2, 3]))
+print(foo(1, ['1', 2, 3]))
+'''
 
+# Clase 50
+if      3>1:
+    print('a')
 
+print('aa')
+print('aaa')
 
+if 3>1:
+    print('b')
 
+print('bb')
+print('bbb')
+
+if 3 > 1:
+    print('c')
+
+print('cc')
+print('ccc')
 
