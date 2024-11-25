@@ -709,7 +709,65 @@ print('ccc')
 Todos los bloques funcionarían correctamente pero la manera correcta por buenas prácticas sería el bloque **b**.
 
 ## Clase 51
-###
+### Cheatsheet: Functions and Conditionals
+In this section, you learned to:
+#### Define functions:
+```html
+def cube_volume(a):
+    return a * a * a
+```
+#### Write if-else conditionals:
+```html
+message = "hello there"
+ 
+if "hello" in message:
+    print("hi")
+else:
+    print("I don't understand")
+```
+#### Write if-elif-else conditionals:
+```html
+message = "hello there"
+ 
+if "hello" in message:
+    print("hi")
+elif "hi" in message:
+    print("hi")
+elif "hey" in message:
+    print("hi")
+else:
+    print("I don't understand")
+```
+#### Use the and operator to check if both conditions are True at the same time:
+```html
+x = 1
+y = 1
+ 
+if x == 1 and y==1:
+    print("Yes")
+else:
+    print("No")
+```
+#### Use the or operator to check if at least one condition is True:
+```html
+x = 1
+y = 2
+ 
+if x == 1 or y==2:
+    print("Yes")
+else:
+    print("No")
+```
+#### Check if a value is of a particular type with isinstance:
+```html
+isinstance("abc", str)
+isinstance([1, 2, 3], list)
+or directly:
+
+type("abc") == str
+type([1, 2, 3]) == lst
+```
+
 
 
 
