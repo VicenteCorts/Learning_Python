@@ -104,6 +104,7 @@ Por normal general los programadores abren dos temrinales una para el "Run" y ot
 <br>
 Tip: Podemos limpiar la temrinal escribiendo **cls** (en la temrinal Run) o **clear** en la temrinal py -3
 
+# Sección 3
 ## Clase 15
 ### Tipos: Integers, Strings y Floats
 Trabajaremos sobre un nuevo archivo **basics.py** para ver los tipos de varaibles:
@@ -353,6 +354,7 @@ help(str.replace)
 help(dict.values)
 ```
 
+# Sección 4
 ## Clase 29
 ###  Tip: Better Error Messages in Python 3.13
 En python 3.13 los "Better Error Messages" ya vienen por defecto, en versiones anteriores a la 3.10 no
@@ -565,9 +567,28 @@ phone_numbers = {"John":"+37682929928","Marry":"+423998200919"}
 phone_numbers["Marry"]
 Output: '+423998200919'
 ```
+# Sección 5
+## Clase 41
+### Creando tus propias funciones
+Para crear una función en python se emplea la palabra reservada **def** seguida del nombre que queramos darle a la función y **():** y finaliza con un **return**.
+```html
+# Ejemplo de función para hacer una media
+def media (mylist):
+    la_media = sum(mylist) / len(mylist)
+    return la_media
 
-## Clase 40
+print(media([1, 4, 5]))
+``` 
+Otro ejemplo: función para hacer conversiones de dinero
+```html
+def convert(amount):
+    output = amount * 1.75
+    return output
+ 
+print(convert(10))
+```
+
+## Clase 4
 ### 
-
 
 
