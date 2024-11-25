@@ -33,6 +33,6 @@ mymean = media([0, 3, 4])
 print(mymean)
 '''
 
-# Clase 44
+# Clase 45
 
 
