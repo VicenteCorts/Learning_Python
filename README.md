@@ -609,6 +609,28 @@ Para solucionar esto haremos uso de los condicionales como veremos en las siguie
 
 ## Clase 45
 ### IF
+A continuación veremos un ejemplo de condicional para solucionar el problema anterior
+```html
+def media (value):
+    if type(value) == dict:
+        la_media = sum(value.values()) / len(value)
+    else:
+        la_media = sum(value) / len(value)
 
+    return la_media
+
+students_grades = {"A": 9.1, "B": 8.8, "C": 7.5}
+print(media(students_grades))
+
+monday_temperature = [9.1, 8.8, 9.9]
+print(media(monday_temperature))
+```
+
+## Clase 46
+### Explicacion del condicional
+(...)
+
+## Clase 47
+### Más Condicionales
 
 
