@@ -48,6 +48,28 @@ print(media(students_grades))
 
 monday_temperature = [9.1, 8.8, 9.9]
 print(media(monday_temperature))
+
+# Warm or Cold (E)
+## Define a function that: (1) takes a temperature as a parameter (2) returns "Warm" if the temperature is greater than 7 (3) returns "Cold" if the temperature is equal to or less than 7. If I called your function with foo(10) it would return Warm. If I called it with foo(7) or foo(5) it would return Cold in both cases, and so on.
+def foo(temp):
+    if temp > 7:
+        msg="Warm"
+    else:
+        msg="Cold"
+    return msg
+        
+print(foo(24))
+
+# Password Controller (E)
+## Define a function that: (1) takes a string as a parameter (2) returns False if the string contains less than 8 characters (3) returns True if the string contains 8 or more characters In other words, if I called your function with foo("mypass") it would return False. If I called it with foo("mylongpassword") it would return True, and so on.
+def foo(word):   
+    if len(word)<8:
+        msg = False
+    else:
+        msg = True
+    return msg
+    
+print(foo('hwjo'))
 '''
 
 # Clase 49

@@ -670,7 +670,7 @@ else:
 That will return Yes since at least one of the conditions is True. In this case x == 1 is True.
 ```
 
-## Clase 48
+## Clase 49
 ### 
 
 
