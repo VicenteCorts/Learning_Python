@@ -833,23 +833,50 @@ Output: Your name is John. Your surname is Smith
 
 ## Clase 57
 ### Cheatsheet: Processing User Input
-In this section, you learned that:
-<br<><br>
-A Python program can get user input via the input function:
-<br<><br>
+In this section, you learned that a Python program can get user input via the input function:
+```html
 The input function halts the execution of the program and gets text input from the user:
-```html
+
 name = input("Enter your name: ")
-```
+----------------------------------------------------
+
 The input function converts any input to a string, but you can convert it back to int or float:
-```html
+
 experience_months = input("Enter your experience in months: ")
 experience_years = int(experience_months) / 12
-```
+
+-----------------------------------------------------
 You can also format strings with:
-```html
+
 name = "Sim"
 experience_years = 1.5
 print("Hi {}, you have {} years of experience".format(name, experience_years))
 Output: Hi Sim, you have 1.5 years of experience.
 ```
+# Section 7
+## Clase 59
+### Bucle For
+De cursos anteriores ya sabemos lo que es un bucle **for**. En este apartado veremos cómo declararlo en Python:
+```html
+monday_temperature = [9.1, 8.8, 7.5]
+
+# Forma burda de recorer la lista
+
+print(round(monday_temperature[0]))
+print(round(monday_temperature[1]))
+print(round(monday_temperature[2]))
+
+# Bucle para recorrer la lista
+
+for temp in monday_temperature:
+    print(round(temp))
+
+# Otro ejemplo
+
+for letter in "Hello":
+    print(letter)
+```
+
+
+
+
