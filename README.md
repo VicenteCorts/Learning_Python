@@ -1054,10 +1054,32 @@ print(" ".join(result))
 ```
 # Section 9
 ## Clase 74
-###
+### List Comprehension (Loops para listas)
+En el ejemplo de las temperaturas, para ahorrar espacio en algunas programaciones establecen archivos con los datos, en los que los floats aparecen como números enteros sin punto, es decir, habría que dividirlos entre 10 para obtener el valor auténtico. Es en este tipo de  casos dodne las **List Comprehensions** ebtran a jugar.
+```html
+# ejemplo con for
+temps = [221, 234, 340, 230]
 
+new_temps = []
 
+for temp in temps:
+    new_temps.append(temp / 10)
 
+print(new_temps)
+--------------------------------
+# ejemplo con List Comprehension
+temps = [221, 234, 340, 230]
+
+new_temps = [ temp / 10 for temp in temps]
+
+print(new_temps)
+```
+
+## Clase 75
+### List Comprehension + IF
+Siguiendo lo aprendido en la clase anterior, también podemos añadir condicionales a los **LC**:
+```html
+```
 
 
 
