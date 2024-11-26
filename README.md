@@ -1079,7 +1079,14 @@ print(new_temps)
 ### List Comprehension + IF
 Siguiendo lo aprendido en la clase anterior, también podemos añadir condicionales a los **LC**:
 ```html
+temps = [221, 234, 340, -9999, 230]
+
+new_temps = [ temp / 10 for temp in temps if temp != -9999]
+
+print(new_temps)
 ```
 
+## Clase 76
+### List Comprehension with If-Else Conditional
 
 
