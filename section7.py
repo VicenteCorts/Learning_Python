@@ -74,13 +74,21 @@ for number in phone_numbers.values():
 '''
 
 # Clase 63
+'''
 a = 3
 while a < 10 :
     a = a+1
     print(a)
+'''
 
+# Clase 64
+'''
+username = ''
+while username != "Vicente":
+    username = input("Nombre de Usuario: ")
+'''
 
-
+# Clase 65
 
 
 

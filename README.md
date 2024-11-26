@@ -951,5 +951,26 @@ while a < 10 :
     print(a)
 ```
 
+## Clase 63
+### Bucle While con User_input
+A continuación, otro ejemplo de **While** en combinación con user_input:
+```html
+username = ''
+while username != "Vicente":
+    username = input("Nombre de Usuario: ")
+```
+
+## Clase 64
+###
+
+
+
+
+
+
+
+
+
+
 
 
