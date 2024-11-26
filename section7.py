@@ -1,4 +1,5 @@
 # Clase 59
+'''
 monday_temperature = [9.1, 8.8, 7.5]
 
 for temp in monday_temperature:
@@ -26,6 +27,14 @@ colors = [11, 34.1, 98.2, 43, 45.1, 54, 54]
 for color in colors:
     if type(color) == int:
         print(color)
+
+# Loop Over Int and Big Colors (E)
+## Loop over the colors items and print out the item in every loop only if the item is an integer and it is greater than 50.
+colors = [11, 34.1, 98.2, 43, 45.1, 54, 54]
+for color in colors:
+    if type(color) == int and color>50:
+        print(color)
+'''
 
 # Clase 60
 
