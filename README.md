@@ -942,8 +942,14 @@ Marry has as phone number +423998200919
 ```
 
 ## Clase 63
-### 
-
+### Bucle While
+De cursos anteriores ya sabemos lo que es un bucle **While**. En este apartado veremos cómo declararlo en Python:
+```html
+a = 3
+while a < 10 :
+    a = a+1
+    print(a)
+```
 
 
 

@@ -59,6 +59,7 @@ for grades in student_grades.keys():
 '''
 
 # Clase 62
+'''
 # Dictionary Loop and String Formatting
 ## Make the code print out the following output using a for loop: John Smith: +37682929928 Marry Simpons: +423998200919 So, the code should loop over the dictionary items and in each iteration should print out the dictionary key, a colon, a space, and the corresponding value.
 phone = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
@@ -70,9 +71,13 @@ for item in phone.items():
 phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
 for number in phone_numbers.values():
     print(number.replace("+", "00"))
+'''
 
 # Clase 63
-
+a = 3
+while a < 10 :
+    a = a+1
+    print(a)
 
 
 
