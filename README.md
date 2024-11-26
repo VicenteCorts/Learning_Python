@@ -1028,8 +1028,33 @@ while datetime.datetime.now() < datetime.datetime(2090, 8, 20, 19, 30, 20):
 The loop above will print out the string inside print() over and over again until the 20th of August, 2090.
 ```
 
+# Section 8
+## Clase 69-72
+### "Problem Statement"
+Ahora pondremos en común todo lo aprendido hasta el momento, para ello crearemos un programa en el que empleemos todos los elementos juntos:
+```html
+def frase (cadena):
+    interrogacion = ("qué", "cómo", "cuándo", "quién", "por qué")
+    mayus = cadena.capitalize()
+    if cadena.startswith(interrogacion):
+        return "¿{}?". format(mayus)
+    else:
+        return "{}.".format(mayus)
 
+result = []
 
+while True:
+    user_imput = input("Escribe algo: ")
+    if user_imput == "/end":
+        break
+    else:
+        result.append(frase(user_imput))
+
+print(" ".join(result))
+```
+# Section 9
+## Clase 74
+###
 
 
 
