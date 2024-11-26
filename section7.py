@@ -89,7 +89,12 @@ while username != "Vicente":
 '''
 
 # Clase 65
-
+while True :
+    username = input("Nombre de Usuario: ")
+    if username == "pypy":
+        break
+    else:
+        continue
 
 
 
