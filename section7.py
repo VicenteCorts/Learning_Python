@@ -37,6 +37,7 @@ for color in colors:
 '''
 
 # Clase 61
+'''
 student_grades = {"Vicente": 10.0, "Maria": 9.5, "Carlos": 5.0}
 for grades in student_grades.items():
     print(grades)
@@ -55,6 +56,26 @@ for grades in student_grades.keys():
 #Vicente
 #Maria
 #Carlos
+'''
+
+# Clase 62
+# Dictionary Loop and String Formatting
+## Make the code print out the following output using a for loop: John Smith: +37682929928 Marry Simpons: +423998200919 So, the code should loop over the dictionary items and in each iteration should print out the dictionary key, a colon, a space, and the corresponding value.
+phone = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+for item in phone.items():
+    print(f"{item[0]}: {item[1]}")
+
+# Loop Over Dictionary and Replace
+## Loop over the phone_numbers values and in each loop print out the phone number, but with '00' instead of '+'. In other words, your code should output: 0037682929928 00423998200919 Hint: You can access dictionary values with phone_numbers.values() and you can replace characters using str.replace() .
+phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+for number in phone_numbers.values():
+    print(number.replace("+", "00"))
+
+# Clase 63
+
+
+
+
 
 
 
