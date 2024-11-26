@@ -897,4 +897,27 @@ The output of that would be:
 So, in the first iteration celsius_to_kelvin(9.1) was executed, in the second celsius_to_kelvin(8.8) and in the third celsius_to_kelvin(-270.15).
 
 ## Clase 61
-###
+### Bucle en dato dictionary
+A la hora de iterar un **dict** debemos especificar con qué elemnto queremos trabajar, diferenciando entre item (tupla), valor o key:
+```html
+student_grades = {"Vicente": 10.0, "Maria": 9.5, "Carlos": 5.0}
+for grades in student_grades.items():
+    print(grades)
+#('Vicente', 10.0)
+#('Maria', 9.5)
+#('Carlos', 5.0)
+
+for grades in student_grades.values():
+    print(grades)
+#10.0
+#9.5
+#5.0
+
+for grades in student_grades.keys():
+    print(grades)
+#Vicente
+#Maria
+#Carlos
+```
+## Clase 62
+### 

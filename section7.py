@@ -36,16 +36,25 @@ for color in colors:
         print(color)
 '''
 
-# Clase 60
+# Clase 61
+student_grades = {"Vicente": 10.0, "Maria": 9.5, "Carlos": 5.0}
+for grades in student_grades.items():
+    print(grades)
+#('Vicente', 10.0)
+#('Maria', 9.5)
+#('Carlos', 5.0)
 
+for grades in student_grades.values():
+    print(grades)
+#10.0
+#9.5
+#5.0
 
-
-
-
-
-
-
-
+for grades in student_grades.keys():
+    print(grades)
+#Vicente
+#Maria
+#Carlos
 
 
 
