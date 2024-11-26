@@ -1088,5 +1088,10 @@ print(new_temps)
 
 ## Clase 76
 ### List Comprehension with If-Else Conditional
+Siguiendo el ejemplo anterior:
+```html
+```
+Destacar que en este caso el orden se invierte; es decir, primero iría la operación (en ambos ejemplos igual), pero luego iría primero el condicional **if-else** y luego el **bucle for**
 
-
+## Clase 77
+### 
