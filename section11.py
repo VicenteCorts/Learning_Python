@@ -34,6 +34,7 @@ print(content)
 '''
 
 # Clase 92
+'''
 with open("downloads/verduras.txt", "w") as myfile:
     myfile.write("Tomate\nPepino\nCebolla\n")
     myfile.write("Ajo")
@@ -61,8 +62,15 @@ with open("first.txt", "w") as myfile:
     bearfile = open("bear.txt")
     content = bearfile.read(90)
     myfile.write(content)
+'''
 
+# Clase 93
+with open("downloads/verduras.txt", "a+") as myfile:
+    myfile.write("\nCipote")
+    myfile.seek(0)
+    content = myfile.read()
 
+print(content)
 
 
 

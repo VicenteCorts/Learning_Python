@@ -1342,10 +1342,41 @@ CebollaAjo
 
 ## Clase 93
 ### Append texto a un archivo ya existente
+#### modo "X"
+Si en el modo de apertura del archivo sustituimos la "r" o "w" por **"x"**, crearemos un nuevo archivo con el nombre indicado. La "x" nos infomra de que el archivo a tratar ya está creado
+```html
+with open("downloads/verduras.txt", "x") as myfile:
+    myfile.write("Cipote")
 
+# FileExistsError: [Errno 17] File exists: 'downloads/verduras.txt'
+```
+#### modo "A"
+Este es el modo que nos permite añadir texto sin sobreescribir:
+```html
+with open("downloads/verduras.txt", "a") as myfile:
+    myfile.write("\nCipote")
+```
+#### modo "+"
+Si queremos leer y escribir al mismo tiempo, añadiremos un "+" al modo indicado:
+```html
+with open("downloads/verduras.txt", "a+") as myfile:
+    myfile.write("\nCipote")
+    content = myfile.read()
 
+print(content)
+```
+**IMPORTANTE** el output de este archivo será un espacio en blanco, ya que al añadir la nueva palabra, el **CURSOR** se establece al final del archivo. Para solucionar esto añadimos **myfile.seek(0)** para situarlo en el elemento 0 del archivo:
+```html
+with open("downloads/verduras.txt", "a+") as myfile:
+    myfile.write("\nCipote")
+    myfile.seek(0)
+    content = myfile.read()
 
+print(content)
+```
 
+## Clase 94
+###
 
 
 
