@@ -1258,5 +1258,5 @@ print(find_winner(Andy = 17, Marry = 19, Sim = 45, Kae = 34))
 Output: Sim
 ```
 #### Here's a summary of function elements:
-![imagen resumen sección 10](\img\Clase84.png)
+![imagen resumen sección 10](/img/Clase84.png)
 
