@@ -1455,6 +1455,12 @@ while True:
 Son módulos que vienen predefinidos en python
 
 #### OS
+C:\Users\Vicente Corts León\AppData\Local\Programs\Python\Python313\Lib
+<br>
+
+https://docs.python.org/3/library/os.html
+<br>
+
 Módulo para controlar el sistema operativo. Puede hacer que un script siga ejecutándose auque lance un error (para retomar una función en cuanto se fixee):
 ```html
 >>> import os
@@ -1497,14 +1503,18 @@ Ambos tipo se módulos son utilizables mediante la importación en el archivo de
 Existen también módulos de terceros que veremos en las próximas clases. Estos precisan de su instalación para poder hacer uso de ellos.
 
 ## Clase 98
-###
+### Módulos de Terceros
+Para comenzar en este apartado debemos hacer uso de **pip**, una libreria default empleada para instalar librerias de terceros.
+<br>
 
-
-
-## Clase 96
-###
-
-
+Mediante **pip** queremos instalar **pandas**, una librería de terceros muy versatil. Para nuestra versión de python debemos usar el sigueinte comando para instalar pandas a través de pip:
+```html
+>>>exit()
+pip install pandas
+# Yo personalmente he upgradeado la versión a la que me decía la consola que había como versión actualizada
+python.exe -m pip install --upgrade pip
+```
+Ahora podemos hacer uso de **pandas** en nuestro script. Documentación de pandas: https://pandas.pydata.org/docs/
 
 ## Clase 99
 ###
