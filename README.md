@@ -1295,8 +1295,16 @@ myfile.close()
 print(content)
 ```
 
+## Clase 90
+### Abrir archvios con "with"
+Con with-as podemos abrir y manipulat los archivos de igual forma que con los ejemplos anteriores, con la salvedad de que al temrinar el bloque de código precedido por el **with**, el arhcivo se cierra automáticamente:
+```html
+with open("downloads/fruits.txt") as myfile:
+    content = myfile.read()
 
-
+print(content)
+```
+Este código haría exactamente lo mismo que el de la clase anterior.
 
 
 

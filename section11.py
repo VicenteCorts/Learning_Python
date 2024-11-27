@@ -18,16 +18,19 @@ print(content)
 '''
 
 # Clase 89
-
+'''
 myfile = open("downloads/fruits.txt")
 content = myfile.read()
 myfile.close()
 print(content)
+'''
 
+# Clase 90
 
+with open("downloads/fruits.txt") as myfile:
+    content = myfile.read()
 
-
-
+print(content)
 
 
 
