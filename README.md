@@ -1286,7 +1286,14 @@ print(content)
 
 ## Clase 89
 ### Cerrar el archvio
+```html
+myfile = open("downloads/fruits.txt")
+content = myfile.read()
 
+myfile.close()
+
+print(content)
+```
 
 
 
