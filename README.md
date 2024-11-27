@@ -1115,8 +1115,14 @@ List comprehension with an if and else condition:
 Output: [2, 0, 20]
 ```
 # Section 10
-## Clase 7
-### 
+## Clase 79
+### Funciones con múltiples argumentos
+Tan sencillo como:
+```html
+def area (a, b):
+    return a * b
+print(area(4, 5))
+```
 
 
 
