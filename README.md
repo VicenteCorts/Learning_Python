@@ -1124,16 +1124,54 @@ def area (a, b):
 print(area(4, 5))
 ```
 
-## Clase 8
+## Clase 81
 ### Default and Non-default Parameters and Keyword and Non-keyword Arguments
+Llamamos keyword-arguments a aquellos que vienen definidos en la entrada de parámetros:
+```hmtl
+# Non-KWA
+def area (a, b):
+    return a * b
+print(area(4, 5))
 
+# Keyword-Arguments
+def area (a = 5 , b = 4):
+    return a * b
+```
+Esto también está asociado a la posición de los parámetros:
+```html
+def area (a, b):
+    return a * b
+print(area(b = 4, a = 5))
+```
+Aquí las variables a y b están en orden opuesto, pero seguirían entrando con sus respectivos nombrameintos.
+#### Parámetros default
+Parámetros que ya vienen definicdos en la función y no es necesario volver a llamar para ejecutarla:
+```html
+def area (a, b = 5):
+    return a * b
+print(area(4))
+```
+Incluso podríamos asignar un valor diferente a **b** simplemente incluyéndolo como parámetro en la llamada a la fucnión
+```html
+def area (a, b=5):
+    return a * b
+print(area(4, b = 7))
 
+o
 
+print(area(4, 7))
 
+# en este ejemplo b tendría el valor "7"
+``` 
+**Hay que tener en cuenta que los parámetros default NO pueden estar delante de los no default**
+```html
+def area (a=5, b):
+    return a * b
+print(area(4, 7))
 
+# ERROR
+```
 
-
-
-
-
+## Clase 82
+###
 
