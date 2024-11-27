@@ -43,3 +43,12 @@ print(foo("snow", "glacier", "iceberg"))
 def mean(**kwargs):
     return kwargs
 print(mean(a=1, b=6, c=3))
+
+# Indefinite Number of Keyword Arguments (E)
+## Enter the correct parameters inside find_sum() so that the output of the code is 9.
+def find_sum(**kwargs):
+    return sum(kwargs.values())
+    
+print(find_sum(a=8, b=1))
+
+
