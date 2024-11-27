@@ -1261,5 +1261,37 @@ Output: Sim
 ![imagen resumen sección 10](/img/Clase84.png)
 
 # Section 11
-## Clase 8
+## Procesar archvios en Python
+Al abrir archivos a través de Python, se emplea una parte de la memoria temporal (RAM)
+
+## Clase 87
+### Leer Text de un archivo
+Debemos abrir el archivo con el que vamos a trabajar y posteriormente imprimirlo para ver su contenido
+```html
+myfile = open("downloads/fruits.txt")
+print(myfile.read())
+```
+
+## Clase 88
 ###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
