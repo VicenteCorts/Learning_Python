@@ -1173,5 +1173,40 @@ print(area(4, 7))
 ```
 
 ## Clase 82
+### Functions with an Arbitrary Number of Non-keyword Arguments
+Hay funciones que tiene un número predefinido de parámetros. Al añadir más o menos de los que exigen, dará error:
+```html
+>>> len('hello')
+5   
+>>> len('hello', 'hi')
+Traceback (most recent call last):
+  File "<python-input-1>", line 1, in <module>
+    len('hello', 'hi')        
+    ~~~^^^^^^^^^^^^^^^        
+TypeError: len() takes exactly one argument (2 given) 
+-------------------------------
+>>> isinstance(6, int)
+True
+>>> isinstance(6, int, int)
+Traceback (most recent call last):
+  File "<python-input-5>", line 1, in <module>
+    isinstance(6, int, int)   
+    ~~~~~~~~~~^^^^^^^^^^^^^   
+TypeError: isinstance expected 2 arguments, got 3
+------------------------------
+# Otras funciones no tienen un número predefinido de parámetros:
+>>> print(1,2,3,4,5)
+1 2 3 4 5
+```
+#### Crear funciones con número de parámetros indefinidos:
+Para crear una función con estas características la declararemos de la sigueinte fomra: ** (*args) **
+```html
+def mean(*args):
+    return sum(args)/len(args)
+print(mean(1, 6, 3))
+```
+
+## Clase 82
 ###
+
 

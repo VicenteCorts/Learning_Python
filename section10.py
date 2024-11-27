@@ -12,15 +12,17 @@ print(foo("hola ", "Mundo"))
 '''
 
 # Clase 81
+'''
 def area (a, b=5):
     return a * b
 print(area(4, b=7))
 print(area(4, 7))
-
+'''
 
 # Clase 82
-
-
+def mean(*args):
+    return sum(args)/len(args)
+print(mean(1, 6, 3))
 
 
 
