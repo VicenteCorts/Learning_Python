@@ -26,12 +26,14 @@ print(content)
 '''
 
 # Clase 90
-
+'''
 with open("downloads/fruits.txt") as myfile:
     content = myfile.read()
 
 print(content)
+'''
 
+# Clase 92
 
 
 

@@ -1306,7 +1306,9 @@ print(content)
 ```
 Este código haría exactamente lo mismo que el de la clase anterior.
 
-
+## Clase 91
+### Diferentes rutas de archivos
+(...)
 
 
 
