@@ -34,6 +34,9 @@ print(content)
 '''
 
 # Clase 92
+with open("downloads/verduras.txt", "w") as myfile:
+    myfile.write("Tomate\nPepino\nCebolla\n")
+    myfile.write("Ajo")
 
 
 

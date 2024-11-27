@@ -1308,11 +1308,40 @@ Este código haría exactamente lo mismo que el de la clase anterior.
 
 ## Clase 91
 ### Diferentes rutas de archivos
-(...)
+Tener en cuenta dónde se ubica el archiv para llamarlo correctamente en nuestro código(...)
 
+## Clase 92
+### Escribir texto en un archivo
+help(open)-> Nos muestra los diferentes métodos y parámetros para abrir archivos. A continuación cambiaremos el "mode" de "r" a "w" para poder escribir texto en un nuevo archivo:
+```html
+with open("downloads/verduras.txt", "w") as myfile:
+    myfile.write("Tomate")
+```
+Al ejecutar este código, crea un nuevo archivo "verduras.txt" en la ruta especificada si no existe, y escribe la palabra "Tomate".
+- **CUIDADO** con este código puede sobreescribirse el archivo.
+#### Escribir una nueva línea:
+```html
+with open("downloads/verduras.txt", "w") as myfile:
+    myfile.write("Tomate\nPepino\nCebolla")
 
+# verduras.txt
+Tomate
+Pepino
+Cebolla
+-------------------------------------------
+# Si hacemos lo siguiente, las palabras Cebolla y Ajo aparecerán juntas en la misma línea del archivo
+with open("downloads/verduras.txt", "w") as myfile:
+    myfile.write("Tomate\nPepino\nCebolla")
+    myfile.write("Ajo")
 
+# verduras.txt
+Tomate
+Pepino
+CebollaAjo
+```
 
+## Clase 93
+### Append texto a un archivo ya existente
 
 
 
