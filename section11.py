@@ -72,6 +72,11 @@ with open("downloads/verduras.txt", "a+") as myfile:
 
 print(content)
 
-
+# Read and Append (E)
+## Append the text of bear1.txt to bear2.txt. In other words, bear2.txt should contain its text and the text of bear1.txt after that.
+with open("bear2.txt", "a+") as myfile:
+    bear1 = open("bear1.txt")
+    content = bear1.read()
+    myfile.write(content)
 
 
