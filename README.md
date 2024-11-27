@@ -1199,14 +1199,22 @@ TypeError: isinstance expected 2 arguments, got 3
 1 2 3 4 5
 ```
 #### Crear funciones con número de parámetros indefinidos:
-Para crear una función con estas características la declararemos de la sigueinte fomra: ** (*args) **
+Para crear una función con estas características la declararemos de la sigueinte fomra:
 ```html
 def mean(*args):
     return sum(args)/len(args)
 print(mean(1, 6, 3))
 ```
 
-## Clase 82
-###
+## Clase 83
+### Functions with an Arbitrary Number of Keyword Arguments
+PAra crear funciones sin un número predeterminado de parámetros y que además estos sean kw (keywords) se realizaría añadiendo dos asteriscos en vez de 1 entre los paréntesis de la declaración de la función:
+```html
+def mean(**kwargs):
+    return kwargs
+print(mean(a=1, b=6, c=3))
+
+# Nos devolvería un dict: {'a': 1, 'b': 6, 'c': 3}
+```
 
 

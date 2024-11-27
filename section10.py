@@ -20,6 +20,7 @@ print(area(4, 7))
 '''
 
 # Clase 82
+'''
 def mean(*args):
     return sum(args)/len(args)
 print(mean(1, 6, 3))
@@ -36,6 +37,9 @@ def foo(*args):
     return sorted(arg.upper() for arg in args)
     
 print(foo("snow", "glacier", "iceberg"))
+'''
 
-
-
+# Clase 83
+def mean(**kwargs):
+    return kwargs
+print(mean(a=1, b=6, c=3))
