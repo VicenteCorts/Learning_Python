@@ -1517,9 +1517,35 @@ python.exe -m pip install --upgrade pip
 Ahora podemos hacer uso de **pandas** en nuestro script. Documentación de pandas: https://pandas.pydata.org/docs/
 
 ## Clase 99
-###
+### Ejemplo básico de Pandas
+Más tarde trabajaremos en profundidad con Pandas, pero por el momento veamos alguno de sus usos.
+```html
+import time
+import os
+import pandas
 
-
+while True:
+    if os.path.exists("downloads/temps_today.csv"):
+        data = pandas.read_csv("downloads/temps_today.csv")
+        print(data.mean()["st1"])
+    else:
+        print("No existe el archivo")
+    time.sleep(3)
+```
+Con pandas creamos un tipo de objeto nuevo propio de esta libreria al usar: "data = pandas.read_csv("downloads/temps_today.csv")". Podemos ver este nuevo objeto en la temrinal py -3:
+```html
+>>> import pandas
+>>> data = pandas.read_csv("downloads/temps_today.csv")
+>>> data
+    st1   st2
+0  23.3  22.1
+1  24.0  23.1
+2  22.1  20.2
+3  19.1  16.8                                       
+>>> type(data)
+<class 'pandas.core.frame.DataFrame'>
+>>> 
+```
 
 ## Clase 100
 ###

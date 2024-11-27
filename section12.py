@@ -29,9 +29,9 @@ import os
 import pandas
 
 while True:
-    if os.path.exists("downloads/verduras.txt"):
-        with open("downloads/verduras.txt") as file:
-            print(file.read())
+    if os.path.exists("downloads/temps_today.csv"):
+        data = pandas.read_csv("downloads/temps_today.csv")
+        print(data.mean()["st1"])
     else:
         print("No existe el archivo")
     time.sleep(3)
