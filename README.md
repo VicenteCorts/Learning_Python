@@ -1273,8 +1273,19 @@ print(myfile.read())
 ```
 
 ## Clase 88
-###
+### File Cursos
+Cuando creamos el objeto "file" al abrir el archivo y empleamos el método .read(), el "cursor" se sitúa al final del archvio, por lo que si volvemos a ejecutar el método .read() nos devolverá una respuesta vacía (ya que no hay nada más al final del archivo).
+- Es importante tener en cuenta este concepto del **cursor**
+- Si queremos imprimir el contenido del archivovarias veces podemos hacer lo sigueinte:
+```html
+myfile = open("downloads/fruits.txt")
+content = myfile.read()
+print(content)
+print(content)
+```
 
+## Clase 89
+### Cerrar el archvio
 
 
 
