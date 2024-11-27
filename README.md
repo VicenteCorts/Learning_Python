@@ -1583,3 +1583,56 @@ Mac and Linux:
 
 pip3 install pandas or use python3 -m pip install pandas if that doesn't work.
 ```
+
+# Section 13
+## Clase 102
+### Pandas: Librería de Data Analysis
+Panda permite el manejo de datos a través de python. También cabe destacar la figura de bokeh que veremos más adelante.
+
+## Clase 103
+### Installing pandas
+Please make sure you have **pandas** installed. You can install it with pip from your computer or Atom/VS Code terminal/cmd just like you have installed other third-party packages. Please execute one of the commands below to do the installation depending on what version of Python you are using:
+```html
+pip3.13 install pandas
+```
+Also, in the next lecture, we will use an enhanced Python interactive shell called IPython.
+<br>
+
+**IPython** is just like the standard shell you get when you run Python, but IPython provides better printing for large text. This ability makes IPython suitable for data analysis because the program prints data in a well-structured format. You can install IPython with pip:
+```html
+pip3.13 install ipython
+```
+
+## Clase 104
+### Pandas: Comenzando
+
+
+
+## Clase 10
+### 
+## Clase 10
+### 
+## Clase 10
+### 
+## Clase 10
+### 
+## Clase 10
+### 
+## Clase 10
+### 
+## Clase 10
+### 
+## Clase 10
+### 
+## Clase 10
+### 
+
+
+
+
+
+
+
+
+
+
