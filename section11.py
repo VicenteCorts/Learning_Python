@@ -12,7 +12,7 @@ print(file.read())
 # Clase 88
 '''
 myfile = open("downloads/fruits.txt")
-content = myfile.read()
+he
 print(content)
 print(content)
 '''
@@ -38,13 +38,29 @@ with open("downloads/verduras.txt", "w") as myfile:
     myfile.write("Tomate\nPepino\nCebolla\n")
     myfile.write("Ajo")
 
+# Reading and Processing Text (E)
+## Read the bear.txt file, and print out the first 90 characters of its content.
+myfile = open("bear.txt")
+print(myfile.read(90))
 
+# File Processing Inside Function (E)
+## Define a function that gets a single string character and a filepath as parameters and returns the number of occurences of that character in the file.
+def foo(a, b):
+    with open(b, 'r') as file:
+            content = file.read()
+            return content.count(a)
 
+# Write Snail (E)
+## Use Python to create a file with name file.txt and write the text snail there.
+with open("file.txt", "w") as myfile:
+    myfile.write("snail")
 
-
-
-
-
+# Write First 90 (E)
+## Create a first.txt file that contains the first 90 characters of bear.txt. Note that you should read the content of bear.txt with Python, extract its first 90 characters with Python, and write those characters in first.txt with Python.
+with open("first.txt", "w") as myfile:
+    bearfile = open("bear.txt")
+    content = bearfile.read(90)
+    myfile.write(content)
 
 
 
