@@ -79,4 +79,10 @@ with open("bear2.txt", "a+") as myfile:
     content = bear1.read()
     myfile.write(content)
 
-
+#Copy n-times (E)
+## The existing content of data.txt looks like this: 1.3, 1.5 2.3, 2.7 Use Python to modify the content of data.txt so that its content looks like below: 1.3, 1.5 2.3, 2.7 1.3, 1.5 2.3, 2.7 1.3, 1.5 2.3, 2.7 So, you need to find a way to insert the existing content two more times.
+with open("data.txt", "a+") as myfile:
+    myfile.seek(0)
+    contenttocopy = myfile.read()
+    myfile.write(contenttocopy*2)
+ 
