@@ -1260,3 +1260,6 @@ Output: Sim
 #### Here's a summary of function elements:
 ![imagen resumen sección 10](/img/Clase84.png)
 
+# Section 11
+## Clase 8
+###
