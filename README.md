@@ -2340,19 +2340,45 @@ df4=pandas.read_excel('AustinJohnHOMELivingDexSV_1.3.2_2.xlsx', sheet_name=0)
 df4
 ```
 
+## Clase 112
+###  Cargando Archivos de Texto plano
+En el primer ejemplo emplearemos el archvio cuyos datos vienen separados por **,**:
+```html
+df4=pandas.read_csv('supermarkets-commas.txt')
+df4
+```
+**CSV**: caracter separator values
+<br>
+
+Cuando el caracter separador son comas, no es necesario añadir parámetro indicando cuál es el separador de CSV; sin embargo, en el siguiente ejemplo, el elemento separador es "**;**" por lo que debemos añadir parámetro indicándolo:
+```html
+# Para ver información sobre el método read_csv, que se encuentra dentro de la librería pandas
+pandas.read_csv?
+---------------------
+# la palabra clave para determinar el separador es (sep="")
+df5=pandas.read_csv('supermarkets-semi-colons.txt', sep=";")
+df5
+```
+
+## Clase 113
+### 
+## Clase 11
+### 
+## Clase 11
+### 
 ## Clase 11
 ### 
 ## Clase 11
 ### 
 ## Clase 11
 ### 
-
-
-
-
-
-
-
-
+## Clase 11
+### 
+## Clase 11
+### 
+## Clase 11
+### 
+## Clase 11
+### 
 
 
