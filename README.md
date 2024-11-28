@@ -2710,4 +2710,70 @@ df1
 
 # Section 14
 ## Clase 121
+### Qué es NumPy
+Documentación: https://numpy.org/doc/
+<br>
+
+NumPy is an open source project that enables numerical computing with Python. (Ejemplo de la imagen pixelada en escala de grises y sus valores representados con listas de números)
+```html
+# Jupyter Notebook: array n unidireccional
+import numpy
+n=numpy.arange(27)
+n
+-> array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+type(n)
+-> numpy.ndarray
+
+# array bidimensional:
+n.reshape(3,9)
+-> array([[ 0,  1,  2,  3,  4,  5,  6,  7,  8],
+       [ 9, 10, 11, 12, 13, 14, 15, 16, 17],
+       [18, 19, 20, 21, 22, 23, 24, 25, 26]])
+
+# array tridimencional:
+n.reshape(3,3,3)
+-> array([[[ 0,  1,  2],
+        [ 3,  4,  5],
+        [ 6,  7,  8]],
+
+       [[ 9, 10, 11],
+        [12, 13, 14],
+        [15, 16, 17]],
+
+       [[18, 19, 20],
+        [21, 22, 23],
+        [24, 25, 26]]])
+
+# Otro ejemplo asociado a la imagen de píxeles grises
+m=numpy.asarray([[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]])  
+m
+-> array([[1, 2, 3, 4, 5],
+       [1, 2, 3, 4, 5],
+       [1, 2, 3, 4, 5]])
+print(m)
+-> [[1 2 3 4 5]
+ [1 2 3 4 5]
+ [1 2 3 4 5]]
+type(m)
+-> numpy.ndarray
+```
+
+
+## Clase 12
+###
+## Clase 12
+###
+## Clase 12
+###
+## Clase 12
+###
+## Clase 12
+###
+## Clase 12
+###
+## Clase 12
+###
+## Clase 12
+###
+## Clase 12
 ###
