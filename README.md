@@ -2776,10 +2776,62 @@ import cv2
 ```
 If you get no errors, you installed OpenCV successfully. **If you find errors, check FAQs**: https://www.udemy.com/course/former-python-mega-course-build-10-real-world-applications/learn/lecture/34362806#overview
 
-## Clase 12
+## Clase 123
+### Convert Images to Numpy Arrays
+Tras la instalación correcta de la clase anterior, comenzaremos por cargar la imagen de los píxeles grises en python:
+```html
+# jupyter Notebook
+import cv2
+im_g=cv2.imread("img/smallgray.png", 0)
+im_g
+# 0= leer la imagen en escala de grises
+# 1= leer la imagen en rbg
+-> array([[187, 158, 104, 121, 143],
+       [198, 125, 255, 255, 147],
+       [209, 134, 255,  97, 182]], dtype=uint8)
+
+# si cambiamos el parámetro de 0 a 1 obtendremos un array tridimensional, correspondiente a R, G, B de cada color
+im_g=cv2.imread("img/smallgray.png", 1)
+im_g
+-> array([[[187, 187, 187],
+        [158, 158, 158],
+        [104, 104, 104],
+        [121, 121, 121],
+        [143, 143, 143]],
+
+       [[198, 198, 198],
+        [125, 125, 125],
+        [255, 255, 255],
+        [255, 255, 255],
+        [147, 147, 147]],
+
+       [[209, 209, 209],
+        [134, 134, 134],
+        [255, 255, 255],
+        [ 97,  97,  97],
+        [182, 182, 182]]], dtype=uint8)
+```
+No solo podemos leer las imagenes, también podemos escribir en ellas:
+```html
+# Creamos un nuevo archivo de imagen empleando el array de la imagen que teníamos en un principio:
+cv2.imwrite("img/newsmallgray.png",im_g)
+-> True
+```
+
+## Clase 124
 ###
-## Clase 12
-###
+
+
+
+
+
+
+
+
+
+
+
+
 ## Clase 12
 ###
 ## Clase 12
