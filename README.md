@@ -2691,7 +2691,9 @@ df1
 # Ahora crearemos una columna específica para la longitud:
 df1["Longitude"] = df1["Coordinates"].apply(lambda x: x.longitude)
 df1
------------------------------------------------------------------
+```
+Cuidado:
+```html
 Puede darnos un error en caso de que alguna de las direcciones no 
 sea real e intente aplicarle los métodos .latitude y/o .logitude; 
 para solucionar este problma podemos modificar el código con un
