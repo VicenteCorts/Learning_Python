@@ -2149,12 +2149,38 @@ Out[23]: np.int64(10)
 ```
 
 ## Clase 105
-### 
+### Installing Jupyter
+In the next videos, we will use Jupyter Notebook is a third-party library. Please install Jupyter Notebook by executing one of the commands below:
+```html
+# Installing Jupyter
+
+pip3.13 install jupyter
+```
+Please change the number after pip to reflect the version of Python you are using.
+
+#### Starting Jupyter
+
+After a successful installation you can start Jupyter Notebook by running the command below from your terminal:
+```html
+jupyter notebook
+
+# If the above command does not work try the following command:
+
+py -3.13 -m jupyter notebook (for Windows users)
+```
+If it works, you will see Jupyter Notebook opened up in your default internet browser: **Jupyter in the cloud**
+<br>
+
+If you do not want to install Jupyter or you cannot install it, you can use Jupyter in the cloud. Google offers a ready-to-use Jupyter notebook here: https://colab.research.google.com/#create=true
 
 
 
-## Clase 10
-### 
+## Clase 106
+### Primeros Pasos Jupyter
+Documentación disponible en: https://jupyter-notebook.readthedocs.io/en/stable/
+<br>
+
+
 ## Clase 10
 ### 
 ## Clase 10
