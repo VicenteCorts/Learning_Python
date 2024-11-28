@@ -2377,6 +2377,35 @@ df1.columns = ["Nombre del alimento"]
 df1
 ```
 
+## Clase 115
+### Set index Columns
+El concepto de **índice** dentro de las tablas con las que estamos trabajando, nos permitirá seleccionar una **porción** de los datos para extraerlos y/o manipularlos. **Con esto lo que hacemos es establecer una de las columnas como índice de cada fila** -> haciendo que su posición de columna desaparezca.
+```html
+df2.set_index("ID")
+```
+Cuando hacemos uso del método set_index no estamos reescribiendo ni sobreescribiendo el Data Frame, sino que crea una addición temporal en la tabla para reflejar los resultados.
+<br>
+
+Si queremos mantener los cambios, podemos almacenar la operación en una nueva variable o emplear el parámetro **inplace=True** en el objeto original para que los cambios sean permanentes:
+```html
+dfi = df2.set_index("ID")
+dfi
+-----------------------------
+# También se puede modificar de manera permanente el objeto inicial con:
+df2.set_index("ID", inplace=True)
+df2
+```
+En el siguiente ejemplo veremos cómo hacer para que a la hora de establecer una de las columnas como índice (mediante set_index), esta columna permanezca en su posición de columna:
+```html
+df2.set_index("Address", inplace=True)
+df2
+```
+
+## Clase 116
+### Filtrar Datos de un DataFrame de pandas
+
+
+
 ## Clase 11
 ### 
 ## Clase 11
@@ -2385,13 +2414,6 @@ df1
 ### 
 ## Clase 11
 ### 
-## Clase 11
-### 
-## Clase 11
-### 
-## Clase 11
-### 
-## Clase 11
-### 
+
 
 
