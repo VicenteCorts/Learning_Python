@@ -2402,7 +2402,7 @@ df2
 ```
 
 ## Clase 116
-### Filtrar Datos de un DataFrame de pandas
+### Filtrar o Seleccionar Datos de un DataFrame de pandas
 Para manipular los DataFrames añadiendo y eliminando columnas o filas, primero debemos entender como están indexados los DF. A continuación veremos cómo están indexados los DF y como hacerles **"Slice"** para extraer una porción deseada de estas tablas.
 <br>
 
@@ -2443,6 +2443,59 @@ df1.iloc[:,1:4]
 
 ## Clase 117
 ### Borrar Columnas y Filas
+Para borrar haremos uso del método **drop**. Tener en cuenta que no es una operación de "inplace" por lo que podemos trabajar de forma segura sin perder o actualizar datos.
+
+#### ELIMINAR COLUMNAS
+```html
+df1.drop("City", axis=1)
+# El "1" puede ser 0 o 1 en función de si queremos borrar filas o columnas (respectivamente)
+or
+df1.drop(columns="City")
+```
+
+Para elimnar múltiples columnas debemos acceder a sus índices de la sigueinte forma:
+```html
+# Descubrir cuáles son los índices de las columnas: 
+df1.columns
+
+# Borrar columnas concretas:
+df1.drop(['City', 'Country', 'State'], axis=1)
+or
+df1.drop(df1.columns[[1, 3, 5]], axis=1)
+
+# Borrar intervalo de columnas:
+df1.drop(columns=df1.columns[0:3])
+or
+df1.drop(df1.columns[0:3], axis=1)
+```
+
+#### ELIMINAR FILAS 
+```html
+df1.drop("3666 21st St", axis=0)
+# El "0" puede ser 0 o 1 en función de si queremos borrar filas o columnas (respectivamente)
+or
+df1.drop("3666 21st St")
+``` 
+
+Para elimnar múltiples filas debemos acceder a sus índices de la sigueinte forma:
+```html
+# Descubrir cuáles son los índices: 
+df1.index
+
+# Borrar filas concretas:
+df1.drop(['3666 21st St', '332 Hill St'])
+or
+df1.drop([1, 2], axis=0)
+
+# Borrar intervalo completo de filas:
+df1.drop(df1.loc["3666 21st St":"3995 23rd St"].index)
+or
+df1.drop(df1.iloc[1:5].index)
+```
+
+## Clase 118
+### Update y Add nuevas Columnas y Filas
+#### COLUMNAS
 
 
 
@@ -2451,8 +2504,3 @@ df1.iloc[:,1:4]
 ### 
 ## Clase 11
 ### 
-## Clase 11
-### 
-
-
-
