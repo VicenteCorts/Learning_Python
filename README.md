@@ -2299,7 +2299,8 @@ os.listdir()
  df1=pandas.read_csv('supermarkets.csv')
  df1
 ```
-![Output Clase 107](/img/Clase107.PNG)
+![Output Clase 107](/img/Clase107.png)
+
 Una vez que cargamos el DataFrame podemos hacer infinidad de operaciones con él y finalmente podemos exportarlo a csv, excel, etc.
 
 ## Clase 10
