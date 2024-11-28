@@ -2317,7 +2317,14 @@ df2
 ```
 Try loading the supermarkets.json file for this exercise using **read_json** instead of read_csv. The supermarkets.json file can be found inside the supermarkets.zip file attached in the previous lecture.
 
+## Clase 110
+### Note on Loading Excel Files
+In the next lecture, you will learn **how to load Excel files** in Python with pandas. For this, you need pandas (which you have already installed) and also two other dependencies that pandas needs for opening Excel files. You can install them with pip:
+```html
+pip3.13 install openpyxl (needed to load Excel .xlsx files)
 
+pip3.13 install xlrd (needed to load Excel old .xls files)
+```
 
 ## Clase 11
 ### 
