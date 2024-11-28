@@ -2368,8 +2368,15 @@ df1=pandas.read_csv('verduras.txt', header=None)
 df1
 ```
 
-## Clase 11
-### 
+## Clase 114
+### Set Columns Names
+Para asignar nombres a este encabezado vacío, lo haremos de la siguiente forma:
+```html
+# Dentro de la lista deben haber tantos elementos como columnas tenga la tabla
+df1.columns = ["Nombre del alimento"]
+df1
+```
+
 ## Clase 11
 ### 
 ## Clase 11
