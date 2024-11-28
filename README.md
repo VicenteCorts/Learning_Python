@@ -2403,11 +2403,49 @@ df2
 
 ## Clase 116
 ### Filtrar Datos de un DataFrame de pandas
+Para manipular los DataFrames añadiendo y eliminando columnas o filas, primero debemos entender como están indexados los DF. A continuación veremos cómo están indexados los DF y como hacerles **"Slice"** para extraer una porción deseada de estas tablas.
+<br>
+
+Trabajaremos sobre esta tabla modificada con el índice "inplaced" de Address:
+![Tabla Clase 116](/img/Clase116.png)
+Existen varias formas de extraer estas porciones:
+
+1. Label-base-indexing -> Se emplea el método **loc**:
+```html
+df1.loc["735 Dolores St":"332 Hill St","Country":"Employees"]
+```
+![Output Clase 116](/img/Clase116_2.png)
+Tambien podemos acceder a celdas únicas modificando el código anterior:
+```html
+df1.loc["332 Hill St","Country"]
+```
+Si queremos una columna completa:
+```html
+df1.loc[:,"Country"]
+# Incluso podemos pasarlo en formato lista
+list(df1.loc[:,"Country"])
+```
+
+2. Position-base-indexing -> **Forma más común de trabajar**. Esta vez se emplea el método **iloc** en vez de **loc**:
+```html
+df1.iloc[1:4,1:4]
+# El último número de los rangos no se incluye en el output, por lo que si queremos extraer las líneas de la 1 (empieza por el indice 0) hasta la 3, debemos indicar 1:4
+```
+![Output Clase 116](/img/Clase116_3.png)
+Tambien podemos acceder a celdas únicas modificando el código anterior:
+```html
+df1.iloc[1,4]
+```
+Si queremos las columnas completas:
+```html
+df1.iloc[:,1:4]
+```
+
+## Clase 117
+### Borrar Columnas y Filas
 
 
 
-## Clase 11
-### 
 ## Clase 11
 ### 
 ## Clase 11
