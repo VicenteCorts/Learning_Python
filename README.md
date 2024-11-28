@@ -2886,7 +2886,84 @@ for i in im_g.flat:
 
 ## Clase 125
 ### Stacking and Splitting Numpy Arrays
-
+Operaciones más específicas. **Stacking** array Numpy supone concatenarlos. Mientras que **Spliting** implica separarlos en arrays más pequeños.
+#### STACKING
+**Stack Horizontal**
+```html
+# hstack = horizontal stack
+# .hstack solo admite un valor dentro, así que para concatenar debemos introducir una tupla:
+# .hstack juntará los arrays de manera horizontal, quedará el mismo número de filas pero el de columnas será la suma de las columnas de ambos arrays de la tupla
+ims=numpy.hstack((im_g, im_g))
+ims
+# Output:
+array([[187, 158, 104, 121, 143, 187, 158, 104, 121, 143],
+       [198, 125, 255, 255, 147, 198, 125, 255, 255, 147],
+       [209, 134, 255,  97, 182, 209, 134, 255,  97, 182]], dtype=uint8)
+```
+**Stack Vertical**
+```html
+# vstack = vertical stack
+# .vstack solo admite un valor dentro, así que para concatenar debemos introducir una tupla:
+# .vstack juntará los arrays de manera vertical, quedará el mismo número de columnas pero el de filas será la suma de las filas de ambos arrays de la tupla
+ims=numpy.vstack((im_g, im_g))
+ims
+# Output:
+array([[187, 158, 104, 121, 143],
+       [198, 125, 255, 255, 147],
+       [209, 134, 255,  97, 182],
+       [187, 158, 104, 121, 143],
+       [198, 125, 255, 255, 147],
+       [209, 134, 255,  97, 182]], dtype=uint8)
+```
+#### SPLITTING
+**Split horizontal**
+```html
+# hsplit -> para dividir en base a columnas
+lst=numpy.hsplit(ims, 5)
+lst
+[array([[187],
+        [198],
+        [209],
+        [187],
+        [198],
+        [209]], dtype=uint8),
+ array([[158],
+        [125],
+        [134],
+        [158],
+        [125],
+        [134]], dtype=uint8),
+ array([[104],
+        [255],
+        [255],
+        [104],
+        [255],
+        [255]], dtype=uint8),
+ array([[121],
+        [255],
+        [ 97],
+        [121],
+        [255],
+        [ 97]], dtype=uint8),
+ array([[143],
+        [147],
+        [182],
+        [143],
+        [147],
+        [182]], dtype=uint8)]
+```
+**Split vertical**
+```html
+# vsplit -> para dividir en base a filas
+lst=numpy.vsplit(ims, 3)
+lst
+[array([[187, 158, 104, 121, 143],
+        [198, 125, 255, 255, 147]], dtype=uint8),
+ array([[209, 134, 255,  97, 182],
+        [187, 158, 104, 121, 143]], dtype=uint8),
+ array([[198, 125, 255, 255, 147],
+        [209, 134, 255,  97, 182]], dtype=uint8)]
+```
 
 # Section15
 ## Clase 12
