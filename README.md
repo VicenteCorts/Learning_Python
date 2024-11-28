@@ -2173,15 +2173,105 @@ If it works, you will see Jupyter Notebook opened up in your default internet br
 
 If you do not want to install Jupyter or you cannot install it, you can use Jupyter in the cloud. Google offers a ready-to-use Jupyter notebook here: https://colab.research.google.com/#create=true
 
-
-
 ## Clase 106
 ### Primeros Pasos Jupyter
 Documentación disponible en: https://jupyter-notebook.readthedocs.io/en/stable/
 <br>
 
+Tras instalar jupyter(**pip3.13 install jupyter**) y escribir en la consola: jupyter notebook; nos lanza un par de urls de nuestro jupyter en local host en nuestro navegador predeterminado.
+<br>
 
-## Clase 10
+En dicha url nos dirijimos a Nuevo>Python3(ipkernel). Aquí podemos editar el "notebook" desde el nombre del mismo como su contenido. Los cambios y arhcivos que vayamos guardando se almacenarán donde hayamos instalado jupyter (A:\Programacion Web\(Cursos)-Udemy\Python Mega Course Buils 10 real world Applications\Python\.ipynb_checkpoints).
+
+#### Trabajando con Jupyter Notebook
+En el navegador podemos emplear la consola de jupyter notebook como una consola normal, con la salvedad de que podemos escribir varias líneas de cósigo pulsando "Enter". Para correr el código, pulsaremos el botón "Run" en el panel de la consola del navegador o **Ctrl + Enter**. Ahora añadamos algo de código para probar la consola:
+```html
+print(1)
+print(2)
+# Out
+1
+2
+```
+Para crear una nueva Celda **Alt + Enter**
+```html
+print(3)
+print(4)
+# Out
+3
+4
+```
+Para crear una nueva Celda de manera directa **Shift + Enter**
+<br>
+
+Para eliminar una celda: **Esc into dd**.
+<br>
+
+Podemos diferenciar la existencia de dos modos dentro de Jupyter Notebook:
+- Common Mode: rectángulo gris al rededor del código
+- Edit Mode: cuando presionas Enter, seleccionas la celda, cuando presionas Esc sales de la celda y retornas al common mode para moverte entre celdas
+<br>
+
+Podemos ver más atajos para el manejo de Jupyter Notebook en **Help>Keyboard Shotcuts**
+```html
+Redo	Ctrl + Shift + Z
+Undo	Ctrl + Z
+Run Selected Cell	Shift + Enter
+Find Next	Ctrl + G
+Find Previous	Ctrl + Shift + G
+Find…	Ctrl + F
+Activate Next Tab	Ctrl + Shift + ]
+Activate Next Tab Bar	Ctrl + Shift + .
+Activate Previous Tab	Ctrl + Shift + [
+Activate Previous Tab Bar	Ctrl + Shift + ,
+Toggle Left Area	Ctrl + B
+Toggle Mode	Ctrl + Shift + D
+Toggle Right Area	Ctrl + J
+Toggle Sidebar Widget	Alt + 1
+Toggle Sidebar Widget	Alt + 2
+Toggle Sidebar Widget	Alt + 3
+Toggle Sidebar Widget	Alt + 4
+Toggle Sidebar Widget	Alt + 5
+Toggle Sidebar Widget	Alt + 6
+Toggle Sidebar Widget	Alt + 7
+Toggle Sidebar Widget	Alt + 8
+Toggle Sidebar Widget	Alt + 9
+Toggle Sidebar Widget	Alt + 0
+Toggle Sidebar Widget	Alt + Shift + 1
+Toggle Sidebar Widget	Alt + Shift + 2
+Toggle Sidebar Widget	Alt + Shift + 3
+Toggle Sidebar Widget	Alt + Shift + 4
+Toggle Sidebar Widget	Alt + Shift + 5
+Toggle Sidebar Widget	Alt + Shift + 6
+Toggle Sidebar Widget	Alt + Shift + 7
+Toggle Sidebar Widget	Alt + Shift + 8
+Toggle Sidebar Widget	Alt + Shift + 9
+Toggle Sidebar Widget	Alt + Shift + 0
+Activate Command Palette	Ctrl + Shift + C
+Show Keyboard Shortcuts…	Ctrl + Shift + H
+Pause	F9
+Next	F10
+Debugger Panel	Ctrl + Shift + E
+Step In	F11
+Step Out	Shift + F11
+Terminate	Shift + F9
+Save Notebook	Ctrl + S
+Save Notebook As…	Ctrl + Shift + S
+Reopen Last	Ctrl + Shift + T
+Activate Previously Used Tab	Ctrl + Shift + '
+Table of Contents	Ctrl + Shift + K
+```
+
+#### Para qué Jupyter Notebook
+JN es empelado especialmente para exploraciones y exploraciones de datos así como para Data Análisis y Data Visualization
+```html
+import pandas
+df=pandas.read_csv("downloads/temps_today.csv")
+df
+# Output: tabla del archivo
+```
+También puede emplearse para **Web scrapping**
+
+## Clase 107
 ### 
 ## Clase 10
 ### 
