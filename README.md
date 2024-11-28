@@ -2326,8 +2326,20 @@ pip3.13 install openpyxl (needed to load Excel .xlsx files)
 pip3.13 install xlrd (needed to load Excel old .xls files)
 ```
 
-## Clase 11
-### 
+## Clase 111
+### Cargando Archivos Excel
+```html
+# Seguimos trabajando en jupyter notebook
+
+df3=pandas.read_excel('supermarkets.xlsx')
+df3
+```
+Si queremos trabajar sobre una de las hojas concretas del excel deberemos cambiar la syntaxis usando su índice o el nombre de la hoja concreta **sheet_name=0**:
+```html
+df4=pandas.read_excel('AustinJohnHOMELivingDexSV_1.3.2_2.xlsx', sheet_name=0)
+df4
+```
+
 ## Clase 11
 ### 
 ## Clase 11
