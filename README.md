@@ -2758,6 +2758,23 @@ type(m)
 -> numpy.ndarray
 ```
 
+## Clase 122
+### Installing OpenCV
+Documentation-> https://opencv.org/
+<br>
+
+In the next lecture, and in Section 17, we will use the **OpenCV** image processing library. Let us first make sure you have installed the OpenCV library. **OpenCV is also referred to as cv2** in Python.
+
+#### How to Install OpenCV
+To install OpenCV for Python 3.13 on Windows, execute the following in the terminal:
+```html
+py -3.13 -m pip install opencv-python
+```
+Once the installation completes, open a Python session and try:
+```html
+import cv2 
+```
+If you get no errors, you installed OpenCV successfully. **If you find errors, check FAQs**: https://www.udemy.com/course/former-python-mega-course-build-10-real-world-applications/learn/lecture/34362806#overview
 
 ## Clase 12
 ###
