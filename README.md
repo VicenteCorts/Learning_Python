@@ -2361,7 +2361,13 @@ df5
 ```
 
 ## Clase 113
-### 
+### Set Table Header Row
+En ocasiones los datos pueden venir sin los encabezados. Para manipular la fila de los **Headers** y dejarla "vacía" emplearemos el siguiente código **header=None**:
+```html
+df1=pandas.read_csv('verduras.txt', header=None)
+df1
+```
+
 ## Clase 11
 ### 
 ## Clase 11
