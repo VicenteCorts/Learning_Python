@@ -2303,17 +2303,29 @@ os.listdir()
 
 Una vez que cargamos el DataFrame podemos hacer infinidad de operaciones con él y finalmente podemos exportarlo a csv, excel, etc.
 
-## Clase 10
+## Clase 108
+### Exercise: Loading JSON Files
+In  the previous lecture, you learned that you can load a CSV file with this code:
+```html
+import pandas
+df1 = pandas.read_csv("supermarkets.csv")
+------------------------------------------
+# Para .Json
+
+df2=pandas.read_json('supermarkets.json')
+df2
+```
+Try loading the supermarkets.json file for this exercise using **read_json** instead of read_csv. The supermarkets.json file can be found inside the supermarkets.zip file attached in the previous lecture.
+
+
+
+## Clase 11
 ### 
-## Clase 10
+## Clase 11
 ### 
-## Clase 10
+## Clase 11
 ### 
-## Clase 10
-### 
-## Clase 10
-### 
-## Clase 10
+## Clase 11
 ### 
 
 
