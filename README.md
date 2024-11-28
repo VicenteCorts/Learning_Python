@@ -2720,19 +2720,19 @@ NumPy is an open source project that enables numerical computing with Python. (E
 import numpy
 n=numpy.arange(27)
 n
--> array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26])
 type(n)
 -> numpy.ndarray
 
 # array bidimensional:
 n.reshape(3,9)
--> array([[ 0,  1,  2,  3,  4,  5,  6,  7,  8],
+array([[ 0,  1,  2,  3,  4,  5,  6,  7,  8],
        [ 9, 10, 11, 12, 13, 14, 15, 16, 17],
        [18, 19, 20, 21, 22, 23, 24, 25, 26]])
 
 # array tridimencional:
 n.reshape(3,3,3)
--> array([[[ 0,  1,  2],
+array([[[ 0,  1,  2],
         [ 3,  4,  5],
         [ 6,  7,  8]],
 
@@ -2747,11 +2747,11 @@ n.reshape(3,3,3)
 # Otro ejemplo asociado a la imagen de píxeles grises
 m=numpy.asarray([[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]])  
 m
--> array([[1, 2, 3, 4, 5],
+array([[1, 2, 3, 4, 5],
        [1, 2, 3, 4, 5],
        [1, 2, 3, 4, 5]])
 print(m)
--> [[1 2 3 4 5]
+[[1 2 3 4 5]
  [1 2 3 4 5]
  [1 2 3 4 5]]
 type(m)
@@ -2786,14 +2786,14 @@ im_g=cv2.imread("img/smallgray.png", 0)
 im_g
 # 0= leer la imagen en escala de grises
 # 1= leer la imagen en rbg
--> array([[187, 158, 104, 121, 143],
+array([[187, 158, 104, 121, 143],
        [198, 125, 255, 255, 147],
        [209, 134, 255,  97, 182]], dtype=uint8)
 
 # si cambiamos el parámetro de 0 a 1 obtendremos un array tridimensional, correspondiente a R, G, B de cada color
 im_g=cv2.imread("img/smallgray.png", 1)
 im_g
--> array([[[187, 187, 187],
+array([[[187, 187, 187],
         [158, 158, 158],
         [104, 104, 104],
         [121, 121, 121],
@@ -2819,21 +2819,76 @@ cv2.imwrite("img/newsmallgray.png",im_g)
 ```
 
 ## Clase 124
-###
+### Indexing, Slicing, and Iterating Numpy Arrays
+Hacer Slice a una lista:
+```html
+a=[1, 2, 3]
+a[:1]
+a[1:2]
+```
+#### INDEXAR EN ARRAY NUMPY
+Con los **array Numpy** funciona de la misma manera, teniendo en cuenta que pueden ser de 1, 2 o 3 dimensiones
+```html
+# Vamos a extraer una porción de la imagen de píxeles grises (im_g):
+# Recuperamos la imagen en formato numpy array
+im_g=cv2.imread("img/smallgray.png", 0)
+im_g
+
+# Seleccionamos el índice de las filas que vamos a hacer Slice, seguido del índice de las columnas:
+im_g[0:2, 2:4 ]
+array([[104, 121],
+       [255, 255]], dtype=uint8)
+im_g.shape
+-> (3, 5)
+```
+#### ITERAR EN ARRAY NUMPY
+Existen dos formas:
+1. iterar el array o matriz Mediante Bucle for:
+```html
+for i in im_g:
+    print(i)
+# Output:
+[187 158 104 121 143]
+[198 125 255 255 147]
+[209 134 255  97 182]
+---------------------------
+# Para iterar a través de las columnas emplearemos la trasnformación de tabla ".T"
+for i in im_g.T:
+    print(i)
+# Output:
+[187 198 209]
+[158 125 134]
+[104 255 255]
+[121 255  97]
+[143 147 182]
+```
+2. iterar el valor a valor Mediante Bucle for:
+```html
+for i in im_g.flat:
+    print(i)
+# Output:
+187
+158
+104
+121
+143
+198
+125
+255
+255
+147
+209
+134
+255
+97
+182
+```
+
+## Clase 125
+### Stacking and Splitting Numpy Arrays
 
 
-
-
-
-
-
-
-
-
-
-
-## Clase 12
-###
+# Section15
 ## Clase 12
 ###
 ## Clase 12
