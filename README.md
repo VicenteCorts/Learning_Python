@@ -2578,4 +2578,134 @@ The rest of the code remains the same.
 ```
 
 ## Clase 120
-### 
+### Data Analysis Example: Converting Addresses to Coordinates
+Vamos a convertir los datos del DataFrame en coordenadas geográficas **(GEOCODING y REVERSEGEOCODING)** para trabajar con ellos. Crearemos dos columnas nuevas para la latitud y la altitud. Pandas no puede hacer este geocoding por ello emplearemos otra librería llamada **GEOPY**. El cual instalaremos mediante:
+```html
+# Consola normal
+pip3.13 install geopy
+
+# Jupyter Notebook
+import geopy
+dir(geopy)
+# Output
+['ArcGIS',
+ 'AzureMaps',
+ 'BANFrance',
+ 'Baidu',
+ 'BaiduV3',
+ 'Bing',
+ 'DataBC',
+ 'GeoNames',
+ 'GeocodeEarth',
+ 'Geocodio',
+ 'Geokeo',
+ 'Geolake',
+ 'GoogleV3',
+ 'Here',
+ 'HereV7',
+ 'IGNFrance',
+ 'LiveAddress',
+ 'Location',
+ 'MapBox',
+ 'MapQuest',
+ 'MapTiler',
+ 'Nominatim',
+ 'OpenCage',
+ 'OpenMapQuest',
+ 'Pelias',
+ 'Photon',
+ 'PickPoint',
+ 'Point',
+ 'Timezone',
+ 'TomTom',
+ 'What3Words',
+ 'What3WordsV3',
+ 'Woosmap',
+ 'Yandex',
+ '__builtins__',
+ '__cached__',
+ '__doc__',
+ '__file__',
+ '__loader__',
+ '__name__',
+ '__package__',
+ '__path__',
+ '__spec__',
+ '__version__',
+ '__version_info__',
+ 'adapters',
+ 'compat',
+ 'exc',
+ 'format',
+ 'geocoders',
+ 'get_geocoder_for_service',
+ 'get_version',
+ 'location',
+ 'point',
+ 'timezone',
+ 'units',
+ 'util']
+
+# Jupyter Notebook
+from geopy.geocoders import ArcGIS
+nom = ArcGIS()
+```
+Tras esta preparación inicial, comenzaremos con la geocodificación:
+```html
+nom.geocode("3666 21st St, San Francisco, CA 94114")
+# Output con altitud y latitud:
+Location(3666 21st St, San Francisco, California, 94114, (37.756632001957, -122.429411011948, 0.0))
+# Puede no lanzar output en caso de que la dirección sea inventada. -> None
+
+# Guardaremos el resultado en una variable para poder trabajar con ella:
+n=nom.geocode("3666 21st St, San Francisco, CA 94114")
+n.latitude
+# 37.756632001957
+n.longitude
+# -122.429411011948
+type(n)
+# geopy.location.Location
+```
+Ahora construiremos las nuevas columnas para llevar a cabo la recopilación de datos del geocoding:
+```html
+# Restauramos el archivo inicial para emplear sus ubicaciones:
+df1=pandas.read_csv('supermarkets.csv')
+df1
+
+# Modificamos la columna "Address" para que contenda la dirección completa y trabajar posteriormente con los datos de esta columna:
+df1["Address"] = df1["Address"]+ ", "+ df1["City"]+ ", "+ df1["State"]+ ", "+ df1["Country"]
+df1
+
+# Ahora emplearemos los datos de la nueva columna para la geocodificación:
+# usaremos el método de pandas: .apply():
+df1["Coordinates"] = df1["Address"].apply(nom.geocode)
+df1
+
+df1.Coordinates
+df1.Coordinates[0].latitude -> Lanzará la latitud
+
+# Ahora crearemos una columna específica para la latitud:
+df1["Latitude"] = df1["Coordinates"].apply(lambda x: x.latitude)
+df1
+
+# Ahora crearemos una columna específica para la longitud:
+df1["Longitude"] = df1["Coordinates"].apply(lambda x: x.longitude)
+df1
+-----------------------------------------------------------------
+Puede darnos un error en caso de que alguna de las direcciones no 
+sea real e intente aplicarle los métodos .latitude y/o .logitude; 
+para solucionar este problma podemos modificar el código con un
+condicional:
+
+# Ahora crearemos una columna específica para la latitud:
+df1["Latitude"] = df1["Coordinates"].apply(lambda x: x.latitude if x 1= None else None)
+df1
+
+# Ahora crearemos una columna específica para la longitud:
+df1["Longitude"] = df1["Coordinates"].apply(lambda x: x.longitude if x 1= None else None)
+df1
+```
+
+# Section 14
+## Clase 121
+###
