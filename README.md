@@ -2272,7 +2272,36 @@ df
 También puede emplearse para **Web scrapping**
 
 ## Clase 107
-### 
+### Cargando archivos CSV
+- Descargamos los archivos supermarkets
+- Abrimos jupyter notebook en su ubicación
+- Creamos un Nuevo>Python3(ipkernel)
+- Empezamos a jugar!
+- Antes de cargar estos archivos de supermarkets en Python, aquí nos muestran un truco para listar los documentos y poder copiar los nombres directamente:
+```html
+import os
+os.listdir()
+# Shift + Enter
+# Nos lanzará la lista de archivos
+['.ipynb_checkpoints',
+ 'fruits.txt',
+ 'supermarkets-commas.txt',
+ 'supermarkets-semi-colons.txt',
+ 'supermarkets.csv',
+ 'supermarkets.json',
+ 'supermarkets.xlsx',
+ 'temps_today.csv',
+ 'Untitled.ipynb',
+ 'verduras.txt']
+
+ # Continuamos:
+ import pandas
+ df1=pandas.read_csv('supermarkets.csv')
+ df1
+```
+![Output Clase 107](/img/Clase107.PNG)
+Una vez que cargamos el DataFrame podemos hacer infinidad de operaciones con él y finalmente podemos exportarlo a csv, excel, etc.
+
 ## Clase 10
 ### 
 ## Clase 10
