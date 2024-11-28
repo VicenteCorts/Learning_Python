@@ -2563,3 +2563,19 @@ list(df1.iloc[4])
 # [5, 'San Francisco', 'California', 'USA', 'Sanchez', 12, '12, Europe']
 ```
 
+## Clase 119
+### Note
+We are going to use **Nominatim()** in the next video. Nominatim() currently has a bug. To fix this problem, whenever you see these lines in the next video:
+```html
+from geopy.geocoders import Nominatim
+nom = Nominatim()
+```
+change them to these
+```html
+from geopy.geocoders import ArcGIS
+nom = ArcGIS()
+The rest of the code remains the same.
+```
+
+## Clase 120
+### 
