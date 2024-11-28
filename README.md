@@ -2495,12 +2495,71 @@ df1.drop(df1.iloc[1:5].index)
 
 ## Clase 118
 ### Update y Add nuevas Columnas y Filas
-#### COLUMNAS
+#### ADD COLUMNAS
+A la hora de crear una nueva columna, debemos tener en cuenta el número de valores que tenemos que indroducir en esta, porque si dejamos algún valor vacío dara ERROR:
+```html
+# Ver total de valores necesarios para crear columna:
+len(df1.index)
+# 6 -> debemos completar la columna con 6 valores
+```
+Para crear una columna usaremos el sigueinte código:
+```html
+df1["Continent"] = df1.shape[0]*["Europe"]
+df1
 
+or
 
+df1["Continent"] = ¡["Europe", "Australia", "Europe", "America, "America", "Asia"]
+df1
+```
+Del primer modo introducimos una columna con el Header "Continent" y los 6 valores necesarios con "Europe". al usar df1.shape nos devuelve (6,8) es decir (6 filas, 8 columnas). Al hacer uso de "df1.shape[0]*["Valor"]", le estamos diciendo a la consola Jupyter Notebook que introduzca ["Valor"] tantas veces como filas haya.
 
+#### UPDATE COLUMNAS
+```html
+# De forma general afectando a todas las filas de la columna:
+df1["Continent"] = df1["Address"] + ", " + "Europe"
+df1
 
-## Clase 11
-### 
-## Clase 11
-### 
+or -para tipo int-
+
+df1["Continent"] = df1["Employees"].astype(str) + ", " + "Europe"
+df1
+
+# De forma específica, cambiando solo uno de los datos
+df1.at[índice, 'nombre_columna'] = nuevo_valor
+df1.loc[índice, 'nombre_columna'] = nuevo_valor
+df1.iloc[número_fila, número_columna] = nuevo_valor
+```
+
+#### ADD FILAS
+Para añadir nuevas filas tomaremos un camino diferente, en primer lugar haremos una **conversión de la tabla (.T)**, para poner los índices en las columnas y las columnas en los índices:
+```html
+df1_t=df1.T
+df1_t
+```
+![Conversión Tabla Clase 118](/img/Clase118.png)
+Y posteriormente, trabajamos como si la fila a crear o modificar se tratase de una nueva columna siguiendo el apartado anterior de esta misma clase (respetando siempre el **tipo de dato, el orden y el número de valores a introducir**):
+```html
+df1_t["My Address"] = [7,"Mi ciudad", "Mi provincia?", "Mi país", "Mi tienda", 11, "Europa occidental"]
+df1_t
+```
+Y finalmente deshacemos la **conversión de la tabla (.T)**:
+```html
+df1=df1_t.T
+df1
+```
+
+#### AÑADIR FILA SEGÚN CLAUDE
+Otra forma menos enrevesada según **CLAUDE** sería:
+```html
+df1.loc['My Address2'] = [7,"Mi ciudad", "Mi provincia?", "Mi país", "Mi tienda", 11, "Europa occidental"]
+df1
+```
+
+#### UPDATE FILA
+Con los elementos vistos hasta ahora, no habría problema, podemos optar por la versión de la conversión de tabla y seguir el ejemplo de la modificación de columna o directamente emplear el ejemplo de Claude y añadir los valores que nos interesen.
+```html
+list(df1.iloc[4])
+# [5, 'San Francisco', 'California', 'USA', 'Sanchez', 12, '12, Europe']
+```
+
