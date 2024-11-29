@@ -2980,10 +2980,64 @@ To make the most of the videos, try to play around with the code that you see in
 ### Demo Web Map
 Trabajaremos con la librería **Folium**. La aplicación recogerá tres capas, una priemra de mapa, una segunda que refleje la población y una tercera que muestre los volcanes por zonas.
 
+## Clase 128
+### Creando mapa html con Python
+Documentación Folium: https://python-visualization.github.io/folium/latest/
+<br>
+
+En primer lugar necesitaremos la librería **Folium**. Folium permite que python se traduzca a html javascript y css; permitiendo crear webmaps usando código de python. PAra empezar a usarlo:
+```html
+pip3.13 install folium
+```
+Nos puede pedir que instalemos ademas jinja2, un paquete anexo de folium. Pero por defecto a nosotros nos lo instala con el comando anterior. **Ahora Comprobamos que folium funciona correctamente:**
+```html
+py -3
+>>> import folium
+>>> 
+# Si no nos da error todo está en orden
+```
+Folium trabaja con objetos **map**
+```html
+>>> dir(folium)
+['Choropleth', 'Circle', 'CircleMarker', 'ClickForLatLng', 'ClickForMarker',
+'ColorLine', 'ColorMap', 'CssLink', 'CustomIcon', 'Div', 'DivIcon',
+'Element', 'FeatureGroup', 'Figure', 'FitBounds', 'FitOverlays',
+'GeoJson', 'GeoJsonPopup', 'GeoJsonTooltip', 'Html', 'IFrame', 
+'Icon', 'JavascriptLink', 'JsCode', 'LatLngPopup', 'LayerControl',
+'LinearColormap', 'Link', 'MacroElement', 'Map', 'Marker', 'PolyLine',
+'Polygon', 'Popup', 'Rectangle', 'RegularPolygonMarker', 'StepColormap',
+'TileLayer', 'Tooltip', 'TopoJson', 'Vega', 'VegaLite', 'WmsTileLayer',
+'__all__', '__builtins__', '__cached__', '__doc__', '__file__',
+'__loader__', '__name__', '__package__', '__path__', '__spec__',
+'__version__', '_version', 'branca', 'elements', 'features', 'folium',
+'map', 'raster_layers', 'utilities', 'vector_layers']
+>>> help(folium.map)
+(...................)
+```
+Ahora **crearemos un obejto map**. Para ello necesitamos la latitud y longitud del punto donde queremos que inicie el mapa:
+- latitud: va de -90 a 90
+- longitud: -180 a 180
+```html
+>>> map = folium.Map(location=[40.42402, -3.711145])
+>>> map
+<folium.folium.Map object at 0x000001F55AC3B4D0>
+```
+Posteriormente con el siguiente código creamos un archivo html para utilizar, el cual iniciará en el punto de coordenadas establecido:
+```html
+# Sevilla:
+>>> map = folium.Map(location=[37.38283, -5.97317])
+>>> map.save("Map1.html")
+----------------------------------
+# Podemos añadir diferentes parámetros e ir jungando
+# Zoom:
+>>> map = folium.Map(location=[37.38283, -5.97317], zoom_start=15)
+>>> map.save("Map1.html")
+```
 
 
-## Clase 12
-###
+
+
+
 ## Clase 12
 ###
 ## Clase 12
