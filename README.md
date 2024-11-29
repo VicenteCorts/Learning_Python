@@ -2977,7 +2977,8 @@ This will help you practice the Python core concepts, and you will also learn ho
 To make the most of the videos, try to play around with the code that you see in the videos. Try to experiment with the code, change it, add more functionalities if you can, and see how the output changes. You will succeed if you do that.
 
 ## Clase 127
-### Demo Web MapBo
+### Demo Web Map
+Trabajaremos con la librería **Folium**. La aplicación recogerá tres capas, una priemra de mapa, una segunda que refleje la población y una tercera que muestre los volcanes por zonas.
 
 
 
