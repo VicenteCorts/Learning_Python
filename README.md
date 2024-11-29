@@ -3034,12 +3034,18 @@ Posteriormente con el siguiente código creamos un archivo html para utilizar, e
 >>> map.save("Map1.html")
 ```
 
+## Clase 129
+###Note
+In the next lecture, I use this in the code:
+```html
+tiles = "Mapbox Bright"
 
+# Please use this instead:
 
+tiles = "Stamen Terrain"
+```
+Mapbox Bright and Stamen Terrain are both types of base maps, but **Mapbox Bright doesn't work anymore**. Stamen Terrain works great, and you will see it creates a beautiful terrain map.
 
-
-## Clase 12
-###
 ## Clase 12
 ###
 ## Clase 12
