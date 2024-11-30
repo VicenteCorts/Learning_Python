@@ -3128,10 +3128,86 @@ map.save("Map1.html")
 Sin embargo, en este código anterior, introducimos manualmente las localizaciones, pero en situaciones reales, estas **locations** nos vendrán dadas en un excel, csv, json, etc. En la siguiente clase completaremos el código mediante el acceso y manipulación de archivos.
 
 ## Clase 132
-### 
+### Procesamiento de archivos + Marcadores
+Ahora completaremos el código mediante el acceso y manipulación de archivos para crear marcadores a través de bucle for:
+- Primero accederemos al archivo para ver si podemos leer la información contenida
+```html
+>>>import pandas
+>>>data = pandas.read_csv("downloads/Calles_Sevilla.csv")
+>>>data
+# Todo OK
+```
+- Luego, crearemos dos listas mediante pandas; una para la latitud y otra para la longitud. Y posteriormente iterar ambas listas medianto bucles for:
+```html
+>>> data.columns
+Index(['NOMBRE', 'NUMERO', 'LOCALIZACION', 'YEAR-CREATION', 'LAT', 'LON'], dtype='object')
 
-## Clase 13
+# LATITUDES
+>>> lat = list(data["LAT"])
+>>> lat
+[37.3886, 37.3839, 37.3984, 37.3823, 37.3827, 37.3869, 37.3903, 37.3846, 37.3912, 
+37.3936, 37.3893, 37.3723, 37.3925, 37.3932, 37.396, 37.3831, 37.3829, 37.3806, 37.3803, 37.3809, 37.3797, 37.3811, 37.3872, 37.4031, 37.4009, 37.4012, 37.4004, 37.4017, 37.4058, 37.4043, 37.4049, 37.4046, 37.4005, 37.3779, 37.3807, 37.38, 37.3824, 37.3862, 37.3877, 37.3897, 37.3908, 37.3923, 37.3895, 37.3864, 37.386, 37.3856, 37.389, 37.3791, 37.3748, 37.3759, 37.3721, 37.373, 37.3745, 37.3753, 37.3756, 37.3751, 37.3757, 37.3762, 37.3764, 37.376, 37.3758, 37.3767, 37.3769, 37.3772, 37.3774, 37.3777, 37.378, 37.3782, 37.3785, 37.3787, 37.3789, 37.3792, 37.3794, 37.3797, 37.3799, 37.3802, 37.3804, 37.3807, 37.3809, 37.3812]
+
+# LONGITUDES
+>>> lon = list(data["LON"])
+>>> lon
+[-5.9953, -6.0007, -5.9927, -6.0034, -6.0045, -5.9936, -5.9948, -5.9924, -5.9933, 
+-5.9901, -5.9952, -6.0012, -5.9964, -5.9908, -5.9852, -6.0049, -6.0058, -5.9902, -5.9774, -5.9756, -5.9745, -5.9725, -5.9752, -5.9843, -5.9867, -5.9904, -5.9929, -5.9911, -5.9871, -5.985, -5.9921, -5.9903, -5.9932, -6.0056, -6.005, -6.0065, -6.0021, -6.0004, -6.0008, -5.9961, -5.998, -5.9973, -5.9951, -5.9921, -5.9895, -5.9886, -5.994, -6.0072, -5.9976, -5.9971, -6.0005, -5.9986, -5.998, -5.9987, -5.9979, -5.9981, -5.9973, -5.9966, -5.9979, -5.9984, -5.9982, -5.9962, -5.9959, -5.9954, -5.995, -5.9946, -5.9941, -5.9936, -5.9932, -5.9928, -5.9924, -5.992, -5.9915, -5.9911, -5.9906, -5.9902, -5.9898, -5.9894, -5.989, -5.9885]
+>>> 
+```
+El resultado en código sería:
+```html
+# Librerías Importadas
+import pandas
+import folium
+
+# Acceder al archivo y extraer las LAT y LON
+data = pandas.read_csv("downloads/Calles_Sevilla.csv")
+lat = list(data["LAT"])
+lon = list(data["LON"])
+nom = list(data["NOMBRE"])
+
+# Crear mapa
+map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+
+# Crear Marcadores FeatureGroup
+fg = folium.FeatureGroup(name="My Map")
+
+# Bucle para recorrer las listas de LAT y LON (itera dos listas de manera simultánea)
+for lt, ln, n in zip(lat, lon, nom):
+    fg.add_child(folium.Marker(location=[lt, ln], popup=n, icon=folium.Icon(color='green')))
+
+# Afianzar Marcadores
+map.add_child(fg)
+
+# Crear archivo de mapa web
+map.save("Map1.html")
+```
+
+#### Bucle For para varias listas:
+Atención a la forma de declarar un bucle for para iterar por dos listas:
+```html
+>>> for i,j in zip([1,2,3],[4,5,6]):
+...     print(i, "and", j)
+... 
+1 and 4
+2 and 5
+3 and 6
+>>> 
+```
+
+## Clase 133
 ###
+
+
+
+
+
+
+
+
+
+
 ## Clase 13
 ###
 ## Clase 13

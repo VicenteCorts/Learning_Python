@@ -1,0 +1,81 @@
+NOMBRE,NUMERO,LOCALIZACION,YEAR-CREATION,LAT,LON
+Calle Sierpes,1,Casco Histórico,1825,37.3886,-5.9953
+Calle Betis,2,Triana,1850,37.3839,-6.0007
+Calle Feria,3,Casco Histórico,1600,37.3984,-5.9927
+Calle San Jacinto,4,Triana,1800,37.3823,-6.0034
+Calle Pureza,5,Triana,1750,37.3827,-6.0045
+Calle Alemanes,6,Casco Histórico,1300,37.3869,-5.9936
+Calle Tetuán,7,Casco Histórico,1900,37.3903,-5.9948
+Avenida de la Constitución,8,Casco Histórico,1858,37.3846,-5.9924
+Calle Alfalfa,9,Casco Histórico,1500,37.3912,-5.9933
+Calle Laraña,10,Casco Histórico,1800,37.3936,-5.9901
+Plaza Nueva,11,Casco Histórico,1851,37.3893,-5.9952
+Calle Asunción,12,Los Remedios,1940,37.3723,-6.0012
+Calle Alfonso XII,13,Casco Histórico,1880,37.3925,-5.9964
+Calle Imagen,14,Casco Histórico,1500,37.3932,-5.9908
+Calle Sol,15,Casco Histórico,1600,37.3960,-5.9852
+Calle Esperanza de Triana,16,Triana,1700,37.3831,-6.0049
+Calle Castilla,17,Triana,1800,37.3829,-6.0058
+Calle San Fernando,18,Casco Histórico,1850,37.3806,-5.9902
+Calle Amador de los Ríos,19,Nervión,1900,37.3803,-5.9774
+Avenida de la Buhaira,20,Nervión,1930,37.3809,-5.9756
+Avenida Eduardo Dato,21,Nervión,1950,37.3797,-5.9745
+Calle Luis Montoto,22,Nervión,1920,37.3811,-5.9725
+Calle Gonzalo Bilbao,23,Nervión,1900,37.3872,-5.9752
+Calle Oriente,24,Macarena,1750,37.4031,-5.9843
+Calle San Luis,25,Macarena,1600,37.4009,-5.9867
+Calle Relator,26,Macarena,1700,37.4012,-5.9904
+Calle Feria,27,Macarena,1500,37.4004,-5.9929
+Calle Parras,28,Macarena,1400,37.4017,-5.9911
+Calle Don Fadrique,29,Macarena,1900,37.4058,-5.9871
+Ronda de Capuchinos,30,Macarena,1950,37.4043,-5.9850
+Calle Resolana,31,Macarena,1800,37.4049,-5.9921
+Calle Virgen de la Macarena,32,Macarena,1900,37.4046,-5.9903
+Calle Feria,33,Macarena,1600,37.4005,-5.9932
+Calle Júpiter,34,Triana,1750,37.3779,-6.0056
+Calle Evangelista,35,Triana,1800,37.3807,-6.0050
+Calle Alfarería,36,Triana,1500,37.3800,-6.0065
+Calle Pagés del Corro,37,Triana,1850,37.3824,-6.0021
+Calle San Jorge,38,Triana,1600,37.3862,-6.0004
+Plaza del Altozano,39,Triana,1700,37.3877,-6.0008
+Calle Adriano,40,Casco Histórico,1800,37.3897,-5.9961
+Calle Arjona,41,Casco Histórico,1850,37.3908,-5.9980
+Calle Reyes Católicos,42,Casco Histórico,1800,37.3923,-5.9973
+Calle Zaragoza,43,Casco Histórico,1700,37.3895,-5.9951
+Calle Mateos Gago,44,Casco Histórico,1500,37.3864,-5.9921
+Calle Santa María la Blanca,45,Casco Histórico,1600,37.3860,-5.9895
+Calle Fabiola,46,Casco Histórico,1700,37.3856,-5.9886
+Calle Francos,47,Casco Histórico,1500,37.3890,-5.9940
+Calle Pescadores,48,Triana,1400,37.3791,-6.0072
+Calle Virgen del Valle,49,Los Remedios,1900,37.3748,-5.9976
+Calle Salado,50,Los Remedios,1930,37.3759,-5.9971
+Calle Niebla,51,Los Remedios,1950,37.3721,-6.0005
+Calle Virgen de Luján,52,Los Remedios,1920,37.3730,-5.9986
+Calle Virgen de Loreto,53,Los Remedios,1940,37.3745,-5.9980
+Calle Virgen del Águila,54,Los Remedios,1930,37.3753,-5.9987
+Calle Virgen del Carmen,55,Los Remedios,1900,37.3756,-5.9979
+Calle Virgen de la Cinta,56,Los Remedios,1940,37.3751,-5.9981
+Calle Virgen del Rosario,57,Los Remedios,1950,37.3757,-5.9973
+Calle Virgen de África,58,Los Remedios,1930,37.3762,-5.9966
+Calle Virgen del Remedio,59,Los Remedios,1900,37.3764,-5.9979
+Calle Virgen de Fátima,60,Los Remedios,1940,37.3760,-5.9984
+Calle Virgen de la Paz,61,Los Remedios,1950,37.3758,-5.9982
+Calle Virgen de Montserrat,62,Los Remedios,1930,37.3767,-5.9962
+Calle Virgen del Rocío,63,Los Remedios,1900,37.3769,-5.9959
+Calle Virgen del Valle,64,Los Remedios,1920,37.3772,-5.9954
+Calle Virgen del Pino,65,Los Remedios,1940,37.3774,-5.9950
+Calle Virgen del Pilar,66,Los Remedios,1930,37.3777,-5.9946
+Calle Virgen de Regla,67,Los Remedios,1900,37.3780,-5.9941
+Calle Virgen de Guadalupe,68,Los Remedios,1920,37.3782,-5.9936
+Calle Virgen de los Reyes,69,Los Remedios,1940,37.3785,-5.9932
+Calle Virgen del Sagrario,70,Los Remedios,1950,37.3787,-5.9928
+Calle Virgen del Rosario,71,Los Remedios,1930,37.3789,-5.9924
+Calle Virgen de Gracia,72,Los Remedios,1900,37.3792,-5.9920
+Calle Virgen de la Encarnación,73,Los Remedios,1920,37.3794,-5.9915
+Calle Virgen del Carmen Dolorosa,74,Los Remedios,1940,37.3797,-5.9911
+Calle Virgen del Amparo,75,Los Remedios,1950,37.3799,-5.9906
+Calle Virgen de Lourdes,76,Los Remedios,1930,37.3802,-5.9902
+Calle Virgen de las Angustias,77,Los Remedios,1900,37.3804,-5.9898
+Calle Virgen de la Luz,78,Los Remedios,1920,37.3807,-5.9894
+Calle Virgen de Belén,79,Los Remedios,1940,37.3809,-5.9890
+Calle Virgen del Dulce Nombre,80,Los Remedios,1950,37.3812,-5.9885

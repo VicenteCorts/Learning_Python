@@ -4,6 +4,7 @@
 ## La aplicación recogerá tres capas, una priemra de mapa, una segunda que refleje la población y una tercera que muestre los volcanes por zonas.
 
 # Clase 128-130
+'''
 # pip3.13 install folium
 import folium
 # Sevilla:
@@ -19,8 +20,40 @@ for coordinates in [[37.38, -5.97],[37.387, -5.977],[37.385, -5.975]]:
 map.add_child(fg)
 
 map.save("Map1.html")
+'''
 
+# Clase 131
+'''
+>>>import pandas
+>>>data = pandas.read_csv("downloads/Calles_Sevilla.csv")
+>>>data
+# Todo OK
+'''
+# Librerías Importadas
+import pandas
+import folium
 
+# Acceder al archivo y extraer las LAT y LON
+data = pandas.read_csv("downloads/Calles_Sevilla.csv")
+lat = list(data["LAT"])
+lon = list(data["LON"])
+nom = list(data["NOMBRE"])
+
+# Crear mapa
+map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+
+# Crear Marcadores FeatureGroup
+fg = folium.FeatureGroup(name="My Map")
+
+# Bucle para recorrer las listas de LAT y LON (itera dos listas de manera simultánea)
+for lt, ln, n in zip(lat, lon, nom):
+    fg.add_child(folium.Marker(location=[lt, ln], popup=n, icon=folium.Icon(color='green')))
+
+# Afianzar Marcadores
+map.add_child(fg)
+
+# Crear archivo de mapa web
+map.save("Map1.html")
 
 
 
