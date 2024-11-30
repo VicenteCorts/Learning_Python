@@ -3048,14 +3048,14 @@ Mapbox Bright and Stamen Terrain are both types of base maps, but **Mapbox Brigh
 
 ## Clase 130
 ### Map Marker
-Investigando más entre los parámetros de **folium.map**, encontramos tiles:
+Investigando más entre los parámetros de **folium.map**, encontramos **tiles** para modificar el fondo del mapa o el tipo (político, topográfico, etc):
 ```html
 import folium
 # Sevilla:
 map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
 map.save("Map1.html")
 ```
-#### Otros ejemplos de Statemen:
+#### Otros ejemplos de tiles:
 ```html
 # Stamen parece que ya no da soporte y no funciona
 # Stamen Terrain
@@ -3093,10 +3093,43 @@ map.add_child(fg)
 map.save("Map1.html")
 ```
 
-## Clase 13
-###
-## Clase 13
-###
+## Clase 131
+### Bucle For para añadir múltiples marcadores
+La opción más rústica sería añadir el código **fg.add_child tantas veces como deseemos** y modificar la **location** para establecer los diferentes marcadores:
+```html
+# Sevilla:
+map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+
+fg = folium.FeatureGroup(name="My Map")
+fg.add_child(folium.Marker(location=[37.38, -5.97], popup="Markador 1", icon=folium.Icon(color='green')))
+fg.add_child(folium.Marker(location=[37.387, -5.977], popup="Markador 2", icon=folium.Icon(color='red')))
+fg.add_child(folium.Marker(location=[37.385, -5.975], popup="Markador 3", icon=folium.Icon(color='blue')))
+
+map.add_child(fg)
+
+map.save("Map1.html")
+```
+Pero la forma óptima de hacerlo sería mediante un **bucle for**:
+```html
+# Sevilla:
+map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+
+fg = folium.FeatureGroup(name="My Map")
+
+i = 1
+for coordinates in [[37.38, -5.97],[37.387, -5.977],[37.385, -5.975]]:
+    fg.add_child(folium.Marker(location=coordinates, popup="Markador {}".format(i), icon=folium.Icon(color='green')))
+    i = i+1
+
+map.add_child(fg)
+
+map.save("Map1.html")
+```
+Sin embargo, en este código anterior, introducimos manualmente las localizaciones, pero en situaciones reales, estas **locations** nos vendrán dadas en un excel, csv, json, etc. En la siguiente clase completaremos el código mediante el acceso y manipulación de archivos.
+
+## Clase 132
+### 
+
 ## Clase 13
 ###
 ## Clase 13

@@ -10,7 +10,11 @@ import folium
 map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
 
 fg = folium.FeatureGroup(name="My Map")
-fg.add_child(folium.Marker(location=[37.38, -5.97], popup="Markador 1", icon=folium.Icon(color='green')))
+
+i = 1
+for coordinates in [[37.38, -5.97],[37.387, -5.977],[37.385, -5.975]]:
+    fg.add_child(folium.Marker(location=coordinates, popup="Markador {}".format(i), icon=folium.Icon(color='green')))
+    i = i+1
 
 map.add_child(fg)
 
