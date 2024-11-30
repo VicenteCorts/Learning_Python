@@ -3039,14 +3039,85 @@ Posteriormente con el siguiente código creamos un archivo html para utilizar, e
 In the next lecture, I use this in the code:
 ```html
 tiles = "Mapbox Bright"
-
+tiles = "Stamen Terrain"
 # Please use this instead:
 
-tiles = "Stamen Terrain"
+tiles = "OpenTopoMap"
 ```
 Mapbox Bright and Stamen Terrain are both types of base maps, but **Mapbox Bright doesn't work anymore**. Stamen Terrain works great, and you will see it creates a beautiful terrain map.
 
-## Clase 12
+## Clase 130
+### Map Marker
+Investigando más entre los parámetros de **folium.map**, encontramos tiles:
+```html
+import folium
+# Sevilla:
+map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+map.save("Map1.html")
+```
+#### Otros ejemplos de Statemen:
+```html
+# Stamen parece que ya no da soporte y no funciona
+# Stamen Terrain
+map = folium.Map(location=[37.38283, -5.97317], tiles="Stamen Terrain", attr="Stamen")
+
+# Stamen Watercolor
+map = folium.Map(location=[37.38283, -5.97317], tiles="Stamen Watercolor", attr="Stamen")
+
+# OpenStreetMap
+map = folium.Map(location=[37.38283, -5.97317], tiles="OpenStreetMap")
+
+# Otros estilos
+map = folium.Map(location=[37.38283, -5.97317], tiles="CartoDB positron", attr="CartoDB")
+```
+#### Incluir puntos o marcadores en el mapa
+```html
+dir(folium)
+(...)
+# En esta ocsaión ejecutamos el archivo .py directamente:
+map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+
+map.add_child(folium.Marker(location=[37.38, -5.97], popup="Ey soy un Marker", icon=folium.Icon(color='green')))
+
+map.save("Map1.html")
+```
+Una forma mejor de hacerlo es añadiendo un **FeatureGroup** (fg) para facilitar el trabajo posterior:
+```html
+map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+
+fg = folium.FeatureGroup(name="My Map")
+fg.add_child(folium.Marker(location=[37.38, -5.97], popup="Markador 1", icon=folium.Icon(color='green')))
+
+map.add_child(fg)
+
+map.save("Map1.html")
+```
+
+## Clase 13
 ###
-## Clase 12
+## Clase 13
 ###
+## Clase 13
+###
+## Clase 13
+###
+## Clase 13
+###
+## Clase 13
+###
+## Clase 13
+###
+## Clase 13
+###
+## Clase 13
+###
+## Clase 14
+###
+## Clase 14
+###
+## Clase 14
+###
+## Clase 14
+###
+
+# Section16
