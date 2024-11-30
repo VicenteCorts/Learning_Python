@@ -3197,18 +3197,30 @@ Atención a la forma de declarar un bucle for para iterar por dos listas:
 ```
 
 ## Clase 133
-###
+### Practicing String Manipulation by Adding Text on the Map Popup Window.
+En el ejemplo de la clase anterior
+```html
+for lt, ln, n in zip(lat, lon, nom):
+    fg.add_child(folium.Marker(location=[lt, ln], popup=n, icon=folium.Icon(color='green')))
+```
+Nosotros no presentamos problemas con "popup=n", porque se trata de un string. Pero si quisiéramos meter en el marcador un valor que sea int o float deberemos hacer conversiones.
+```html
+# Si "n" fuera int o float:
+for lt, ln, n in zip(lat, lon, nom):
+    fg.add_child(folium.Marker(location=[lt, ln], popup=str(n), icon=folium.Icon(color='green')))
 
+# Nota: puede ser que se lance una webmap negra si el string contiene comillas ('). Para evitar eso, cambiar el popup a:
+popup=folium.Popup(str(n), parse_html=True)
 
+# Aunque para strings simples como puede ser un número suelto no debería dar problemas mayores.
+```
+Podemos dar estilos o modificar el popup añadiendo más información:
+```html
+for lt, ln, n in zip(lat, lon, nom):
+    fg.add_child(folium.Marker(location=[lt, ln], popup="Calle "+ n, icon=folium.Icon(color='green')))
+```
 
-
-
-
-
-
-
-
-## Clase 13
+## Clase 134
 ###
 ## Clase 13
 ###
