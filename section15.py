@@ -111,7 +111,18 @@ def determinar_color(calle):
     return 'grey'
 
 # Crear mapa
-map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+# map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+attr = (
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
+    'contributors, Tiles courtesy of <a href="https://www.openstreetmap.cat" '
+    'target="_blank">Breton OpenStreetMap Team</a>'
+)
+tiles = "https://tile.openstreetmap.bzh/ca/{z}/{x}/{y}.png"
+map= folium.Map(location=[37.38283, -5.97317], tiles=tiles, attr=attr, zoom_start=15)
+# Mapa mudo extraído de:
+## https://python-visualization.github.io/folium/latest/user_guide/raster_layers/tiles.html
+## https://leaflet-extras.github.io/leaflet-providers/preview/
+## https://leaflet-extras.github.io/leaflet-providers/preview/#filter=OpenStreetMap.CAT
 
 # Crear Marcadores FeatureGroup
 fg = folium.FeatureGroup(name="My Map")

@@ -3336,13 +3336,16 @@ Podemos añadir puntos o líneas a través del GeoJson, todo en base a su conten
 
 ## Clase 141
 ### Stylizing the Population Layer
+Ahora probaremos algunos métodos y funciones para editar el estilo de la capa de polígonos:
+```html
+```
 
 
 
-
-## Clase 14
+## Clase 142
 ###
-## Clase 14
-###
+
 
 # Section16
+## Clase 
+### 
