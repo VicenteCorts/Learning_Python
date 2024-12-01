@@ -3311,7 +3311,13 @@ You can use **dir(folium)**  to look for possible methods of creating circle mar
 Once you locate the method, consider using **the help  function** to look for possible arguments you can pass to the method for styling the circle markers.
 
 ## Clase 138
-### 
+### Solution: Add and Stylize Markers
+```html
+    fg.add_child(folium.CircleMarker(location=[lt, ln], radius=10, popup=folium.Popup(iframe), fill_color = determinar_color(n), color = 'grey', fill_opacity=1))
+
+# Si da error y no se rellena el cículo de color emplearmeos como parámetro adicional:
+fill=True 
+```
 ## Clase 13
 ###
 ## Clase 14

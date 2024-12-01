@@ -120,7 +120,7 @@ fg = folium.FeatureGroup(name="My Map")
 # Bucle para recorrer las listas de LAT y LON (itera dos listas de manera simultánea)
 for lt, ln, n in zip(lat, lon, nom):
     iframe = folium.IFrame(html=html % str(n), width=200, height=100)
-    fg.add_child(folium.CircleMarker(location=[lt, ln], popup=folium.Popup(iframe), fill_color = determinar_color(n), color = 'grey', fill_opacity=1))
+    fg.add_child(folium.CircleMarker(location=[lt, ln], radius=10, popup=folium.Popup(iframe), fill_color = determinar_color(n), color = 'grey', fill_opacity=1))
 
 # Afianzar Marcadores
 map.add_child(fg)
