@@ -3325,10 +3325,21 @@ Ahora en el curso se establece una capa adicional al mapa en la que se represent
 
 Para crear una capa con polígonos emplearemos el objeto **Folium.GeoJson**. En el curso trabajan con el archivo world.json, a través de ChatGPT crearemos sevilla_zonas.json (importante añadir la geometría y la población)
 
-## Clase 14
-###
-## Clase 14
-###
+## Clase 140
+### Practicing JSON Data by Adding a Population Map Layer from the Data
+Tras la creación del archivo que vamos a emplear y una primera toma de contacto, vamos a añadir dicho archivo a neustro código para elaborar la capa de población para nuestro mapa:
+```html
+fg.add_child(folium.GeoJson(data=(open("downloads/sevilla_zonas_with_pop.json", 'r', encoding='utf-8').read())))
+# Los polígonos son mejorables pero al menos los marca en el mapa.
+```
+Podemos añadir puntos o líneas a través del GeoJson, todo en base a su contenido. En la siguiente clase haremos que estos cambien de color en función de su población.
+
+## Clase 141
+### Stylizing the Population Layer
+
+
+
+
 ## Clase 14
 ###
 ## Clase 14

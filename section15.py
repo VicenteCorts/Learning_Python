@@ -122,7 +122,7 @@ for lt, ln, n in zip(lat, lon, nom):
     fg.add_child(folium.CircleMarker(location=[lt, ln], radius=10, popup=folium.Popup(iframe), fill_color = determinar_color(n), color = 'grey', fill_opacity=1))
 
 # Clase 139 - Añadir polígonos al mapa (Folium.GeoJson)
-fg.add_child(folium.GeoJson("downloads/sevilla_zonas.json"))
+fg.add_child(folium.GeoJson(data=(open("downloads/sevilla_zonas_with_pop.json", 'r', encoding='utf-8').read())))
 
 # Afianzar Marcadores
 map.add_child(fg)
