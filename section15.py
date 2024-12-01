@@ -28,7 +28,7 @@ map.save("Map1.html")
 >>>data = pandas.read_csv("downloads/Calles_Sevilla.csv")
 >>>data
 # Todo OK
-'''
+
 # Librerías Importadas
 import pandas
 import folium
@@ -76,8 +76,57 @@ map.add_child(fg)
 
 # Crear archivo de mapa web
 map.save("Map1.html")
+'''
 
+# Clase 138
 
+# Librerías Importadas
+import pandas
+import folium
+
+# Acceder al archivo y extraer las LAT y LON
+data = pandas.read_csv("downloads/Calles_Sevilla.csv")
+lat = list(data["LAT"])
+lon = list(data["LON"])
+nom = list(data["NOMBRE"])
+
+# Variable html para insertar en el popup
+html = """<h4>Nombre del marcador:</h4>
+dirección: %s
+"""
+
+# Calase 135 Función para determinar el color en función de si es calle avda u otro
+def determinar_color(calle):
+    calle = calle.lower()
+    color_variador = {
+        'calle': 'blue',
+        'avenida': 'red', 
+        'plaza': 'green',
+        'paseo': 'purple',
+        'camino': 'orange',
+        'boulevard': 'pink'
+    }
+    for tipo, color in color_variador.items():
+        if tipo in calle:
+            return color
+    return 'grey'
+
+# Crear mapa
+map = folium.Map(location=[37.38283, -5.97317], zoom_start=15, tiles="OpenTopoMap")
+
+# Crear Marcadores FeatureGroup
+fg = folium.FeatureGroup(name="My Map")
+
+# Bucle para recorrer las listas de LAT y LON (itera dos listas de manera simultánea)
+for lt, ln, n in zip(lat, lon, nom):
+    iframe = folium.IFrame(html=html % str(n), width=200, height=100)
+    fg.add_child(folium.CircleMarker(location=[lt, ln], popup=folium.Popup(iframe), fill_color = determinar_color(n), color = 'grey', fill_opacity=1))
+
+# Afianzar Marcadores
+map.add_child(fg)
+
+# Crear archivo de mapa web
+map.save("Map1.html")
 
 
 
