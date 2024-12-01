@@ -3276,9 +3276,32 @@ map.save("Map_html_popup_advanced.html")
 ```
 
 ## Clase 135
+### Practicing Functions by Creating a Color Generation Function for Markers
+Añadiremos una función para detemrinar el color del marcador en función de la información de la coordenada que obtenemos:
+```html
+# Calase 135 Función para determinar el color en función de si es calle avda u otro
+def determinar_color(calle):
+    calle = calle.lower()
+    color_variador = {
+        'calle': 'blue',
+        'avenida': 'red', 
+        'plaza': 'green',
+        'paseo': 'purple',
+        'camino': 'orange',
+        'boulevard': 'pink'
+    }
+    for tipo, color in color_variador.items():
+        if tipo in calle:
+            return color
+    return 'gray'
+
+# Y modificamos el FeatureGroup del bucle for para incluir el color en el icono:
+fg.add_child(folium.Marker(location=[lt, ln], popup=folium.Popup(iframe), icon=folium.Icon(color=determinar_color(n))))
+```
+
+## Clase 136
 ###
-## Clase 13
-###
+
 ## Clase 13
 ###
 ## Clase 13
