@@ -3318,8 +3318,13 @@ Once you locate the method, consider using **the help  function** to look for po
 # Si da error y no se rellena el cículo de color emplearmeos como parámetro adicional:
 fill=True 
 ```
-## Clase 13
-###
+## Clase 139
+### Exploring the Population JSON Data
+Ahora en el curso se establece una capa adicional al mapa en la que se representa mediante polígonos la población de estados unidos. Nosotros modificaremos esto levemente para representar mediante polígonos el año de construcción de las calles, veamos si es posible.
+<br>
+
+Para crear una capa con polígonos emplearemos el objeto **Folium.GeoJson**. En el curso trabajan con el archivo world.json, a través de ChatGPT crearemos sevilla_zonas.json (importante añadir la geometría y la población)
+
 ## Clase 14
 ###
 ## Clase 14

@@ -79,7 +79,6 @@ map.save("Map1.html")
 '''
 
 # Clase 138
-
 # Librerías Importadas
 import pandas
 import folium
@@ -90,12 +89,12 @@ lat = list(data["LAT"])
 lon = list(data["LON"])
 nom = list(data["NOMBRE"])
 
-# Variable html para insertar en el popup
+# Variable html para insertar en el popup como iframe
 html = """<h4>Nombre del marcador:</h4>
 dirección: %s
 """
 
-# Calase 135 Función para determinar el color en función de si es calle avda u otro
+# Calase 135 - Función para determinar el color en función de si es calle avda u otro
 def determinar_color(calle):
     calle = calle.lower()
     color_variador = {
@@ -121,6 +120,9 @@ fg = folium.FeatureGroup(name="My Map")
 for lt, ln, n in zip(lat, lon, nom):
     iframe = folium.IFrame(html=html % str(n), width=200, height=100)
     fg.add_child(folium.CircleMarker(location=[lt, ln], radius=10, popup=folium.Popup(iframe), fill_color = determinar_color(n), color = 'grey', fill_opacity=1))
+
+# Clase 139 - Añadir polígonos al mapa (Folium.GeoJson)
+fg.add_child(folium.GeoJson("downloads/sevilla_zonas.json"))
 
 # Afianzar Marcadores
 map.add_child(fg)
