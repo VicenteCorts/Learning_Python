@@ -3340,8 +3340,6 @@ Ahora probaremos algunos métodos y funciones para editar el estilo de la capa d
 ```html
 ```
 
-
-
 ## Clase 142
 ###
 
