@@ -3346,8 +3346,45 @@ fg.add_child(folium.GeoJson(data=open("downloads/sevilla_zonas_with_pop.json", '
 ```
 
 ## Clase 142
-###
+### Adding a Layer Control Panel
+Actualmente el mapa tiene una capa de mapa, una de marcadores y otra de polígonos. Ahora añadiremos una última capa de panel de control para poder esconder las capas de marcadores y polígonos a voluntad.
+```html
+# Al final del código pero antes del map.save()
+map.add_child(folium.LayerControl())
+```
+Con este código podemos desactivar la capa Mymap, que actualmente lo contiene todo (marcadores y polígonos; el mapa no se puede ocultar). Separemos ahora ambas capas para poder tener un control más preciso.
+- Para ello separamos los Feature Groups añadiéndoles una letra más (**fgm** para marcadore sy **fgp** para polígonos).
+- Creamos los map.add_child() correspondientes
+- Y modificamos las variables necesarias dentro del código:
+```html
+# Crear Marcadores FeatureGroup
+fgm = folium.FeatureGroup(name="My Map Marcadores")
 
+# Bucle para recorrer las listas de LAT y LON (itera dos listas de manera simultánea)
+for lt, ln, n in zip(lat, lon, nom):
+    iframe = folium.IFrame(html=html % str(n), width=200, height=100)
+    fgm.add_child(folium.CircleMarker(location=[lt, ln], radius=10, popup=folium.Popup(iframe), fill_color = determinar_color(n), color = 'grey', fill_opacity=1))
+
+# Crear Polígonos FeatureGroup
+fgp = folium.FeatureGroup(name="My Map Polígonos")
+
+# Clase 139 - Añadir polígonos al mapa (Folium.GeoJson)
+fgp.add_child(folium.GeoJson(data=open("downloads/sevilla_zonas_with_pop.json", 'r', encoding='utf-8').read(),
+    style_function=lambda x: {'fillColor': 'green' if x['properties']['POP']< 50000 
+    else 'yellow' if 50000 <= x['properties']['POP']< 100000 else 'red' }))
+
+# Afianzar Marcadores
+map.add_child(fgm)
+
+# Afianzar Polígonos
+map.add_child(fgp)
+
+# Clase 142 - Capa de control
+map.add_child(folium.LayerControl())
+
+# Crear archivo de mapa web
+map.save("Map1.html")
+```
 
 # Section16
 ## Clase 
