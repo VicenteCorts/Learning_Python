@@ -3678,10 +3678,38 @@ I first created a list containing the image file paths and then iterated through
 
 The loop: reads each image, resizes, displays the image, waits for the user input key, closes the window once the key is pressed, and writes the resized image. The name of the resized image will be "resized" plus the existing file name of the original image.
 
-## Clase 15
-### 
-https://docs.python.org/3/library/glob.html
-## Clase 15
+## Clase 154
+### Solution Further Explained
+Para realizar el ejercicio anterior emplearemos la librería **glob** ->https://docs.python.org/3/library/glob.html
+<br>
+
+Glob encuentra el path de los archivos indicándole parte del path, en este caso, todos los que temrinen en jpg:
+```html
+images=glob.glob("*.jpg")
+```
+
+Para mi caso, que quiero guardarlas en una carpeta específica, tendré que importar os y añadir variables para las carpetas:
+```html
+# Ejercicio de resize de imagenes Clase 152-153
+import cv2
+import glob
+import os
+
+folder = "img/152/"
+images=glob.glob(folder + "*.jpg")
+
+for image in images:
+    img=cv2.imread(image,0)
+    re=cv2.resize(img,(100,100))
+    cv2.imshow("Hey",re)
+    cv2.waitKey(400)
+    cv2.destroyAllWindows()
+->  filename = os.path.basename(image)
+->  output_path = os.path.join(folder, "resized_" + filename)
+    cv2.imwrite(output_path,re)
+```
+
+## Clase 155
 ### 
 
 ## Clase 15

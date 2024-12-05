@@ -20,16 +20,20 @@ cv2.destroyAllWindows()
 # Ejercicio de resize de imagenes Clase 152-153
 import cv2
 import glob
+import os
 
-images=glob.glob("*.jpg")
+folder = "img/152/"
+images=glob.glob(folder + "*.jpg")
 
 for image in images:
     img=cv2.imread(image,0)
     re=cv2.resize(img,(100,100))
     cv2.imshow("Hey",re)
-    cv2.waitKey(500)
+    cv2.waitKey(400)
     cv2.destroyAllWindows()
-    cv2.imwrite("resized_"+image,re)
+    filename = os.path.basename(image)
+    output_path = os.path.join(folder, "resized_" + filename)
+    cv2.imwrite(output_path,re)
 
 
 
