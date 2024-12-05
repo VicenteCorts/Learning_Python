@@ -3777,5 +3777,134 @@ cv2.imshow("Cara", re)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+## Clase 156
+### Capturing Video with Python
+En esta clase aprenderemos a capturar video mediante Opencv. 
+```html
+# Importamos Librerías
+import cv2, time
+
+# Crear objeto video - el número indica qué cámara actuará- al tener solo una, marcamos el primer índice: 0
+video=cv2.VideoCapture(0)
+```
+Comprobaremos que está funcionando la webcam:
+```html
+# Revisión de los frames que captura la webcam
+check, frame = video.read()
+print(check)
+print(frame)
+
+# Ralentizar la ejecución del script para comprobar si la webcam se activa
+time.sleep(3)
+
+# Liberar/Parar la webcam
+video.release() 
+------------------------------
+# Output:
+True
+[[[100  82  41]
+  [100  82  41]
+  [ 98  81  41]
+  ...
+  [ 51  49  28]
+  [ 51  49  29]
+  [ 52  49  29]]
+ ...
+ [[ 53  48  23]
+  [ 52  47  22]
+  [ 50  45  20]
+  ...
+  [ 18  18   2]
+  [ 22  23   7]
+  [ 18  19   3]]]
+```
+En el siguiente test, haremos que python lance el primer frame que captura la cámara en este proceso:
+```html
+# Mostrar Captura de Video
+cv2.imshow("Capturing", frame)
+
+# Liberar/Parar la webcam y las ventanas de testing de captura
+cv2.waitKey(0)
+video.release() 
+cv2.destroyAllWindows
+```
+Otra de las pruebas que haremos será pasar el frame a escala de grises y cambiaremos la muestra de la captura de video a escala de grises:
+```html
+# Revisión de los frames que captura la webcam
+check, frame = video.read()
+print(check)
+print(frame) # Por defecto es el primer frame que la cámara captura
+
+-> # Imagen en gris (tests)
+gray=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+# Ralentizar la ejecución del script para comprobar si la webcam se activa
+time.sleep(3)
+
+# Mostrar Captura de Video
+-> cv2.imshow("Capturing", gray)
+```
+
+#### Trabajando con Vídeo, no frames
+Para ello, haremos uso de un buble while, para ir viendo todos los frames de la webcam hasta que indiquemos que se detenga.
+- eliminaremos el time.sleep()
+- Cambiaremos el cv2.waitKey y pondremos un condicional para forzar la salida del bucle
+- Cambiaremos la cv2.waitKey() a 1000
+<br>
+Código completo:
+```html
+# Importamos Librerías
+import cv2, time
+
+# Crear objeto video - el número indica qué cámara actuará- al tener solo una, marcamos el primer índice: 0
+video=cv2.VideoCapture(0)
+
+# Bucle While para pasar de formato imagen (frame) a video (bucle de frames)
+while True:
+    # Revisión de los frames que captura la webcam
+    check, frame = video.read()
+    # print(check)
+    # print(frame) # Por defecto es el primer frame que la cámara captura
+
+    # Imagen en gris (tests)
+    gray=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    # Ralentizar la ejecución del script para comprobar si la webcam se activa
+    # time.sleep(3)
+
+    # Mostrar Captura de Video
+    cv2.imshow("Capturing", gray)
+
+    # Liberar/Parar la webcam y las ventanas de testing de captura
+    key=cv2.waitKey(1)
+    if key==ord('q'):
+        break
+
+video.release() 
+cv2.destroyAllWindows
+print("Webcam Off")
+```
+Por último, podemos saber cuantos frames se están generando de la sigueinte manera, por si es de utilidad en un futuro:
+```html
+# Variable para contar frames (por curiosear)
+a=1
+
+# Bucle While para pasar de formato imagen (frame) a video (bucle de frames)
+while True:
+    # Contando frames
+    a = a + 1
+    (...)
+    (...)
+
+(...)
+print("Total de frames: {}".format(a))
+```
+
+# Section18
 ## Clase 15
-### 
+###
+
+
+
+
+
