@@ -3424,7 +3424,34 @@ Ahora tenemos un error con mayor descripción donde nos recomienda correcciones.
 
 ## Clase 145
 ### Runtime Errors
+Todo error que no sea un **Syntax Error** se denomina **Exception**. Este será nuestro código erróneo:
+```html
+a = 1
+b = "2"
+print(int(2.5)
+print ( a + b )
+```
+Al ejecutarlo:
+```html
+Applications\Python\section16.py", line 13
+    print(int(2.5)
+         ^
+SyntaxError: '(' was never closed
+```
+El programa priemro busca los **syntax errors**, y una vez están corregidos, busca **Exceptions**. Al corregir ese paréntesis anterior y ejecutar el código nos lanzará el sigueinte error:
+```html
+  File "a:\Programacion Web\(Cursos)-Udemy\Python Mega Course Buils 10 real world 
+Applications\Python\section16.py", line 14, in <module>
+    print( a + b )
+           ~~^~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
+# Corrección:
+a = 1
+b = "2"
+print(int(2.5))
+print( a + float(b))
+```
 
 ## Clase 14
 ### 
