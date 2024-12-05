@@ -3476,7 +3476,32 @@ Hay Errores que vienen definidos por su propio nombre como es este caso de **Zer
 (...)
 
 ## Clase 148
-### 
+### Making the Code Handle Errors by Itself
+```html
+# Código
+def divide(a,b):
+    return a/b
+print(divide(1,0))
+
+# Error:
+  File "a:\Programacion Web\(Cursos)-Udemy\Python Mega Course Buils 10 real world Applications\Python\section16.py", line 30, in <module>
+    print(divide(1,0))
+          ~~~~~~^^^^^
+  File "a:\Programacion Web\(Cursos)-Udemy\Python Mega Course Buils 10 real world Applications\Python\section16.py", line 29, in divide
+    return a/b
+           ~^~
+ZeroDivisionError: division by zero
+```
+Ahora haremos uso de **try: except:**:
+```html
+def divide(a,b):
+    try:
+        return a/b
+    except:
+        return "Zero division can't be done"
+
+print(divide(1,0))
+```
 
 # Section17
 ## Clase 149

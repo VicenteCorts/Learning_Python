@@ -16,12 +16,19 @@ print( a + float(b))
 '''
 
 # Clase 146
-
+'''
 a = 1
 b = "2"
 c = 3
 print(int(2.5))
 print( c/0)
+'''
 
+# Clase 148
+def divide(a,b):
+    try:
+        return a/b
+    except ZeroDivisionError:
+        return "Zero division can't be done"
 
-
+print(divide(1,0))
