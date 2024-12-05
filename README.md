@@ -3525,8 +3525,133 @@ import cv2
 
 FAQs -> https://www.udemy.com/course/former-python-mega-course-build-10-real-world-applications/learn/lecture/34362862#announcements
 
-## Clase 15
-### 
+## Clase 151
+### Loading, Displaying, Resizing, and Creating Images
+Ahora manipularemos la imagen "galaxy.jpg".
+- primero debemos importar la librería
+- luego crearemos la imagen con el método cv2.imread()
+- dentro de este método tenemos que especificar como parámetro, cómo queremos leer la imagen: 1 para leerla con colores, 0 para escala de grises, -1 colores con trasparencias.
+
+#### Cargar la imagen
+```html
+import cv2
+
+# Cargar la imagen
+img = cv2.imread("img/galaxy.jpg", 0)
+
+print(type(img))-> tipo de dato de la variable
+print(img)-> array de escala de grises
+print(img.shape)-> para ver la coneitdad de píxeles
+print(img.ndim) -> para ver las dimensiones del array
+
+# Output:
+<class 'numpy.ndarray'>
+[[14 18 14 ... 20 15 16]
+ [12 16 12 ... 20 15 17]
+ [12 13 16 ... 14 24 21]
+ ...
+ [ 0  0  0 ...  5  8 14]
+ [ 0  0  0 ...  2  3  9]
+ [ 1  1  1 ...  1  1  3]]
+ (1485, 990)
+ 2
+```
+Si por el contrario probamos a cargar la imagen en color, los outputs varíarían:
+```html
+# Cargar la imagen con color
+img = cv2.imread("img/galaxy.jpg", 1)
+
+# Output
+<class 'numpy.ndarray'>
+[[[19 15 10]
+  [23 19 14]
+  [21 15  8]
+  ...
+  [27 22 13]
+  [22 17  8]
+  [23 18  9]]
+
+ [[17 13  8]
+  [21 17 12]
+  [19 13  6]
+  ...
+  [27 22 13]
+  [22 17  8]
+  [24 19 10]]
+
+ [[17 14  6]
+  [18 15  7]
+  [21 18 10]
+  ...
+  [23 16  7]
+  [33 26 17]
+  [30 23 14]]
+
+ ...
+
+ [[ 0  0  0]
+  [ 0  0  0]
+  [ 0  0  0]
+  ...
+  [ 5  5  5]
+  [ 8  8  8]
+  [14 14 14]]
+
+ [[ 0  0  0]
+  [ 0  0  0]
+  [ 0  0  0]
+  ...
+  [ 2  2  2]
+  [ 3  3  3]
+  [ 9  9  9]]
+
+ [[ 1  1  1]
+  [ 1  1  1]
+  [ 1  1  1]
+  ...
+  [ 1  1  1]
+  [ 1  1  1]
+  [ 3  3  3]]]
+(1485, 990, 3)
+3
+```
+#### Mostrar la imagen:
+```html
+cv2.imshow("Galaxy", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# INFO
+0: cerrar ventana con cualquier tecla
+2000: la ventana se cerrará en 2 segundos
+cv2.destroyAllWindows(): Para cerrar todas las ventanas
+```
+
+#### Resize Image
+```html
+resized_image=cv2.resize(img, (1000, 500))
+cv2.imshow("Galaxy", resized_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+La imagen se ve muy achatada debido a los valores que hemos introducido, podemos modificarlos para dejarla a nuestro gusto:
+```html
+resized_image=cv2.resize(img, (500, 1000))
+``` 
+O podemos mantener el ratio de la imagen de la sigueinte fomra:
+```html
+resized_image=cv2.resize(img, (int(img.shape[1]/2), int(img.shape[0]/2)))
+```
+
+#### Escribir imagen
+En este caso, no la modificamos pero la guardamos. tomaremos la imagen resized y la guardaremos como nueva imagen con **cv2.imwrite("img/Galaxy_resized.jpg", resized_image)**:
+```html
+resized_image=cv2.resize(img, (int(img.shape[1]/2), int(img.shape[0]/2)))
+cv2.imshow("img/Galaxy", resized_image)
+cv2.imwrite("Galaxy_resized.jpg", resized_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 
 ## Clase 15
 ### 
@@ -3536,7 +3661,7 @@ FAQs -> https://www.udemy.com/course/former-python-mega-course-build-10-real-wor
 
 ## Clase 15
 ### 
-
+https://docs.python.org/3/library/glob.html
 ## Clase 15
 ### 
 
