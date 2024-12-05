@@ -3710,7 +3710,72 @@ for image in images:
 ```
 
 ## Clase 155
-### 
+### Detecting Faces in Images
+Haarcascades: https://github.com/opencv/opencv/tree/master/data/haarcascades
+<br>
 
+Sirve para buscar modelos, en concreto estaremos trabajando con haarcascade de **frontal_face**. Para ello nos apoyaremos en la librería anterior opencv.
+```html
+# Importamos la librería
+import cv2
+# Creamos el objeto haarcascade
+face_cascade=cv2.CascadeClassifier("img/haarcascade_frontalface_default.xml")
+# Cargar imagen con cara frontal -> FUNCIONA MEJOR CON IMÁGENES EN ESCALA DE GRISES
+img=cv2.imread("img/photo.jpg")
+gray_img=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) # Convierte la imagen a escala de grises
+```
+Ahora aplicaremos el método de búsqueda de caras:
+```html
+# Método para aplicar haarcascade-> los números pueden variar en funcióin de la búsqueda que queramos hacer
+faces=face_cascade.detectMultiScale(gray_img,
+scaleFactor=1.05,
+minNeighbors=5)
+
+print(type(faces))
+print(faces)
+# Nos devolverá el array de dónde se sitúa la cara (detecta la cara en forma de rectángulo):
+<class 'numpy.ndarray'>
+[[157  84 379 379]]
+```
+Ahora mostraremos un rectángulo en la imagen apuntando al array que nos ha devuelto la búsqueda de caras:
+```html
+# Dibujando la salida del método anterior en forma de rectángulo
+for x, y, w, h in faces:
+    img=cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 3)
+# img=cv2.rectangle(img, (punto de incio), (punto de inicio+valores de alto y ancho), (color en rgb), grosor del rectángulo)
+```
+Por último en el método cv2.imshow() incluimos la imagen original para aplicar el rectángulo. código completo:
+```html
+# Importamos la librería
+import cv2
+
+# Creamos el objeto haarcascade
+face_cascade=cv2.CascadeClassifier("img/haarcascade_frontalface_default.xml")
+
+# Cargar imagen con cara frontal
+img=cv2.imread("img/photo.jpg")
+gray_img=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) # Convierte la imagen a escala de grises
+
+# Método para aplicar haarcascade
+faces=face_cascade.detectMultiScale(gray_img,
+scaleFactor=1.05,
+minNeighbors=5)
+
+# Dibujando la salida del método anterior en forma de rectángulo
+for x, y, w, h in faces:
+    img=cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 3)
+
+# Datos para revisar
+print(type(faces))
+print(faces)
+
+# Resizing
+re=cv2.resize(img, (int(img.shape[1]/2),int(img.shape[0]/2)))
+
+# Mostrar Imagen editada
+cv2.imshow("Cara", re)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 ## Clase 15
 ### 
