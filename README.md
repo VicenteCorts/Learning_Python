@@ -3901,10 +3901,17 @@ print("Total de frames: {}".format(a))
 ```
 
 # Section18
-## Clase 15
+## Clase 158
+### Detecting Moving Objects from the Webcam
+Trabajaremos con las librerias **Opencv y Time**
+<br>
+
+Ahora elaboraremos una aplicación para detectar movimiento a través de la webcam y registrar dichos movimientos en formato CSV.
+<br>
+
+
+
+
+
+## Clase 159
 ###
-
-
-
-
-
