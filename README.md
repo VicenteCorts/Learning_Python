@@ -3453,20 +3453,37 @@ print(int(2.5))
 print( a + float(b))
 ```
 
-## Clase 14
+## Clase 146
+### How to Fix Difficult Errors
+```html
+# Código:
+a = 1
+b = "2"
+c = 3
+print(int(2.5))
+print( c/0)
+
+# Error:
+  File "a:\Programacion Web\(Cursos)-Udemy\Python Mega Course Buils 10 real world Applications\Python\section16.py", line 24, in <module>
+    print( c/0)
+           ~^~
+ZeroDivisionError: division by zero
+```
+Hay Errores que vienen definidos por su propio nombre como es este caso de **ZeroDivisionError**. Si no sabemos la causa de ese error, la mejor solución es buscar el propio error en Google e investigar. -> Stackoverflow
+
+## Clase 147
+### How to ask good questions (StackOverFlow)
+
+
+## Clase 148
 ### 
 
-## Clase 14
+# Section17
+## Clase 149
 ### 
 
-## Clase 14
+## Clase 15
 ### 
 
-## Clase 14
-### 
-
-## Clase 14
-### 
-
-## Clase 14
+## Clase 15
 ### 
