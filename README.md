@@ -3504,7 +3504,37 @@ print(divide(1,0))
 ```
 
 # Section17
-## Clase 149
+## Clase 150
+### Instalando la Librería OpenCV
+**OpenCV** (Computer Vision).-> https://opencv.org/
+<br>
+
+If you haven't installed OpenCV yet, please do so by following the instructions below.  If you don't know if you have OpenCV, please open Python and type import cv2. If you don't get an error, it means OpenCV is installed.
+<br>
+
+To install:
+1. Open the command line and type:
+```html
+pip install opencv-python 
+```
+2. Then open a Python session and try:
+```html
+import cv2 
+```
+3. If you get no errors, that means you installed OpenCV successfully. If you get an error, please see the FAQs below:
+
+FAQs -> https://www.udemy.com/course/former-python-mega-course-build-10-real-world-applications/learn/lecture/34362862#announcements
+
+## Clase 15
+### 
+
+## Clase 15
+### 
+
+## Clase 15
+### 
+
+## Clase 15
 ### 
 
 ## Clase 15
