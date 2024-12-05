@@ -3387,5 +3387,59 @@ map.save("Map1.html")
 ```
 
 # Section16
-## Clase 
+## Clase 144
+### Fixing Programming Errors - Syntax Errors
+Cuando tenemos errores podemos encontrar:
+- Syntax Errors
+- Eceptions
+<br>
+
+Tenemos este código con errores:
+```html
+# Clase 143
+print(1)
+int(9)
+int 9
+print(2)
+print 3
+```
+Al correr este código, se detendrá en el primer error que encontremos:
+```html
+File "a:\Programacion Web\(Cursos)-Udemy\Python Mega Course Buils 10 real world 
+Applications\Python\section16.py", line 4
+    int 9
+        ^
+SyntaxError: invalid syntax
+```
+Si lo corregimos y corremos el código este se detendrá en la sigueinte línea con errores.
+```html
+int(99)
+  File "a:\Programacion Web\(Cursos)-Udemy\Python Mega Course Buils 10 real world 
+Applications\Python\section16.py", line 6
+    print 3
+    ^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+```
+Ahora tenemos un error con mayor descripción donde nos recomienda correcciones. Esto dependerá del propio error. Lo corregimos; y en caso de no tener más errores el código se ejecutará por completo.
+
+## Clase 145
+### Runtime Errors
+
+
+## Clase 14
+### 
+
+## Clase 14
+### 
+
+## Clase 14
+### 
+
+## Clase 14
+### 
+
+## Clase 14
+### 
+
+## Clase 14
 ### 
