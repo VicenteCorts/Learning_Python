@@ -3653,8 +3653,9 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-## Clase 15
-### 
+## Clase 152
+### Exercise: Batch Image Resizing
+Write a script that resizes all images in a directory to 100x100. You can find an attached ZIP file with some image files in the Resources.
 
 ## Clase 15
 ### 
