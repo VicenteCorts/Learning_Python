@@ -78,7 +78,7 @@ map.add_child(fg)
 map.save("Map1.html")
 '''
 
-# Clase 138
+# Clase 138-142
 # Librerías Importadas
 import pandas
 import folium
@@ -133,7 +133,9 @@ for lt, ln, n in zip(lat, lon, nom):
     fg.add_child(folium.CircleMarker(location=[lt, ln], radius=10, popup=folium.Popup(iframe), fill_color = determinar_color(n), color = 'grey', fill_opacity=1))
 
 # Clase 139 - Añadir polígonos al mapa (Folium.GeoJson)
-fg.add_child(folium.GeoJson(data=(open("downloads/sevilla_zonas_with_pop.json", 'r', encoding='utf-8').read())))
+fg.add_child(folium.GeoJson(data=open("downloads/sevilla_zonas_with_pop.json", 'r', encoding='utf-8').read(),
+                            style_function=lambda x: {'fillColor': 'green' if x['properties']['POP']< 50000 
+                            else 'yellow' if 50000 <= x['properties']['POP']< 100000 else 'red' }))
 
 # Afianzar Marcadores
 map.add_child(fg)

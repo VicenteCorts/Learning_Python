@@ -3337,7 +3337,12 @@ Podemos añadir puntos o líneas a través del GeoJson, todo en base a su conten
 ## Clase 141
 ### Stylizing the Population Layer
 Ahora probaremos algunos métodos y funciones para editar el estilo de la capa de polígonos:
+- Para añadir estilos empeleamos el parámetro style_function
+- Este requere de una función lambda (funciones de una sola línea)
 ```html
+fg.add_child(folium.GeoJson(data=open("downloads/sevilla_zonas_with_pop.json", 'r', encoding='utf-8').read(),
+    style_function=lambda x: {'fillColor': 'green' if x['properties']['POP']< 50000 
+    else 'yellow' if 50000 <= x['properties']['POP']< 100000 else 'red' }))
 ```
 
 ## Clase 142
