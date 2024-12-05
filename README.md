@@ -3473,7 +3473,7 @@ Hay Errores que vienen definidos por su propio nombre como es este caso de **Zer
 
 ## Clase 147
 ### How to ask good questions (StackOverFlow)
-
+(...)
 
 ## Clase 148
 ### 
