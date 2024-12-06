@@ -4077,12 +4077,108 @@ print("Webcam Off")
 
 ## Clase 159
 ### Storing Object Detection Timestamps in a CSV File
+En este apartado crearemos una tabla csv para guardar el tiempo que el programa detecta que los diferentes objetos han estado en movimiento durante la grabación. Para ello, analizaremos el momento de entrada y salida de cada objeto en cámara.
+```html
+# Añadimos una nueva variable status:
+    # Variable para analizar el movimiento
+    status=0
 
+# dentro del for loop de la creación de contornos añadimos
+    # Tomar contornos que tengan un ára superior a 1000 pixels
+    for contour in cnts:
+        if cv2.contourArea(contour) < 1000:
+            continue
 
+        # Si el programa detecta algo con una variación cuya area sea mayor a 1000 pixeles cambiamos la variable status:
+        status=1
+        (...)
 
+# mostramos la variavle status al final de bucle while
+    # Imprimimos la variable status
+    print(status)
+```
 
+Una vez que la consola imprime 1 y 0 en función de si detecta o no objetos, queremos que cuando la variable status cambie de valor y guardar el tiempo en el que lo hace.
+```html
+# variable al inicio del programa para recoger los cambios de la variable status
+# Variable de lista vacía para rellenar con el valor de "status"
+status_list=[]
 
+# Rellenamos status_list con el método append() justo al finalizar el bucle for
+    # Rellenando la variable status_list con los valores de la variable status
+    status_list.append(status)
 
+# imprimimos el status_list fuera del bucle while:
+# Imprimimos la variable status_list
+print(status_list)
+```
+Lo siguiente es conseguir el tiempo que los cambios de la variable status se han llevado a cabo
+```html
+# Importamos datetime
+# importamos datetime
+from datetime import datetime 
 
+# Creamos una variable para guardar los tiempos al inicio del programa
+# Variable para guardar tiempos de cambios de status
+times=[]
 
+# Creamos un condicional despues del status_list.append() para anexar tiempos a la variable times:
+    # Condicional para anexar tiempos a la lista times cuando un objeto es detectado
+    if status_list[-1]==1 and status_list[-2]==0:
+        times.append(datetime.now())
 
+    # Condicional para anexar tiempos a la lista times cuando un objeto deja de ser detectado
+    if status_list[-1]==0 and status_list[-2]==1:
+        times.append(datetime.now())
+
+# Imprimimos el resultado de la liasta times al final
+# Imprimimos la variable status_list al finalizar
+print(status_list)
+# Imprimimos la variable times al finalizar
+print(times)
+```
+Llegados a este punto, dará error en el punto que python, al llegar a la variable times, intenta leer dos objetos dentro de la variable status_list. Pero en el inicio se encuentra vacía hasta que sea rellenada con los 2 primeros frames de la captura de video. Para solucionar esto, añadimos dos valores vacíos a status_list y de este modo solucionamos el error:
+```html
+# El Error en cuestion:
+  File "a:\Programacion Web\(Cursos)-Udemy\Python Mega Course Buils 10 real world Applications\Python\section18.py", line 69, in <module>
+    if status_list[-1]==0 and status_list[-2]==1:
+                              ~~~~~~~~~~~^^^^
+IndexError: list index out of range
+
+# Solución:
+status_list=[None, None]
+```
+Solcionado, sin embargo, puede pasar que el programa termine con un objeto en detección, por lo que dejará uno de los pares de timepo sin su tiempo final. Para solucionar esto añadiremos un bloque en el condicional que cierra el bucle while:
+```html
+if key==ord('q'):
+    # Añadir tiempo final si el progrmaa se cierra con objeto en pantalla (haciendo que no genere tiempo de cierre)
+    if status==1:
+        times.append(datetime.now())
+    break
+```
+Ahora, pasaremos la lista de times a pandas DataFrame y eso a un archivo csv, este csv tendrá una columna con times de entrada y times de salida:
+```html
+# improtamos Pandas
+import pandas
+
+# Creamos variable al inicio para crear el DataFrame:
+# Variable DataFrame de panda para recoger los datos de la lista times
+df=pandas.DataFrame(columns=["Start","End"])
+
+# Al final, fuera del bucle while, añadimos un bucle para iterar a través de la lista times e ir añadiendo valores al DataFrame
+# Bucle para iterar (tantas veces como valores tenga la lista times, con un step de 2 - valores de 2 en 2-) por la lista times e incluir los datos en la variable DataFrame (df)
+for i in range(0, len(times),2):
+    new_row=pandas.DataFrame({"Start":[times[i]], "End":[times[i+1]]})
+    df=pandas.concat([df, new_row], ignore_index=True)
+
+# Creación del archivo CSV
+df.to_csv("downloads/Times.csv")
+```
+ERROR DE SINTAXIS, REVISAR:
+- Create a new row as a separate DataFrame with square brackets around the values to make them lists
+- Use pd.concat() instead of the deprecated append() method
+- Pass ignore_index=True to reset the index of the combined DataFrame
+
+# Section19
+## Clase 160
+### Introduction to Bokeh
