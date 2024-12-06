@@ -1,4 +1,4 @@
-# Clase 158
+# Clase 158-159
 # Los apartados con titulación comentada verde son los que se añaden para el nuevo proyecto:
 
 import cv2, time
