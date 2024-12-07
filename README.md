@@ -4221,8 +4221,60 @@ Write two code snippets, each producing the following graphs. The first graph ha
 ![163.a](/img/Clase163a.png)
 ![163.b](/img/Clase163b.png) 
 
-## Clase 16
-### 
+## Clase 164
+### Solution: Plotting Triangles and Circles
+####Snippet producing the triangle-based plot
+```html
+#Making a basic Bokeh line graph
+ 
+#importing Bokeh
+from bokeh.plotting import figure
+from bokeh.io import output_file, show
+ 
+#prepare some data
+x=[3,7.5,10]
+y=[3,6,9]
+ 
+#prepare the output file
+output_file("Line.html")
+ 
+#create a figure object
+f=figure()
+ 
+#create line plot
+f.triangle(x,y)
+ 
+#write the plot in the figure object
+show(f)
+```
+**DEPRECADO** BokehDeprecationWarning: 'triangle() method' was deprecated in Bokeh 3.4.0 and will be removed, use "scatter(marker='triangle', ...) instead" instead.
+
+#### Snippet producing the circle based plot
+```html
+#Making a basic Bokeh line graph
+ 
+#importing Bokeh
+from bokeh.plotting import figure
+from bokeh.io import output_file, show
+ 
+#prepare some data
+x=[3,7.5,10]
+y=[3,6,9]
+ 
+#prepare the output file
+output_file("Line.html")
+ 
+#create a figure object
+f=figure()
+ 
+#create line plot
+f.circle(x,y)
+ 
+#write the plot in the figure object
+show(f)
+```
+HABRIA QUE AÑADIR ADEMÁS EL **RADIO 0,1**
+
 ## Clase 16
 ### 
 ## Clase 16
