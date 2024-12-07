@@ -4191,9 +4191,16 @@ Con Bokeh podemos tomar datos de un csv y mostrarlos de manera gráfica e intera
 - gráficos combinados
 - Timelines
 
-
 ## Clase 16
-### 
+### Installing Bokeh
+If you haven't installed Bokeh yet, you can easily install it with pip from the terminal:
+```html
+pip install bokeh 
+
+Or you use pip3:
+
+pip3 install bokeh 
+```
 
 ## Clase 16
 ### 
