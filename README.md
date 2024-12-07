@@ -4216,7 +4216,10 @@ Emplearemos comentarios en JN para entender mejor el desarrollo. A partir de est
 
 ## Clase 163
 ### Exercise: Plotting Triangles and Circles
+Write two code snippets, each producing the following graphs. The first graph has triangles as glyphs and the second graph has circles as glyphs. You can use triangle , and circle  instead of line. You should have the same coordinates, as shown in the plots below.
 
+![163.a](/img/Clase163a.png)
+![163.b](/img/Clase163b.png)
 
 ## Clase 16
 ### 
