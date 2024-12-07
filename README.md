@@ -4182,3 +4182,43 @@ ERROR DE SINTAXIS, REVISAR:
 # Section19
 ## Clase 160
 ### Introduction to Bokeh
+Bokeh Docs -> https://docs.bokeh.org/en/latest/
+<br>
+
+
+
+## Clase 16
+### 
+## Clase 16
+### 
+## Clase 16
+### 
+## Clase 16
+### 
+## Clase 16
+### 
+## Clase 16
+### 
+## Clase 16
+### 
+## Clase 16
+### 
+## Clase 16
+### 
+## Clase 170
+### 
+## Clase 17
+###
+## Clase 17
+###
+## Clase 17
+###
+## Clase 17
+###
+## Clase 17
+###
+## Clase 17
+###
+
+
+
