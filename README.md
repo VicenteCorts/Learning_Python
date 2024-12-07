@@ -4185,10 +4185,16 @@ ERROR DE SINTAXIS, REVISAR:
 Bokeh Docs -> https://docs.bokeh.org/en/latest/
 <br>
 
+Con Bokeh podemos tomar datos de un csv y mostrarlos de manera gráfica e interactiva (apoyándonos en Jupyter Notebook). Veremos:
+- diagramas de líneas
+- dispersión de puntos
+- gráficos combinados
+- Timelines
 
 
 ## Clase 16
 ### 
+
 ## Clase 16
 ### 
 ## Clase 16
