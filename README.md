@@ -4191,7 +4191,7 @@ Con Bokeh podemos tomar datos de un csv y mostrarlos de manera gráfica e intera
 - gráficos combinados
 - Timelines
 
-## Clase 16
+## Clase 161
 ### Installing Bokeh
 If you haven't installed Bokeh yet, you can easily install it with pip from the terminal:
 ```html
@@ -4202,10 +4202,22 @@ Or you use pip3:
 pip3 install bokeh 
 ```
 
-## Clase 16
-### 
-## Clase 16
-### 
+## Clase 162
+### Your First Bokeh Plot
+Necesitaremos instalar Bokeh y Jupyter Notebook
+```html
+pip3 install bokeh 
+pip3 install jupyter notebook
+```
+Luego iniciaremos Jupyter Notebook, para ello escribimos **jupyter notebook** en la consola (normal) y accedemos a uno de los enlaces que nos lanza para abrir JN en el navegador. Una vez iniciado creamos un New>Python3 (ipkernel); y lo nombramos "Graphs".
+<br>
+
+Emplearemos comentarios en JN para entender mejor el desarrollo. A partir de este punto, crearemos todo el contenido de la clase en Jupyter Notebook; para verlo, acceder al archivo Graphs.ipynb.
+
+## Clase 163
+### Exercise: Plotting Triangles and Circles
+
+
 ## Clase 16
 ### 
 ## Clase 16
