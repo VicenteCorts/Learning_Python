@@ -4309,7 +4309,11 @@ show(f)
 ```
 
 ## Clase 16
-### 
+### Exercise: Plotting Education Data
+The following line graph shows the percentage of women who have received a bachelor's degree over the years in the USA. The graph was produced from the Year  and Engineering columns of the CSV file provided in the following link: https://pythonizing.github.io/data/bachelors.csv
+- Try to reproduce the graph using Bokeh.
+![Ejercicio 166](/img/Clase166.png) 
+
 ## Clase 16
 ### 
 ## Clase 16
