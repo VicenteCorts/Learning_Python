@@ -4372,18 +4372,23 @@ show(p)
 ```
 
 ## Clase 170
-### 
-## Clase 17
+### Exercise: Plotting Weather Data
+Produce the following graph using the data from this Excel file: https://github.com/pythonizing/data/raw/master/verlegenhuken.xlsx
+![Ejercicio 170](/img/Clase170.png) 
+**Some notes:** Temperature and pressure values in the Excel file have a scale factor of 10; you'll have to divide those values by 10 to get the actual observations.
+- And, yes, you can set your own fonts and colors, but be accurate with the rest of the plot elements.
+
+## Clase 171
 ###
-## Clase 17
+## Clase 172
 ###
-## Clase 17
+## Clase 173
 ###
-## Clase 17
+## Clase 174
 ###
-## Clase 17
+## Clase 175
 ###
-## Clase 17
+## Clase 176
 ###
 
 
