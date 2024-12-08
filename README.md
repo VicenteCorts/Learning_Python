@@ -4308,15 +4308,41 @@ show(f)
 #Jugar con las pestañas laterales
 ```
 
-## Clase 16
+## Clase 166
 ### Exercise: Plotting Education Data
 The following line graph shows the percentage of women who have received a bachelor's degree over the years in the USA. The graph was produced from the Year  and Engineering columns of the CSV file provided in the following link: https://pythonizing.github.io/data/bachelors.csv
 - Try to reproduce the graph using Bokeh.
 ![Ejercicio 166](/img/Clase166.png) 
 
-## Clase 16
-### 
-## Clase 16
+## Clase 167
+### Solution: Plotting Education Data
+```html
+#Plotting percentage of women who received an engineering degree over years
+ 
+#importing bokeh and pandas
+from bokeh.plotting import figure
+from bokeh.io import output_file, show
+import pandas
+ 
+#prepare some data
+df=pandas.read_csv("https://pythonizing.github.io/data/bachelors.csv")
+x=df["Year"]
+y=df["Engineering"]
+ 
+#prepare the output file
+output_file("Line_from_bachelors.html")
+ 
+#create a figure object
+f=figure()
+ 
+#create line plot
+f.line(x,y)
+ 
+#write the plot in the figure object
+show(f)
+```
+
+## Clase 168
 ### 
 ## Clase 16
 ### 
