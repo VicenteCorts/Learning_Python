@@ -4275,8 +4275,39 @@ show(f)
 ```
 HABRIA QUE AÑADIR ADEMÁS EL **RADIO 0,1**
 
-## Clase 16
-### 
+## Clase 165
+###  Using Bokeh with Pandas
+```html
+#Making basic bokeh Graph
+
+#importing bokeh and pandas
+from bokeh.plotting import figure
+from bokeh.io import output_file, show
+import pandas
+
+#prepare some data
+df=pandas.read_csv("downloads/data.csv")
+x=df["x"]
+y=df["y"]
+
+#prepare de output file
+output_file("Line_from_csv.html")
+
+#create figure object
+f=figure()
+
+#create line plot
+f.line(x,y)
+#f.triangle(x,y) -> BokehDeprecationWarning: 'triangle() method' was deprecated in Bokeh 3.4.0 and will be removed, use "scatter(marker='triangle', ...) instead" instead.
+#f.circle(x,y,0.1)
+
+#write the plot in the figure boject
+show(f)
+
+#Crt+Enter para ver el gráfico
+#Jugar con las pestañas laterales
+```
+
 ## Clase 16
 ### 
 ## Clase 16
