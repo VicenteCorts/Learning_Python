@@ -4408,9 +4408,31 @@ show(p)
 **File**: error al intentar tomar la url de github, he descargado el archivo para trbajar con él
 
 ## Clase 172
-###
+### Changing Visual Attributes
+Once you have built a basic plot, you can customize its visual attributes, including changing the title color and font, adding labels for xaxis and yaxis, changing the color of the axis ticks, etc. All these properties are illustrated in the diagram below:
+![Ejercicio 172](/img/Clase172.png) 
+And here is the code if you want to play around with it:
+```html
+from bokeh.plotting import figure, output_file, show
+p = figure(width=500, height=400, tools = 'pan, reset')
+p.title.text = "Earthquakes"
+p.title.text_color = "Orange"
+p.title.text_font = "times"
+p.title.text_font_style = "italic"
+p.yaxis.minor_tick_line_color = "Yellow"
+p.xaxis.axis_label = "Times"
+p.yaxis.axis_label = "Value"
+p.scatter([1,2,3,4,5], [5,6,5,5,3], size = [i*2 for i in [8,12,14,15,20]], color="red", alpha=0.5)
+output_file("Scatter_plotting.html")
+show(p)
+```
+For a complete list of visual attributes, see the Styling Visual Attributes documentation page of Bokeh. (https://docs.bokeh.org/en/latest/docs/user_guide/styling.html)
+
 ## Clase 173
-###
+### 
+
+
+
 ## Clase 174
 ###
 ## Clase 175
