@@ -4349,9 +4349,27 @@ In the next lecture, you will learn how to load Excel files in Python with panda
 - pip3.13 install xlrd (needed to load Excel old .xls files)
 
 ## Clase 169
-### 
-
-
+### Changing Plot Properties
+You can add a title to the plot, set the figure width and height, change title font, etc. Below is a summary of properties which can be added to change the style of the plot:
+```html
+import pandas
+from bokeh.plotting import figure, output_file, show
+ 
+p=figure(width=500,height=400, tools='pan')
+ 
+p.title.text="Cool Data"
+p.title.text_color="Gray"
+p.title.text_font="times"
+p.title.text_font_style="bold"
+p.xaxis.minor_tick_line_color=None
+p.yaxis.minor_tick_line_color=None
+p.xaxis.axis_label="Date"
+p.yaxis.axis_label="Intensity"    
+ 
+p.line([1,2,3],[4,5,6])
+output_file("graph.html")
+show(p)
+```
 
 ## Clase 170
 ### 
