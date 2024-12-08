@@ -4379,7 +4379,34 @@ Produce the following graph using the data from this Excel file: https://github.
 - And, yes, you can set your own fonts and colors, but be accurate with the rest of the plot elements.
 
 ## Clase 171
-###
+### Solution: Plotting Weather Data
+```html
+#CLASE 170
+import pandas 
+from bokeh.plotting import figure, output_file, show
+ 
+df=pandas.read_excel("downloads/verlegenhuken.xlsx",sheet_name=0)
+df["Temperature"]=df["Temperature"]/10
+df["Pressure"]=df["Pressure"]/10
+ 
+p=figure(width=500,height=400,tools='pan')
+ 
+p.title.text="Temperature and Air Pressure"
+p.title.text_color="Gray"
+p.title.text_font="arial"
+p.title.text_font_style="bold"
+p.xaxis.minor_tick_line_color=None
+p.yaxis.minor_tick_line_color=None
+p.xaxis.axis_label="Temperature (°C)"
+p.yaxis.axis_label="Pressure (hPa)"    
+ 
+p.scatter(df["Temperature"],df["Pressure"],size=0.5)
+output_file("Weather.html")
+show(p)
+```
+**Cicle**: DEPRECATED-> use scatter instead
+**File**: error al intentar tomar la url de github, he descargado el archivo para trbajar con él
+
 ## Clase 172
 ###
 ## Clase 173
