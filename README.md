@@ -4429,12 +4429,35 @@ show(p)
 For a complete list of visual attributes, see the Styling Visual Attributes documentation page of Bokeh. (https://docs.bokeh.org/en/latest/docs/user_guide/styling.html)
 
 ## Clase 173
-### 
+### Creating a Time-series Plot
+```html#CLASE 173
+from bokeh.plotting import figure, output_file, show
+import pandas
 
+df=pandas.read_csv("downloads/adbe.csv", parse_dates=["Date"])
 
+p=figure(width=500, height=250, x_axis_type="datetime", sizing_mode="stretch_width")
+
+p.line(df["Date"], df["Close"], color="Orange", alpha=0.5)
+
+output_file("Timeseries.html")
+
+show(p)
+```
+Ha habido problemas con el enlace, porque google ya no genera archivos csv, por lo que henmos empleado el archivo de la carpeta de descarga
+<br>
+
+También cabe tener en cuenta los sigueintes atributos para modificar el tamaño del grafico:
+**Common sizing_mode options include:**
+
+- "stretch_both": Stretches the plot to fill the available space
+- "stretch_width": Stretches horizontally but maintains the given height
+- "stretch_height": Maintains the given width but stretches vertically
+- "scale_width": Scales the width while maintaining aspect ratio
+- "scale_height": Scales the height while maintaining aspect ratio
 
 ## Clase 174
-###
+### More Visualization Examples with Bokeh
 ## Clase 175
 ###
 ## Clase 176
