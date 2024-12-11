@@ -4554,6 +4554,10 @@ To build this app we need to install a few Python libraries. Please run the foll
 **Installing justpy** (library for building web apps and data visualization):
 ```html
 pip3.13 install justpy==0.1.5
+
+# He tenido problemas y he usado el sigueinte código:
+pip install justpy==0.1.5 --no-deps
+pip install starlette uvicorn itsdangerous websockets addict
 ```
 
 **Installing pandas** (library for data analysis):
@@ -4578,7 +4582,13 @@ pip3.13 install jupyter
 Note: The commands above assume you are using Python 3.13. If you are using another version of Python please change pip3.13 to reflect the other version of Python you are using (e.g.,pip3.9).
 
 ## Clase 179
-###
+### Starting Jupyter
+We are going to use Jupyter in the next videos. Just to refresh your memory, Jupyter can be started by running the following command on your terminal:
+```html
+jupyter notebook
+```
+That will start Jupyter Notebook on your internet browser.
+
 ## Clase 180
 ###
 ## Clase 181
