@@ -4590,7 +4590,21 @@ jupyter notebook
 That will start Jupyter Notebook on your internet browser.
 
 ## Clase 180
-###
+### Exploring the Dataset with Python and pandas
+Nos dirigimos a Jupyter Notebook y abrimos un nuevo archivo de jupyter con Nuevo>Python3 (ipykernel). En este archivo trabajremos conceptos básicos de data análisis usando el archvio descargado **reviews.csv**
+```html
+#Clase 180
+# Importamos Pandas para acceder a archivos
+import pandas
+# Accedemos al archivo reviews.csv
+data = pandas.read_csv("downloads/reviews.csv")
+-----------------------------------------------
+data (ctrl+Enter)
+# Output -> veremos los datos de dentro del archivo
+# "b" para crear una nueva celda en jupyter
+```
+Ver archivo **Clase180.ipynb** para ver todos los comandos para "viajar" por el archivo reviews.csv
+
 ## Clase 181
 ###
 ## Clase 182
