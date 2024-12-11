@@ -64,6 +64,11 @@ while True:
     # Rellenando la variable status_list con los valores de la variable status
     status_list.append(status)
 
+    ########################
+    # AÑADIDO EN CLASE 175 # -> para evitar colapsar la memoria, y hacer que al imprimir status_list solo nos muestre los dos últimos valores
+    ########################
+    status_list=status_list[-2:]
+
     # Condicional para anexar tiempos a la lista times cuando un objeto es detectado
     if status_list[-1]==1 and status_list[-2]==0:
         times.append(datetime.now())
