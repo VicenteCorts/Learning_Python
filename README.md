@@ -4492,6 +4492,55 @@ show(p)
 ```
 
 ## Clase 176
-### 
+### Implementing a Hover Feature
+Ahora añadiremos "hover" a los bloques verdes del reusltado del script para mostrar el gráfico del movimiento:
 
+```html
+# Importamos el siguiente modelo de bokeh
+from bokeh.models import HoverTool
 
+# Añadimos el código para incluir la hovertool, tras la creación de la figura "p"
+hover=HoverTool(tooltips=[("Start: ", "@Start"), ("End: ", "@End")])
+p.add_tools(hover)
+```
+Sin embargo, los hovers creados no muestran los datos. Esto es por un error de sintaxis, en el que bokeh ya inclute los ":" despues de las palabras "Start" y "End" de manera automática, y porque debemos apuntar a los datos de las columnas del arhcivo csv con el método **ColumnDataSource**:
+
+```html
+# Clase 176 -> Añadiendo hover con info a los bloques de movimeinto del gráfico
+from section18 import df
+from bokeh.plotting import figure, show, output_file
+from bokeh.models import HoverTool, ColumnDataSource
+
+# Método ColumnDatraSource para poder acceder a los datos en las figuras (hover)
+cds=ColumnDataSource(df)
+
+p=figure(x_axis_type='datetime', height=300, width=500, sizing_mode="stretch_width", title="Motion Graph")
+# Estilos para el gráfico
+p.yaxis.minor_tick_line_color=None
+p.yaxis.ticker.desired_num_ticks=1
+
+# Añadiendo Hover
+hover=HoverTool(tooltips=[("Start", "@Start"), ("End", "@End")])
+p.add_tools(hover)
+
+q=p.quad(left="Start", right="End", bottom=0, top=1, color="green", source=cds)
+
+output_file("Graph.html")
+
+show(p)
+```
+Pero nos surge un nuevo error: el ColumnDataSource no puede hacer fetch de datos de tipo datetime. Para solventar esto pasaremos a String los datetimes:
+```html
+# Pasando a String los datetimes para poder trabajar con ellos
+df["Start_string"]=df["Start"].dt.strftime("%Y-%m-%d %H:%M:%S")
+df["End_string"]=df["End"].dt.strftime("%Y-%m-%d %H:%M:%S")
+
+# Y Modificamos los datos a los que accede el Hover:
+# Añadiendo Hover
+hover=HoverTool(tooltips=[("Start", "@Start_string"), ("End", "@End_string")])
+p.add_tools(hover)
+```
+
+# Section20
+## Clase 177
+###
