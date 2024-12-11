@@ -4547,7 +4547,36 @@ p.add_tools(hover)
 En esta Sección daremos un paso dentro del mundo del Data Análisis. Crearemos grçaficos con un sinfin de datos para obtener información de ellos.
 
 ## Clase 178
-### 
+### Installing the Required Libraries
+To build this app we need to install a few Python libraries. Please run the following commands in your terminal to install the correct library versions even if you have the libraries installed already:
+<br>
+
+**Installing justpy** (library for building web apps and data visualization):
+```html
+pip3.13 install justpy==0.1.5
+```
+
+**Installing pandas** (library for data analysis):
+```html
+pip3.13 install pandas==1.2.2
+```
+
+**Installing pytz** (library for datetime calculations between timezones)
+```html
+pip3.13 install pytz==2021.1
+```
+
+**Installing matplotlib** (library for quick data visualization)
+```html
+pip3.13 install matplotlib==3.3.4
+```
+
+**Installing jupyter** (library that enables a reach interactive Python shell)
+```html
+pip3.13 install jupyter
+```
+Note: The commands above assume you are using Python 3.13. If you are using another version of Python please change pip3.13 to reflect the other version of Python you are using (e.g.,pip3.9).
+
 ## Clase 179
 ###
 ## Clase 180
