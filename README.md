@@ -4543,4 +4543,32 @@ p.add_tools(hover)
 
 # Section20
 ## Clase 177
+### Preview of the End Results
+En esta Sección daremos un paso dentro del mundo del Data Análisis. Crearemos grçaficos con un sinfin de datos para obtener información de ellos.
+
+## Clase 178
+### 
+## Clase 179
+###
+## Clase 180
+###
+## Clase 181
+###
+## Clase 182
+###
+## Clase 183
+###
+## Clase 184
+###
+## Clase 185
+###
+## Clase 186
+###
+## Clase 187
+###
+## Clase 188
+###
+## Clase 189
+###
+## Clase 190
 ###
