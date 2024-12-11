@@ -4458,6 +4458,16 @@ También cabe tener en cuenta los sigueintes atributos para modificar el tamaño
 
 ## Clase 174
 ### More Visualization Examples with Bokeh
+Para añadir múltiples figuras dentro de un mismo gráfico:
+```html
+p.line([1,2,3,4,5], [5,6,5,5,3], line_width=2, color="red", alpha=0.5)
+p.scatter([i*2 for i in [1,2,3,4,5]], [5,6,5,5,3], size = 8, color="red", alpha=0.5)
+```
+Diferentes tipos de plot: https://docs.bokeh.org/en/latest/docs/user_guide.html
+<br>
+
+Para terminar la app de detectar moviminetos por la webcam emplearemos el **quad**
+
 ## Clase 175
 ###
 ## Clase 176
