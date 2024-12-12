@@ -4672,3 +4672,49 @@ Continuamos en JpyNtbk.
 dir(plt)
 help(plot.pie)
 ```
+
+# Section21
+## Clase 191
+### Note
+Please note that this section contains part 2 of the development of Application 3 and it is strongly related to part 1. If you did not take part 1, please do that first. Part 1 was covered in the previous section.
+
+## Clase 191
+### 
+## Clase 192
+### 
+## Clase 193
+### 
+## Clase 194
+### 
+## Clase 195
+### 
+## Clase 196
+### 
+## Clase 197
+### 
+## Clase 198
+### 
+## Clase 199
+### 
+## Clase 200
+### 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
