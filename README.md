@@ -4661,7 +4661,9 @@ Continuamos en JpyNtbk. En esta clase veremos como incluir una línea adicional 
 - Revisar la parte final, con las variaciones de mean()/count()
 
 ## Clase 189
-### 
+### What Day of the Week are People the Happiest?
+Continuamos en JpyNtbk.
+- Clase Curiosa
 
 ## Clase 190
 ###
