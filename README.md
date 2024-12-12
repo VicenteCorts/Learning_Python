@@ -4606,7 +4606,18 @@ data (ctrl+Enter)
 Ver archivo **Clase180.ipynb** para ver todos los comandos para "viajar" por el archivo reviews.csv
 
 ## Clase 181
-###
+### Selecting Data
+Seguiremos trabajando en Jupyter Notebook; en el archivo **Clase180.ipynb**. Ahora veremos como hacer Selección de datos, según los parámetros que nosotros consideremos.
+
+- A en notebook para añadir una celda en la anterior a la seleccionada
+- B en notebook para añadir una celda despues de la seleccionada
+- DD para elimnar la celda  seleccionada
+- M en notebook para cambiar la celda a formato MarkDown (MD) para añadir titulos en la celda seleccionada
+
+<br>
+
+Más Información sobre el trato de datos, columnas y filas en el archivo, la sección de la clase 181.
+
 ## Clase 182
 ###
 ## Clase 183
