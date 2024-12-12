@@ -4666,4 +4666,9 @@ Continuamos en JpyNtbk.
 - Clase Curiosa
 
 ## Clase 190
-###
+### Other Types of Plots
+Continuamos en JpyNtbk.
+```html
+dir(plt)
+help(plot.pie)
+```
