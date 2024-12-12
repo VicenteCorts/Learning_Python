@@ -5224,8 +5224,85 @@ Para realizar la webapp empleando los resultados del grafico de múltiples time-
 Tras ello nos dirigimos a su **código en jsFiddle** y lo copiamos, junto con el código que previamente habíamos picado en **Jupyter Notebook** para crear el plot de este Dataframe de **"Multi-Time-Series"**; añadiendo las modificaciones necesarias:
 
 ```html
-```
+import justpy as jp
+import pandas
+from datetime import datetime
+from pytz import utc
 
+data = pandas.read_csv("downloads/reviews.csv", parse_dates=['Timestamp'])
+data['Month'] = data['Timestamp'].dt.strftime("%Y-%m")
+month_av_crs = data.groupby(['Month','Course Name']).mean(numeric_only=True).unstack()
+
+chart_def = """
+{
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: 'Average Rating by Course through the Months'
+    },
+    subtitle: {
+        text: ''
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 65,
+        y: 180,
+        floating: false,
+        borderWidth: 1,
+        backgroundColor:
+            '#FFFFFF'
+    },
+    xAxis: {
+         type: "category",
+        dateTimeLabelFormats: {
+            month: '%Y-%m'
+        },
+        title: {
+            text: 'Date'
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Rating'
+        }
+    },
+    tooltip: {
+        shared: true,
+        headerFormat: '<b>Average Rating {point.x}</b><br>'
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: '',
+        data:
+            []
+    }, {
+        name: '',
+        data:
+            []
+    }]
+}
+"""
+
+def app():
+    wp = jp.QuasarPage()
+    h1 = jp.QDiv(a=wp, text="Analysis of Course Reviews", classes="text-h3 text-center q-pa-md")
+    p1 = jp.QDiv(a=wp, text="These graphs represent course review analysis", classes="text-h6 text-center q-pa-md")
+    
+    hc = jp.HighCharts(a=wp, options=chart_def)
+
+    hc.options.xAxis.categories = list(month_av_crs.index)
+    hc_data = [{"name": v1, "data":[v2 for v2 in month_av_crs[v1]]} for v1 in month_av_crs.columns]
+    hc.options.series = hc_data
+ 
+    return wp
+ 
+jp.justpy(app)
+```
 
 ## Clase 200
 ### 

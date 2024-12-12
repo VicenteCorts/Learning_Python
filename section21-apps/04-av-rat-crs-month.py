@@ -36,9 +36,6 @@ chart_def = """
         },
         title: {
             text: 'Date'
-        },
-        labels: {
-            format: '{value}'
         }
     },
     yAxis: {
@@ -52,14 +49,6 @@ chart_def = """
     },
     credits: {
         enabled: false
-    },
-    plotOptions: {
-        series: {
-            pointStart: 2000
-        },
-        areaspline: {
-            fillOpacity: 0.5
-        }
     },
     series: [{
         name: '',
