@@ -4613,6 +4613,8 @@ Seguiremos trabajando en Jupyter Notebook; en el archivo **Clase180.ipynb**. Aho
 - B en notebook para añadir una celda despues de la seleccionada
 - DD para elimnar la celda  seleccionada
 - M en notebook para cambiar la celda a formato MarkDown (MD) para añadir titulos en la celda seleccionada
+- CC copiar celda 
+- V pegar celda copiada
 
 <br>
 
@@ -4630,7 +4632,7 @@ Continuamos en JpyNtbk.
 
 ## Clase 184
 ### Turning Data into Information
-Continuamos en JpyNtbk.
+Continuamos en JpyNtbk. Todavía estamos con manipulación de datos, no podremos denominarlo data análisis hasta que generemos una información a partir de los datos. Que será en esta clase.
 
 ## Clase 185
 ###
@@ -4644,3 +4646,4 @@ Continuamos en JpyNtbk.
 ###
 ## Clase 190
 ###
+- Importamos matplotlib: https://matplotlib.org/stable/
