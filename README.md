@@ -4686,13 +4686,15 @@ Iniciamos una nueva sección, que va de la mano de la anterior. Emplearemos libr
 Crearemos **Gráficos Interactivos** mostrando información con el hover del ratón y variaciones en base a información por día, semana, mes, etc y todas las variaciones vistas en el apartado anterior.
 <br>
 
-Para ello emplearemos **Highcharts**; librería de ploting de Javascript, que puede usarse sin problema con Python a través de **Justpy** (otra librería para creación de WebApps). Esta librería tiene la ventaja de que no es necesario escribir html, Js o CSS para crear WebApps.
+Para ello emplearemos **Highcharts**; librería de ploting de Javascript, que puede usarse sin problema con Python a través de **Justpy** (Framework para creación de WebApps). Este Framework tiene la ventaja de que no es necesario escribir html, Js o CSS para crear WebApps.
 <br>
 
-En la sigueinte clase crearemos una página web Justpy de una página que contiene simplemente un título y un párrafo con texto. En clases posteriores iremos mejorando esa web añadiendo un **High chart graph**
+En la sigueinte clase crearemos una página web con Justpy, de una página que contenga simplemente un título y un párrafo con texto. En clases posteriores iremos mejorando esa web añadiendo un **High chart graph**.
 
 ## Clase 193
-### 
+### Making a Simple Web App
+
+
 ## Clase 194
 ### 
 ## Clase 195

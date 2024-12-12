@@ -1,6 +1,21 @@
 # Clase 192 #############################################
 # Veremos en futuras clases:
-# JustPy -> para creación de WebApps
-# HighChart -> Librería JS para creación de Gráficos; compatible con JustPy
+    # JustPy -> Framework para creación de WebApps
+    # HighChart -> Librería JS para creación de Gráficos; compatible con JustPy
 
 # Clase 193 - Making a Simple Web App ###################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
