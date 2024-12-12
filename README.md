@@ -5217,7 +5217,16 @@ jp.justpy(app)
 ```
 
 ## Clase 199
-### 
+### Multiple Time-Series Plots
+Para realizar la webapp empleando los resultados del grafico de múltiples time-series, lo primero será localizar en **HighChart** un HC que nos cuadre para la representación gráfica: https://www.highcharts.com/docs/chart-and-series-types/areaspline-chart
+<br>
+
+Tras ello nos dirigimos a su **código en jsFiddle** y lo copiamos, junto con el código que previamente habíamos picado en **Jupyter Notebook** para crear el plot de este Dataframe de **"Multi-Time-Series"**; añadiendo las modificaciones necesarias:
+
+```html
+```
+
+
 ## Clase 200
 ### 
 
