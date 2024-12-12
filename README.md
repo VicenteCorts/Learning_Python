@@ -4643,9 +4643,15 @@ Continuamos en JpyNtbk. Pero ahora trabajaremos en el archivo Clase185.ipynb.
 Agruparemos la información de los comentarios por día empleando el método: **Pandas group by**.
 
 ## Clase 186
-###
+### Downsampling and Plotting Average Ratings by Week
+Continuamos en JpyNtbk.
+- Para jugar con las fechas empleamos en esta clase strftime() Para más info: https://docs.python.org/3/library/datetime.html
+<br>
+
+**Matplotinglib**, es una librería para plotting más bien anticuada, en futuras clases veremos algunas más modernas y trabajaremos con ellas.
+
 ## Clase 187
-###
+### Downsampling and Plotting Average Ratings by Month
 ## Clase 188
 ###
 ## Clase 189
