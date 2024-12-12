@@ -5123,7 +5123,11 @@ jp.justpy(app)
 ```
 
 ## Clase 197
-### 
+### Exercise: Monthly Time-Series
+Please make a JustPy web app containing a HighCharts graph that represents average ratings by month. The output should look something like in the screenshot below. The code solution can be found in the next lecture.
+
+![Output Clase 197](/img/Clase197.png)
+
 ## Clase 198
 ### 
 ## Clase 199
