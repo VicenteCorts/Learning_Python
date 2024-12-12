@@ -4652,6 +4652,8 @@ Continuamos en JpyNtbk.
 
 ## Clase 187
 ### Downsampling and Plotting Average Ratings by Month
+Continuamos en JpyNtbk.
+
 ## Clase 188
 ###
 ## Clase 189
