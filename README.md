@@ -4635,7 +4635,13 @@ Continuamos en JpyNtbk.
 Continuamos en JpyNtbk. Todavía estamos con manipulación de datos, no podremos denominarlo data análisis hasta que generemos una información a partir de los datos. Que será en esta clase.
 
 ## Clase 185
-###
+### Aggregating and Plotting Average Ratings by Day
+Continuamos en JpyNtbk. Pero ahora trabajaremos en el archivo Clase185.ipynb.
+- Importamos matplotlib como plt: https://matplotlib.org/stable/
+
+### Comenzando:
+Agruparemos la información de los comentarios por día empleando el método: **Pandas group by**.
+
 ## Clase 186
 ###
 ## Clase 187
@@ -4646,4 +4652,3 @@ Continuamos en JpyNtbk. Todavía estamos con manipulación de datos, no podremos
 ###
 ## Clase 190
 ###
-- Importamos matplotlib: https://matplotlib.org/stable/
