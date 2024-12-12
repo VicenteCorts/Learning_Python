@@ -15,35 +15,29 @@ chart_def = """
         inverted: false
     },
     title: {
-        text: 'Atmosphere Temperature by Altitude'
+        text: ''
     },
     subtitle: {
-        text: 'According to the Standard Atmosphere Model'
+        text: ''
     },
     xAxis: {
+        
         reversed: false,
         title: {
             enabled: true,
-            text: 'Altitude'
+            text: 'Date'
         },
         labels: {
-            format: '{value} km'
+            format: '{value}'
         },
-        accessibility: {
-            rangeDescription: 'Range: 0 to 80 km.'
-        },
-        maxPadding: 0.05,
-        showLastLabel: true
+        
     },
     yAxis: {
         title: {
-            text: 'Temperature'
+            text: 'Average Rating'
         },
         labels: {
-            format: '{value}°'
-        },
-        accessibility: {
-            rangeDescription: 'Range: -90°C to 20°C.'
+            format: '{value}'
         },
         lineWidth: 2
     },
@@ -52,7 +46,7 @@ chart_def = """
     },
     tooltip: {
         headerFormat: '<b>{series.name}</b><br/>',
-        pointFormat: '{point.x} km: {point.y}°C'
+        pointFormat: 'day: {point.x} || {point.y} Av. Rating'
     },
     plotOptions: {
         spline: {
@@ -62,12 +56,8 @@ chart_def = """
         }
     },
     series: [{
-        name: 'Temperature',
-        data: [
-            [0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
-            [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]
-        ]
-
+        name: 'Average Rating',
+        data: []
     }]
 }
 """
@@ -76,11 +66,11 @@ def app():
     wp = jp.QuasarPage()
 
     h1 = jp.QDiv(a=wp, text="Análisis de las Valoraciones de los Cursos", classes="text-h3 text-center q-pa-md")
-    p1 = jp.QDiv(a=wp, text="Estos Gráficos representan un análisis de las Valoraciones de los Cursos")
+    p1 = jp.QDiv(a=wp, text="Estos Gráficos representan un análisis de las Valoraciones de los Cursos", classes="text-h6 text-center q-pa-md")
     hc = jp.HighCharts(a=wp, options=chart_def)
     hc.options.title.text="Media de Valoraciones por Día"
 
-    hc.options.XAxis.categories = list(day_average.index)
+    hc.options.xAxis.categories = list(day_average.index)
     hc.options.series[0].data = list(day_average['Rating'])
 
     return wp
