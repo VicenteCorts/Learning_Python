@@ -4741,10 +4741,211 @@ Al correr este código nos genera un enlace que nos lleva a una web local con ht
 
 ## Clase 194
 ### Making a Data Visualization Web App
+Cada uno de los elementos QDiv se denominan **Componentes**. En la clase anterior incluimos dos componentes QDiv, pero en la clase actual añadiremos un tercer componente de tipo **HighChart**. (Trabajaremos en un nuevo archivo section21-apps/01-av-rat-day.py).
+<br>
 
+Los componente de tipo **HighChart** son elementos pertenecientes a una librería JS para generar PLOTS. Para apoyarnos en los componentes **HighCharts** podemos dirigirnos a: https://www.highcharts.com/docs/index?gad_source=1&gclid=Cj0KCQiAsOq6BhDuARIsAGQ4-zhCV6WDg3S-LWemIDmQ0076FJNzKzmgv9XsN7vShRCT3QN4_Xw8JSQaAtH-EALw_wcB ((https://www.highcharts.com/docs/chart-and-series-types/spline-chart)) -> jsFiddle
+<br>
+
+No debemos saber JS para hacer uso de estos Gráficos, debemos copiar el código de jsFiddle; a partir de la coma(,) -no incluida- hasta el corchete final -incluido-
+<br>
+
+Para añadirlo al código de JustPy creamos una nueva variable y pegamos en esta todo el código copiado, rodeándolo de triples comillas dobles:
+```html
+import justpy as jp
+
+chart_def = """
+{
+    chart: {
+        type: 'spline',
+        inverted: false
+    },
+    title: {
+        text: 'Atmosphere Temperature by Altitude'
+    },
+    subtitle: {
+        text: 'According to the Standard Atmosphere Model'
+    },
+    xAxis: {
+        reversed: false,
+        title: {
+            enabled: true,
+            text: 'Altitude'
+        },
+        labels: {
+            format: '{value} km'
+        },
+        accessibility: {
+            rangeDescription: 'Range: 0 to 80 km.'
+        },
+        maxPadding: 0.05,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Temperature'
+        },
+        labels: {
+            format: '{value}°'
+        },
+        accessibility: {
+            rangeDescription: 'Range: -90°C to 20°C.'
+        },
+        lineWidth: 2
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        headerFormat: '<b>{series.name}</b><br/>',
+        pointFormat: '{point.x} km: {point.y}°C'
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                enable: false
+            }
+        }
+    },
+    series: [{
+        name: 'Temperature',
+        data: [
+            [0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
+            [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]
+        ]
+
+    }]
+}
+"""
+
+def app():
+    wp = jp.QuasarPage()
+
+    h1 = jp.QDiv(a=wp, text="Análisis de las Valoraciones de los Cursos", classes="text-h3 text-center q-pa-md")
+    p1 = jp.QDiv(a=wp, text="Estos Gráficos representan un análisis de las Valoraciones de los Cursos")
+    hc = jp.HighCharts(a=wp, options=chart_def)
+    hc.options.title.text="Media de Valoraciones por Día"
+    hc.options.series[0].data = [[3,4],[4,4],[7,8]]
+    
+    return wp
+
+jp.justpy(app)
+```
+Elementos a tener en cuenta para manipular el hc:
+- Chart invertido o no: (dentro de la variable) inverted: false
+- Acceder a la serie de datos: (en la definición de app)hc.options.series[0].data = [[3,4],[4,4],[7,8]] -cualquier dato-
+<br>
+
+En la vida real, los datos inyectados en la serie procederán de un DataFrame, de un archivo csv. En este caso el formato será diferente; empleando el objeto **zip()** pasándolo a tipo lista previamente:
+```html
+def app():
+    wp = jp.QuasarPage()
+
+    h1 = jp.QDiv(a=wp, text="Análisis de las Valoraciones de los Cursos", classes="text-h3 text-center q-pa-md")
+    p1 = jp.QDiv(a=wp, text="Estos Gráficos representan un análisis de las Valoraciones de los Cursos")
+    hc = jp.HighCharts(a=wp, options=chart_def)
+    hc.options.title.text="Media de Valoraciones por Día"
+    x = [3,6,8]
+    y= [4,7,9]
+    hc.options.series[0].data = list(zip(x, y))
+
+    return wp
+```
+
+En el caso de que los datos procedan de un DataFrame real:
+```html
+import justpy as jp
+import pandas
+from datetime import datetime
+from pytz import utc
+import matplotlib.pyplot as plt
+
+data = pandas.read_csv("downloads/reviews.csv", parse_dates=['Timestamp'])
+data['Day'] = data['Timestamp'].dt.date
+day_average = data.groupby(['Day']).mean(numeric_only=True)
+
+chart_def = """
+{
+    chart: {
+        type: 'spline',
+        inverted: false
+    },
+    title: {
+        text: 'Atmosphere Temperature by Altitude'
+    },
+    subtitle: {
+        text: 'According to the Standard Atmosphere Model'
+    },
+    xAxis: {
+        reversed: false,
+        title: {
+            enabled: true,
+            text: 'Altitude'
+        },
+        labels: {
+            format: '{value} km'
+        },
+        accessibility: {
+            rangeDescription: 'Range: 0 to 80 km.'
+        },
+        maxPadding: 0.05,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Temperature'
+        },
+        labels: {
+            format: '{value}°'
+        },
+        accessibility: {
+            rangeDescription: 'Range: -90°C to 20°C.'
+        },
+        lineWidth: 2
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        headerFormat: '<b>{series.name}</b><br/>',
+        pointFormat: '{point.x} km: {point.y}°C'
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                enable: false
+            }
+        }
+    },
+    series: [{
+        name: 'Temperature',
+        data: [
+            [0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
+            [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]
+        ]
+
+    }]
+}
+"""
+
+def app():
+    wp = jp.QuasarPage()
+
+    h1 = jp.QDiv(a=wp, text="Análisis de las Valoraciones de los Cursos", classes="text-h3 text-center q-pa-md")
+    p1 = jp.QDiv(a=wp, text="Estos Gráficos representan un análisis de las Valoraciones de los Cursos")
+    hc = jp.HighCharts(a=wp, options=chart_def)
+    hc.options.title.text="Media de Valoraciones por Día"
+
+    hc.options.XAxis.categories = list(day_average.index)
+    hc.options.series[0].data = list(day_average['Rating'])
+
+    return wp
+
+jp.justpy(app)
+```
 
 ## Clase 195
-### 
+### Changing Graph Labels in the Web App
 ## Clase 196
 ### 
 ## Clase 197
