@@ -4655,8 +4655,13 @@ Continuamos en JpyNtbk.
 Continuamos en JpyNtbk.
 
 ## Clase 188
-###
+### Average Ratings by Course by Month
+Continuamos en JpyNtbk. En esta clase veremos como incluir una línea adicional por cada curso de la BBDD en el plot, que represente la variación de la media de cada mes independiente de cada curso.
+
+- Revisar la parte final, con las variaciones de mean()/count()
+
 ## Clase 189
-###
+### 
+
 ## Clase 190
 ###
