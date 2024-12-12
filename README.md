@@ -4625,10 +4625,13 @@ Continuamos en JpyNtbk.
 ## Clase 183
 ### Time-Based Filtering
 Continuamos en JpyNtbk.
-- Importamos datetime from datetime.
+- Importamos datetime from datetime: https://docs.python.org/3/library/datetime.html
+- Importamos pytz: https://sourceforge.net/directory/software-development/windows/
 
 ## Clase 184
-### 
+### Turning Data into Information
+Continuamos en JpyNtbk.
+
 ## Clase 185
 ###
 ## Clase 186
