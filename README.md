@@ -4678,10 +4678,19 @@ help(plot.pie)
 ### Note
 Please note that this section contains part 2 of the development of Application 3 and it is strongly related to part 1. If you did not take part 1, please do that first. Part 1 was covered in the previous section.
 
-## Clase 191
-### 
 ## Clase 192
-### 
+### Intro to the Interactive Visualization Section
+Iniciamos una nueva sección, que va de la mano de la anterior. Emplearemos librerías más modernas para abordar lo aprendido en la Sección anterior y poder plasmar la información el webapps.
+<br>
+
+Crearemos **Gráficos Interactivos** mostrando información con el hover del ratón y variaciones en base a información por día, semana, mes, etc y todas las variaciones vistas en el apartado anterior.
+<br>
+
+Para ello emplearemos **Highcharts**; librería de ploting de Javascript, que puede usarse sin problema con Python a través de **Justpy** (otra librería para creación de WebApps). Esta librería tiene la ventaja de que no es necesario escribir html, Js o CSS para crear WebApps.
+<br>
+
+En la sigueinte clase crearemos una página web Justpy de una página que contiene simplemente un título y un párrafo con texto. En clases posteriores iremos mejorando esa web añadiendo un **High chart graph**
+
 ## Clase 193
 ### 
 ## Clase 194
