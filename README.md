@@ -4693,10 +4693,56 @@ En la sigueinte clase crearemos una página web con Justpy, de una página que c
 
 ## Clase 193
 ### Making a Simple Web App
+https://justpy.io/
+<br>
 
+Creamos una nueva carpeta para almacenar todo el contenido de WebApps que creemos en esta sección. La carpeta se llamará section21-apps.
+<br>
+
+Creamos dentro un archivo "00-simple-app.py" para empezar a crear este proyecto. También añadimos una copia del archivo reviews.csv para trabajar más tarde con él.
+<br>
+
+Para usar JustPy debemos instalarlo:
+```html
+pip install justpy
+```
+JustPy usa el Framwork **quasar**, framwork que está escrito en Javascript y hace uso del framework en python. 
+<br>
+
+Para crear una función para la app debemos declararlo así:
+```html
+import justpy as jp
+
+def app():
+    wp = jp.QuasarPage()
+
+    (...) # Elementos de la web
+
+    return wp
+```
+
+El resultado completo sería:
+```html
+import justpy as jp
+
+def app():
+    wp = jp.QuasarPage()
+
+    h1 = jp.QDiv(a=wp, text="Análisis de las Valoraciones de los Cursos", classes="text-h3 text-center q-pa-md")
+    p1 = jp.QDiv(a=wp, text="Estos Gráficos representan un análisis de las Valoraciones de los Cursos")
+
+    return wp
+
+jp.justpy(app)
+```
+Al correr este código nos genera un enlace que nos lleva a una web local con html raw.
+- Ctrl + C para temrinar el proceso de la webapp en marcha y poder hacer modificaciones 
+- Para modificar los estilos de quasar: https://v1.quasar.dev/style/stylus-variables
 
 ## Clase 194
-### 
+### Making a Data Visualization Web App
+
+
 ## Clase 195
 ### 
 ## Clase 196
