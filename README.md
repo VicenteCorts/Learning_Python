@@ -4618,10 +4618,13 @@ Seguiremos trabajando en Jupyter Notebook; en el archivo **Clase180.ipynb**. Aho
 
 Más Información sobre el trato de datos, columnas y filas en el archivo, la sección de la clase 181.
 
-## Clase 182
-###
+## Clase 182 - 
+### Filtering the Dataset
+Continuamos en JpyNtbk.
+
 ## Clase 183
-###
+### 
+
 ## Clase 184
 ###
 ## Clase 185
