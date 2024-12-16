@@ -5405,8 +5405,40 @@ def app():
 jp.justpy(app)
 ```
 ## Clase 203
-### 
+### Adding a Pie Chart to the Web App
+Clase adicional usando JustPy en la que se enfrenta a la dificultad de reconocer el cómo acceder al valor de dentro de la serie para introducir datos al gráfico. (...)
 
+# Section23
+## Clase 204
+###
+
+## Clase 205
+###
+## Clase 206
+###
+## Clase 207
+###
+## Clase 208
+###
+## Clase 209
+###
+## Clase 210
+###
+## Clase 211
+###
+## Clase 212
+###
+## Clase 213
+###
+
+
+
+## Clase 214
+###
+## Clase 215
+###
+## Clase 216
+###
 
 
 
