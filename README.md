@@ -5305,10 +5305,15 @@ jp.justpy(app)
 ```
 
 ## Clase 200
+### Multiple Time-Series Streamgraph
+Comenzaremos por copiar el código de la clase anterior en un nuevo archivo. A continuación cambiaremos el código de la variable chart_def por el de un **HighChart** de tipo Stream; extraido de la web de highchart (jsFiddle) --> https://www.highcharts.com/docs/chart-and-series-types/stream-graph
+
+## Clase 201
 ### 
-
-
-
+## Clase 202
+### 
+## Clase 203
+### 
 
 
 
