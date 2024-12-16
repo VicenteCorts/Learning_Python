@@ -5449,9 +5449,27 @@ def about():
 ```
 
 ## Clase 206
-###
+### Preparing HTML Templates
+Para añadir templates de html, no solo texto plano como vimos en la clase anterior, deberemos empezar por importar **render_template** de la librería flask.
+```html
+from flask import Flask, render_template
+```
+Ahora debemos meter las templates que deseemos importar a la webPython en una carpeta llamada **templates**. En nuestro caso hemos descargado dos archivos html, crearemos la carpeta templates en la raíz del proyecto e incluiremos ambos archivos en esa carpeta. Posteriormente debemos cambiar el **"return"** de los métodos de **@app.route** de la siguiente forma para que redireccionen a ellos:
+```html
+@app.route('/')
+def home():
+    return render_template("home.html")
+
+@app.route('/about/')
+def about():
+    return render_template("about.html")
+```
+
 ## Clase 207
-###
+### Adding a Website Navigation Menu
+
+
+
 ## Clase 208
 ###
 ## Clase 209
