@@ -5309,7 +5309,11 @@ jp.justpy(app)
 Comenzaremos por copiar el código de la clase anterior en un nuevo archivo. A continuación cambiaremos el código de la variable chart_def por el de un **HighChart** de tipo Stream; extraido de la web de highchart (jsFiddle) --> https://www.highcharts.com/docs/chart-and-series-types/stream-graph
 
 ## Clase 201
-### 
+### Exercise: Interactive Chart to Find the Happiest Day of the Week
+Create a JustPy app containing a HighCharts graph that represents aggregated average ratings by day of the week. The output should look similar to the screenshot below.
+
+![Clase 201](/img/Clase201.png)
+
 ## Clase 202
 ### 
 ## Clase 203
