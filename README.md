@@ -5412,9 +5412,41 @@ Clase adicional usando JustPy en la que se enfrenta a la dificultad de reconocer
 ## Clase 204
 ### Demo of the Personal Website
 Ene sta sección crearemos páginas web usando Flask, un framework de Python.
+-Documentación de Flask: https://flask.palletsprojects.com/en/stable/
 
 ## Clase 205
-###
+### Building Your First Website
+Primero, instalaremos Flask para poder hacer uso de él:
+- pip install flask
+<br>
+
+Una vez instalado debemos importar la clase **Flask** de dentro de la libreria **flask** y añadir las siguientes líneas de código para establecer la propia app:
+```html
+from flask import Flask
+
+app=Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Website content goes here!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+Actualmente la web solo muestra un String. Más adelante explicaremos como incluir páginas html en el return de la función home.
+<br>
+
+#### Crear urls para Páginas:
+Para añadir más páginas a nuestra web debemos crear más funciones como la función home; especificando su url y su contenido:
+```html
+@app.route('/')
+def home():
+    return "Página principal - Homepage"
+
+@app.route('/about/')
+def about():
+    return "Página about"
+```
 
 ## Clase 206
 ###
