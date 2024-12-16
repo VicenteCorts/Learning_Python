@@ -5408,12 +5408,14 @@ jp.justpy(app)
 ### Adding a Pie Chart to the Web App
 Clase adicional usando JustPy en la que se enfrenta a la dificultad de reconocer el cómo acceder al valor de dentro de la serie para introducir datos al gráfico. (...)
 
-# Section23
+# Section22
 ## Clase 204
-###
+### Demo of the Personal Website
+Ene sta sección crearemos páginas web usando Flask, un framework de Python.
 
 ## Clase 205
 ###
+
 ## Clase 206
 ###
 ## Clase 207
