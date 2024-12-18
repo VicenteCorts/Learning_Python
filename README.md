@@ -5540,10 +5540,53 @@ Una vez listos correremos nuestra aplicación web con nuestra nueva instalación
 Es recomendable crear un entorno virtual antes de empezar a crear ningún código para crear una aplicación. Ahora estmaos listos para **subir nuestra aplicación web a la nube**.
 
 ## Clase 211
-###
+### How to Use the PythonAnywhere Service
+Nos dirigiremos a: https://www.pythonanywhere.com/
+<br>
+
+Tanto **Heroku** como **PythonAnywhere** tienen un servicio gratuito donde podemos colgar nuestras aplicaciones web. En esta clase veremos como llevar a cabo este proceso de hosting gratuito a través de **PythonAnywhere**. [Heroku es más dificil en terminos de administración de servidor que PyhtonAnywhere, aunque ambos som más sencillos de emplear que un servidor propio]
+<br>
+
+Primero debemos registrarnos > Begginer account. Si tenemos mucho tráfico en nuestra web deberemos hacer uso un plan de pago (Rellenamos datos para registrarnos...etc.). https://www.pythonanywhere.com/user/VicenteCorts/
+<br>
+
+#### Deploying A Local Web App (Part 2 of 7)
+The process of deploying an app on PythonAnywhere involves three main steps:
+- Uploading your code to PythonAnywhere
+- Setting up a virtualenv, if you need one
+- Configuring your application using WSGI
+- NB - **only WSGI apps are supported**, so that includes anything built with Django, Flask, Bottle, etc, but custom servers using, eg, Tornado, probably won't work.
+
+#### Deploying A Local Web App (Part 6 of 7)
+**Setting up your web app using manual WSGI configuration**
+<br>
+
+To get your app working, we'll need to configure a WSGI file that imports your app, as a Python variable. That means you need to know two things:
+- The path to the Python file containing your web app's WSGI file.
+- The name of the application.
+<br>
+
+- For **Django**, the WSGI app is usually stored at projectname/projectname/wsgi.py, and the variable name is application
+- For **Flask**, the WSGI app is usually invoked as app = Flask(__name__) somewhere. Locate this file and variable
+- For **Bottle**, the app is usually invoked something like application = default_app()
+<br>
+
+Next we'll want to edit the WSGI file which has been generated for you. Click through to it (there's a link in the "Code" section), and take a look at the comments, which provide some examples for how to get your app imported. The main steps are:
+
+- Adding the path that your app lives in to **sys.path**
+- Importing the WSGI app and calling it application.
+For example, if your app lives at /home/myusername/myproject/myapp.py, and in there, the WSGI app is a variable called app, you'll want:
+```html
+sys.path.append('/home/mysusername/myproject')
+from myapp import app as application
+```
+También es interesante el tema de **automatización** de scripts (Clase 211 min 7).
+
 ## Clase 212
 ###
-## Clase 213
+
+# Section23
+## Clase 214
 ###
 
 
