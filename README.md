@@ -5467,7 +5467,7 @@ def about():
 
 ## Clase 207
 ### Adding a Website Navigation Menu
-Crearmeos un layout para importar a ambas páginas html a modo de menú de navegación. Dentro del archivo layout.html caben destacar dos elementos:
+Crearmeos un layout para importar a ambas páginas html a modo de menú de navegación. Dentro del archivo layout.html caben **destacar dos elementos**:
 ```html
 # Los enlaces emplean "url_for('home')" entre dos llaves, siendo home la función creada en el archivo script1.py
 <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -5481,7 +5481,7 @@ Crearmeos un layout para importar a ambas páginas html a modo de menú de naveg
 </div>
 ```
 
-Es importante saber que a la hora de emplear child templates es neceario eliminar las etiquetas sobrantes. Así pues, el archivo home.html (que antes era un html completo) se modificaría quedando así:
+Es importante saber que a la hora de emplear **child templates** es neceario eliminar las etiquetas sobrantes. Así pues, el archivo home.html (que antes era un html completo) se modificaría quedando así:
 ```html
 {%extends "layout.html"%}
 {%block content%}
@@ -5497,7 +5497,16 @@ Es importante saber que a la hora de emplear child templates es neceario elimina
 In the next lecture, we will add CSS styling to the webpage. Sometimes, when you make a change to the CSS file and reload the webpage, the changes are not shown because the browser uses the previous cached styling. If this happens, open the browser in private (incognito) mode and load the webpage there.
 
 ## Clase 209
-###
+### Improving the Website Frontend with CSS
+Tras crear nuestra hoja de CSS debemos  meterla en una carpeta dentro de la raíz del proyecto llamada **"static/css"**. Y posteriormente debemos linkearla a nuestra web:
+```html
+# Para linkearla usamos la syntaxis de la etiqueta "link"
+<head>
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+</head>
+```
+
 ## Clase 210
 ###
 ## Clase 211
