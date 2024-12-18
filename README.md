@@ -5608,10 +5608,12 @@ Para poder ver la app en funcionamiento debemos volver al apartado de "Web" y cl
 # Section23
 ## Clase 214
 ### Introduction to the Tkinter Library
-
+En esta sección aprenderemos a crear interfaces de usuario para posteriormente en la sigueinte sección enlazarla con Bases de Datos y crear así un programa de escritorio completo.
 
 ## Clase 215
-###
+### Creating a GUI Window and Adding Widgets
+
+
 ## Clase 216
 ###
 
