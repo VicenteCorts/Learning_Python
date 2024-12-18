@@ -5412,7 +5412,7 @@ Clase adicional usando JustPy en la que se enfrenta a la dificultad de reconocer
 ## Clase 204
 ### Demo of the Personal Website
 Ene sta sección crearemos páginas web usando Flask, un framework de Python.
--Documentación de Flask: https://flask.palletsprojects.com/en/stable/
+- Documentación de Flask: https://flask.palletsprojects.com/en/stable/
 
 ## Clase 205
 ### Building Your First Website
@@ -5467,8 +5467,30 @@ def about():
 
 ## Clase 207
 ### Adding a Website Navigation Menu
+Crearmeos un layout para importar a ambas páginas html a modo de menú de navegación. Dentro del archivo layout.html caben destacar dos elementos:
+```html
+# Los enlaces emplean "url_for('home')" entre dos llaves, siendo home la función creada en el archivo script1.py
+<li><a href="{{ url_for('home') }}">Home</a></li>
+<li><a href="{{ url_for('about') }}">About</a></li>
 
+# El bloque a continuación se emplea para contener en ellos los archivos "child". 
+# Su sintaxys es {%block nombre%} || {%endblock%}
+<div class="container">
+    {%block content%}
+    {%endblock%}
+</div>
+```
 
+Es importante saber que a la hora de emplear child templates es neceario eliminar las etiquetas sobrantes. Así pues, el archivo home.html (que antes era un html completo) se modificaría quedando así:
+```html
+{%extends "layout.html"%}
+{%block content%}
+<div class="home">
+  <h1>Pagina principal</h1>
+  <p>This is a test website again</p>
+</div>
+{%endblock%}
+```
 
 ## Clase 208
 ###

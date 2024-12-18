@@ -3,6 +3,7 @@
 from flask import Flask, render_template
 
 app=Flask(__name__)
+
 ### Creación de rutas *************************************
 @app.route('/')
 def home():
