@@ -5508,7 +5508,37 @@ Tras crear nuestra hoja de CSS debemos  meterla en una carpeta dentro de la raí
 ```
 
 ## Clase 210
-###
+### Creating a Python Virtual Environment
+Para poder mostrar nuestra web más allá de en local vamos a hacerle deploy mediante **Heroku-Cloud**. En Heroku podremos tener un pequeño web-server para contener aplicaciones web o pequeños desarrollos.
+
+### Creación de Host Virtual
+Una buena práctica a la hora crear una aplicación web es crear un **Host Virtual (Vhost)** donde hagamos una instalación virgen sin librerías ni elementos adicionales descargados que no estemos empleando en dicha aplicación web.
+<br>
+
+Para crear un VHost, debemos usar una librería para host virtuales de python:
+- Instalar virtualenv: **pip install virtualenv**
+- Crear un **entorno virtual** - El entorno virtual debe estar creado en el mismo nivel que la carpeta principal que contenda los arhcivos de la aplicación.
+- Creamos una **carpeta adicional (llamada "mysite")** para que contenga a la carpeta "section22-web"
+- Abrimos (~Atom~) VSCode dentro de la carpeta mysite y procedemos a crear el entorno virtual.
+- cd mysite
+<br>
+
+Ahora por consola escribimos: **python -m venv virtual**. Esto creará una carpeta llamada "virtual" que contendrá el propio entorno virtual.
+![Entorno Virtual](/img/Clase210.png)
+
+Ahora para **"Virgenizar Python"** escribimos por consola: **virtual/Scripts/python** (Dirección donde se encuentra el python que hemos creado con la virtualización; y del cual haremos uso).
+
+- **Ctrl + Z** para revertirlo antes de usarlo, ya que no nos interesa hacer uso de este python de momento
+- Como este nuevo python es virgen debemos volver a **instalar Flask** para poder hacer uso de él. 
+- En este caso escribimos: **virtual/Scripts/pip install flask**
+<br>
+
+Una vez listos correremos nuestra aplicación web con nuestra nueva instalación de Python. Para ello debemos apuntar dicha instalación "virgen" y a al archivo script1.py dentro de nuestra carpeta section22-web: **virtual/Scripts/python section22-web/script1.py**
+<br>
+
+#### NOTA
+Es recomendable crear un entorno virtual antes de empezar a crear ningún código para crear una aplicación. Ahora estmaos listos para **subir nuestra aplicación web a la nube**.
+
 ## Clase 211
 ###
 ## Clase 212
