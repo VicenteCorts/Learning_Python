@@ -5583,16 +5583,33 @@ from myapp import app as application
 También es interesante el tema de **automatización** de scripts (Clase 211 min 7).
 
 ## Clase 212
-###
+### Deploying the Flask App on PythonAnywhere
+Dentro del panel principal del usuario en PythonAnywhere, nosdirigiremos a la pestaña superior "Web". Aquí clicaremos en **"Add new Web App"**.
+<br>
+
+Respecto al nombre del dominio, Ardit recomineda **namecheap.com** para comprarlo (con su DNS etc.). En nuestro caso no será necesario ya que nos conformaremos con **VicenteCorts.pythonanywhere.com**. Clicamos en el framework de aplicaciones web que estemos empleando (Flask)
+
+- problemas con la versión de python, solo permitía entre las opciones hasta python 3.10 y estamos trabajando con python3.13.
+- next - next - next ...
+- Web creada; ahora toca subir los archivos y redirigir la página principal a script1.py.
+
+#### Configuracionesde inicio.
+Una vez seguidos los pasos anteriores, nos dirigimos a **"Files / myfiles"** para subir los archivos de nuestra web. En este punto podemos observar un archivo llamado **flask_app.py** creado por PythonAnywhere. 
+- Editamos aste archivo borrando todo su contenido y copiando el contenido de script1.py en él.
+- creamos en la parte derecha tantas carpetas como sean necesarias (respetando los nombres de las carpetas del proyecto en local)
+- subimos todos los archivos del proyecto respetando el árbol de directorios
+- Por último cuando nuestra aplicación está en producción debemos cambiar la última línea de código a False:
+```html
+if __name__ == "__main__":
+    app.run(debug=False)
+```
+Para poder ver la app en funcionamiento debemos volver al apartado de "Web" y clicar sobre el botón verde de **"Refescar"**.
 
 # Section23
 ## Clase 214
-###
+### Introduction to the Tkinter Library
 
 
-
-## Clase 214
-###
 ## Clase 215
 ###
 ## Clase 216
