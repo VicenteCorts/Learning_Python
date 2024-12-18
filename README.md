@@ -5493,7 +5493,9 @@ Es importante saber que a la hora de emplear child templates es neceario elimina
 ```
 
 ## Clase 208
-###
+### Note on Browser Caching
+In the next lecture, we will add CSS styling to the webpage. Sometimes, when you make a change to the CSS file and reload the webpage, the changes are not shown because the browser uses the previous cached styling. If this happens, open the browser in private (incognito) mode and load the webpage there.
+
 ## Clase 209
 ###
 ## Clase 210
