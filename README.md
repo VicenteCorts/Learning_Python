@@ -5803,7 +5803,11 @@ window.mainloop()
 
 # Section24
 ## Clase 219
-###
+### How Python Interacts with Databases #sql
+En esta sección veremos como interactuar con BD usando Python. Haremos uso de:
+- Psycopg2: https://www.psycopg.org/docs/ (Para trabajar con Postgre)
+- sqlite3: https://docs.python.org/3/library/sqlite3.html (Para trabajar con sqlite)
+
 ## Clase 220
 ###
 ## Clase 221
