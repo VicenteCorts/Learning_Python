@@ -5700,11 +5700,20 @@ window.mainloop()
 ```
 
 ## Clase 217
-###
+### Exercise: Create a Multi-Widget GUI
+Create a Python program that expects a kilogram input value and converts that value to grams, pounds, and ounces when the user pushes the Convert button.   
+<br>
 
+The program will look similar to the one in the following picture:
+![Clase217](/img/Clase217.png)
+
+Tip:  
+- 1 kg = 1000 grams  
+- 1 kg = 2.20462 pounds  
+- 1 kg = 35.274 ounces
 
 ## Clase 218
-###
+### 
 
 # Section24
 ## Clase 219
