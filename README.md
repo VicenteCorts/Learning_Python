@@ -5612,9 +5612,105 @@ En esta sección aprenderemos a crear interfaces de usuario para posteriormente 
 
 ## Clase 215
 ### Creating a GUI Window and Adding Widgets
+Emplearemos **Tkinter** para la creación de interfaces de usuario. A diferencia de las demas librerías, Tkinter viene por defecto con python y no necesita de instalación previa.
+<br>
 
+La sintaxis base de tkinter sería la sigueinte:
+```html
+from tkinter import *
+
+# Create a window object
+window = Tk()
+
+# Aquí crearemos todos los widgets entre estas dos líenas
+
+window.mainloop()
+```
+#### Widgets
+1. Button
+Para acceder a la lista completa de argumetnos del widget Button: 
+```html
+# Por consola normal
+ipython
+from tkinter import *
+Button?
+```
+Para añadir un botón podriamos hacerlo de las sigueintes maneras:
+```html
+window = Tk()
+
+b1 = Button(window, text="Execute")
+b1.pack()
+
+window.mainloop()
+-------------------------------------
+window = Tk()
+
+b1 = Button(window, text="Execute")
+b1.grid()
+
+window.mainloop()
+```
+Con el método grid tendremos más control sobre la posición de nuestro botón
+
+2. Entrada
+Área para introducir inputs
+```html
+window = Tk()
+
+b1 = Button(window, text="Execute")
+b1.grid(row=0, column=0 )
+
+e1 = Entry(window)
+e1.grid(row=0, column=1)
+
+window.mainloop()
+```
+
+3. Text
+Para escritura de texto
+```html
+t1 = Text(window, height=1, width=20)
+t1.grid(row=0, column=2)
+```
 
 ## Clase 216
+### Connecting GUI Widgets with Functions
+## Clase 217
+###
+## Clase 218
+###
+
+# Section24
+## Clase 219
+###
+## Clase 220
+###
+## Clase 221
+###
+## Clase 222
+###
+## Clase 223
+###
+
+# Section25
+## Clase 224
+###
+## Clase 225
+###
+## Clase 226
+###
+## Clase 227
+###
+## Clase 228
+###
+## Clase 229
+###
+## Clase 230
+###
+## Clase 231
+###
+## Clase 232
 ###
 
 
