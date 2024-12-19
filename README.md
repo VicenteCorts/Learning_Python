@@ -5809,9 +5809,73 @@ En esta sección veremos como interactuar con BD usando Python. Haremos uso de:
 - sqlite3: https://docs.python.org/3/library/sqlite3.html (Para trabajar con sqlite)
 
 ## Clase 220
-###
+### Connecting to an SQLite Database with Python
+En esta clase Trabajaremos con son **sqlite3**. No es necesario instalar esta librería porque es una librería "built-in" de python. Para empezar debemos importar sqlite3:
+```html
+import sqlite3
+```
+El proceso de manejo de BBDD consiste en los sigueintes 5 pasos:
+1. Crear Conexión con la BBDD
+2. Crear un objeto puntero - para acceder a las filas de la BBDD
+3. Query SQL
+4. Commit cambios
+5. Cerrar Conexión
+
+```html
+import sqlite3
+
+#########################
+## Crear base de datos ##
+#########################
+
+# 1. Crear la conexión - si no existe la base de datos, la crea
+conn = sqlite3.connect('bases_de_datos/lite.db')
+# 2. Crear un cursor
+cur = conn.cursor()
+# 3. Query SQL
+cur.execute("CREATE TABLE IF NOT EXISTS store (item TEXT, quantity INTEGER, price REAL)")
+# 4. Commit
+conn.commit()
+# 5. Close Connection
+conn.close()
+```
+Hemos creado una BBDD y una tabla (store) dentro de esta. Ahora añadiremos datos dentro de la tabla store:
+```html
+cur.execute("INSERT INTO store VALUES ('Wine Glass', 8, 10.5)")
+```
+Sin embargo, mejoraremos el código para poder hacer las inserciones de datos a través de una función:
+```html
+def insert(item, quantity, price):
+    conn = sqlite3.connect('bases_de_datos/lite.db')
+    cur = conn.cursor()
+    cur.execute("INSERT INTO store VALUES (?, ?, ?)", (item, quantity, price))
+    conn.commit()
+    conn.close()
+
+insert('Coffe Cup', 10, 5)
+```
+Para ver el contenido de nuestra tabla crearemos otra función específica:
+```html
+def view():
+    conn = sqlite3.connect('bases_de_datos/lite.db')
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM store")
+    rows = cur.fetchall()
+    conn.close()
+    return rows
+
+print(view())
+# rows is returned as a python list
+------------------------------------------------------
+# Output:
+[('Wine Glass', 8, 10.5), ('Water Glass', 10, 5.0), ('Coffe Cup', 10, 5.0), ('Coffe Cup', 10, 5.0)]
+```
+
 ## Clase 221
-###
+###  (SQLite) Selecting, Inserting, Deleting, and Updating SQL Records
+
+
+
 ## Clase 222
 ###
 ## Clase 223
