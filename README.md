@@ -5676,8 +5676,33 @@ t1.grid(row=0, column=2)
 
 ## Clase 216
 ### Connecting GUI Widgets with Functions
+En esta clase añadiremos funciones a los diferentes widgets, no solo mostrarlos. En concreto haremos que en el widget Entry metamos un valo numérico y al pulsar el botón mostremos dicho valor convertido a millas en el área de texto:
+```html
+from tkinter import *
+
+window = Tk()
+
+def km_to_miles():
+    miles = float(e1_value.get())*1.6
+    t1.insert(END, miles)
+
+b1 = Button(window, text="Execute", command=km_to_miles)
+b1.grid(row=0, column=0 )
+
+e1_value = StringVar()
+e1 = Entry(window, textvariable=e1_value)
+e1.grid(row=0, column=1)
+
+t1 = Text(window, height=1, width=20)
+t1.grid(row=0, column=2)
+
+window.mainloop()
+```
+
 ## Clase 217
 ###
+
+
 ## Clase 218
 ###
 
