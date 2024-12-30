@@ -1,4 +1,7 @@
 # Clase 220
+''' 
+SQL ********************************************************************************
+
 import sqlite3
 
 #########################
@@ -17,15 +20,12 @@ def create_table():
     # 5. Close Connection
     conn.close()
 
-
 def insert(item, quantity, price):
     conn = sqlite3.connect('bases_de_datos/lite.db')
     cur = conn.cursor()
     cur.execute("INSERT INTO store VALUES (?, ?, ?)", (item, quantity, price))
     conn.commit()
     conn.close()
-
-'''insert('Coffe Cup', 10, 5)'''
 
 def view():
     conn = sqlite3.connect('bases_de_datos/lite.db')
@@ -49,9 +49,25 @@ def update(quantity, price, item):
     conn.commit()
     conn.close()
 
+insert('Coffe Cup', 10, 5)
 update(11, 6, "Water Glass")
-'''delete("Wine Glass")'''
+delete("Wine Glass")
 print(view())
+********************************************************************************
+hasta aquí el código para base de datos SQLlite'''
+
+# Clase 222
+''' POSTGRESQL '''
+import psycopg
+
+
+
+
+
+
+
+
+
 
 
 

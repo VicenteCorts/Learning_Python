@@ -5899,11 +5899,40 @@ def update(quantity, price, item):
 update(11, 6, "Water Glass")
 ```
 
-
 ## Clase 222
-###
+### PostgreSQL Database with Python
+En esta clase trabajaremos con: https://www.psycopg.org/docs/ y https://www.postgresql.org/docs/
+<br>
+
+Ahora trabajaremos con **PostgreSQL**, dejamos SQLlite. Comenzaremos instalando la librería **psycopg2**, así como **postgreSQL** en nuestro ordenador.
+
+#### POSTGRESQL
+- Descargamos el instalador de la url: https://www.enterprisedb.com/postgresql-tutorial-resources-training-1?uuid=69f95902-b451-4735-b7e4-1b62209d4dfd&campaignId=postgres_rc_17
+- En el paquete de instalación vienen además: PostgreSQL Server, pgAdmin4, Stack Builder, Command Line Tools
+- Ubicamos la instalación en archivos de programas...
+- Durante la instalación nos pedira un usuario y contraseña, están recogidos en el archivo postgres credentials.
+- También se asigna un puerto para el servidor local de postgres (5432)
+- Al finalizar la instalación te permite lanzar stack Builder para instalar extensiones de PostgreSQL. Escogemos la opción de Postgres (versión que hayamos instalado: 17).
+- Clicamos en las extensiones que queramos añadir y le damos Spacial Extensions -> PostGIS 3.5 Bundle for PostgreSQL
+<br>
+
+**STACK BUILDER** -> En futuras ocasiones podemos volver a acceder a Stack Builder para instalar más extensiones, drivers, etc... Simplemente buscandolo en el navegador de archivos de windows (application Stack Builder)
+<br>
+
+#### PSYCOPG2
+Ahora instalaremos **psycopg2**-> nos vamos a la consola y escribimos el comando: **pip install psycopg2**. Sin embargo podemos tener problemas en Windows, ya que necesitaremos un compilador de C. (En nuestro caso lo tenemos).
+
+- Una solución a esto es hacer uso de VSCode o sino; https://www.lfd.uci.edu Ctrl+F psycopg2 (...)
+#### ERRORES CONSTANTES
+Al final hemos optado por instalar **psycopg** sin el 2, (es la versión 3, la más reciente) mediante **pip intall psycopg**. No ha dado más errores de momento
+
 ## Clase 223
-###
+### (PostGreSQL) Selecting, Inserting, Deleting, and Updating SQL Records
+#### SELECTING
+
+#### INSERTING
+#### DELETING
+#### UPDATING
 
 # Section25
 ## Clase 224
