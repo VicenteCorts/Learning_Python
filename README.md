@@ -5991,10 +5991,10 @@ update(20, 16, "Apple")
 print(view())
 ```
 # Section25
-## Clase 224
-###
 ## Clase 225
-###
+### Designing the User Interface
+Abordaremos la parte del Frontend con **Tkinter**, La interfaz de Usuario.
+
 ## Clase 226
 ###
 ## Clase 227
