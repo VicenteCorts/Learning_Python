@@ -5874,6 +5874,30 @@ print(view())
 ## Clase 221
 ###  (SQLite) Selecting, Inserting, Deleting, and Updating SQL Records
 
+Para eliminar una fila (en concreto la que tiene el item "Wine Glass") emplearemos el sigueinte código:
+```html
+def delete(item):
+    conn = sqlite3.connect('bases_de_datos/lite.db')
+    cur = conn.cursor()
+    cur.execute("DELETE FROM store WHERE item=?", (item,))
+    conn.commit()
+    conn.close()
+
+delete("Wine Glass")
+```
+Cabe destacar la **sintaxis de la query**, ya que en el elemento que pasamos por parámetro debemos incluir la coma final<br>
+
+Para hacer update y modificar algún valor de alguna de las filas emplearíamos el sigueinte código:
+```html
+def update(quantity, price, item):
+    conn = sqlite3.connect('bases_de_datos/lite.db')
+    cur = conn.cursor()
+    cur.execute("UPDATE store SET quantity=?, price=? WHERE item=?", (quantity, price, item))
+    conn.commit()
+    conn.close()
+
+update(11, 6, "Water Glass")
+```
 
 
 ## Clase 222
