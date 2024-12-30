@@ -5928,12 +5928,68 @@ Al final hemos optado por instalar **psycopg** sin el 2, (es la versión 3, la m
 
 ## Clase 223
 ### (PostGreSQL) Selecting, Inserting, Deleting, and Updating SQL Records
+El manejo de psycopg y PostgreSQL es muy similar en cuanto a código en relación con SQL. Sin embargo, no se trabaja con un archivo **.db** sino con una **instalación en nuestro POSTGRESQL**. Así que el primer requisito es tener una BBDD en nuestro PostgreSQL. De forma default, con la instalación se generan una serie de bases de datos, pudiendo emplear estas. O podemos crear una desde cero; para ello:
+- Vamos a nuestro PostgreSQL -> pgAdmin4
+- Creamos una BBDD "database1"
+- Volvemos al código y creamos la conexión
+
+#### CONEXIÓN BBDD POSTGRESQL
+Este es el fragmento que más cambia, por la variable **conn** el resto permanece igual cambiando sqlite3 por psycopg. También hay que atender al formato que sigue la variable conn para bases de datos PostgreSQL.
+```html
+def create_table():
+    conn = psycopg.connect("dbname='database1' user='postgres' password='postgres123' host='localhost' port='5432'")
+    cur = conn.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS store (item TEXT, quantity INTEGER, price REAL)")
+    conn.commit()
+    conn.close()
+```
 #### SELECTING
-
+```html
+def view():
+    conn = psycopg.connect("dbname='database1' user='postgres' password='postgres123' host='localhost' port='5432'")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM store")
+    rows = cur.fetchall()
+    conn.close()
+    return rows
+```
 #### INSERTING
+```html
+def insert(item, quantity, price):
+    conn = psycopg.connect("dbname='database1' user='postgres' password='postgres123' host='localhost' port='5432'")
+    cur = conn.cursor()
+    cur.execute("INSERT INTO store VALUES (%s, %s, %s)", (item, quantity, price))
+    conn.commit()
+    conn.close()
+```
 #### DELETING
+```html
+def delete(item):
+    conn = psycopg.connect("dbname='database1' user='postgres' password='postgres123' host='localhost' port='5432'")
+    cur = conn.cursor()
+    cur.execute("DELETE FROM store WHERE item=?", (item,))
+    conn.commit()
+    conn.close()
+```
 #### UPDATING
+```html
+def update(quantity, price, item):
+    conn = psycopg.connect("dbname='database1' user='postgres' password='postgres123' host='localhost' port='5432'")
+    cur = conn.cursor()
+    cur.execute("UPDATE store SET quantity=?, price=? WHERE item=?", (quantity, price, item))
+    conn.commit()
+    conn.close()
+```
 
+#### COMPROBACIONES
+Volvemos a pgAdmin4, a nuestra database1, schemas, public, tables y vemos las tablas recien creadas.
+```html
+create_table()
+#insert("Grapes", 10, 15)
+#delete("Grapes")
+update(20, 16, "Apple")
+print(view())
+```
 # Section25
 ## Clase 224
 ###
