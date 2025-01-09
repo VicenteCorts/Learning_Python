@@ -6487,7 +6487,26 @@ account.commit()
 ```
 
 ## Clase 237
-###
+### Creating Classes Through Inheritance
+Ahora abordaremos la **Herencia**; la herencia es el proceso de crear una nueva clase empleando otra clase como base; es decir, crear una clase que tiene todos las propiedades y métodos de la clase de la que procede y que además puede tener otros métodos propios. Para declarar una nueva clase que hereda de otra:
+```html
+class Checking(Account):
+
+    def __init__(self, filepath, fee):
+        Account.__init__(self, filepath)
+        self.fee = fee
+
+    def transfer(self, amount):
+        self.balance = self.balance - amount - self.fee
+
+checking = Checking("section26-apps/account/balance.txt", 1)
+checking.transfer(100)
+print(checking.balance)
+checking.commit()
+```
+La clase Checking tendrá los mismos métodos que la clase Account (de la cual hereda). Además puede tener otros métodos adicionales que se incluyan dentro de la declaración de la propia clase Checking; como el método transfer. 
+
+
 ## Clase 238
 ###
 ## Clase 239
