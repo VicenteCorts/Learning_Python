@@ -6222,12 +6222,18 @@ def get_selected_row(event):
 The error was fixed by simply implementing a try  and except block. When the get_selected_row  function is called, Python will execute the indented block under try . If there is an IndexError, none of the lines under try  will be executed; the line under except  will be executed, which is pass. The pass  statement means "do nothing". Therefore, the function will do nothing when there's an empty listbox.
 
 ## Clase 232
-### 
+### Creating .exe and .app Executables from the Python Script
+Ahora convertiremos este proyecto en un ejecutable para poder usarlo como un programa de escritorio. El programa se compone de dos archivos y una base de datos y se incia a través del archivo **frontend.py**. Para crear un ejecutable necesitaremos crear un **standalone**; para ello instalaremos: **pip install pyinstaller**
+<br>
 
+Posteriormente nos situaremos desde la temrinal en la carpeta que contenda los archivos del proyecto y ejecutamos el comando **pyinstaller --onefile --windowed frontend.py**.
+<br>
 
+Debido a mi arbol de directorios he tenido que realizar la acción a parte en el escritorio, copiando los arhcivos necesarios en una nueva carpeta de manera aislada, he ejecutado el comando anterior y se ha generado el programa correctamente.
 
-
-
+# Section26
+## Clase 233
+###
 
 
 
