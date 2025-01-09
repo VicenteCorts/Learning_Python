@@ -6454,7 +6454,38 @@ De este modo, todo está optimimzado pero faltaría añadir un cierre de la cone
 ```
 
 ## Clase 236
-###
+### Creating a Bank Account Class
+Crearemos una simulación sencilla de una cuenta bancaria para temrinar de ver las posibilidades de la POO. Para ello creamos una nueva carpeta account con dos archivos dentro: acc.py para los scripts y balance.txt para guardar los gastos, ingresos y ahorros bancarios.
+```html
+class Account:
+
+    def __init__(self, filepath):
+        self.filepath = filepath
+        with open(filepath, 'r') as file:
+            self.balance = int(file.read())
+            
+    def withdraw(self, amount):
+        self.balance -= amount
+    
+    def deposit(self, amount):
+        self.balance += amount
+
+    def commit(self):
+        with open(self.filepath, 'w') as file:
+            file.write(str(self.balance))
+
+account = Account("section26-apps/account/balance.txt")
+print(account.balance)
+
+account.withdraw(100)
+print(account.balance)
+
+account.deposit(200)
+print(account.balance)
+
+account.commit()
+```
+
 ## Clase 237
 ###
 ## Clase 238
