@@ -6199,9 +6199,32 @@ def get_selected_row(event):
 Since the listbox is empty,  list1.curselection()  will be an empty list with no items. Trying to access the first item on the list with [0]  in line 3 will throw an error because there is no first item in the list.
 
 ## Clase 231
-###
+### Solution: Fixing a Bug in Our Program
+#### Solution
+```html
+def get_selected_row(event):
+    try:
+        global selected_tuple
+        index=list1.curselection()[0]
+        selected_tuple=list1.get(index)
+        e1.delete(0,END)
+        e1.insert(END,selected_tuple[1])
+        e2.delete(0,END)
+        e2.insert(END,selected_tuple[2])
+        e3.delete(0,END)
+        e3.insert(END,selected_tuple[3])
+        e4.delete(0,END)
+        e4.insert(END,selected_tuple[4])
+    except IndexError:
+        pass
+```
+#### Explanation
+The error was fixed by simply implementing a try  and except block. When the get_selected_row  function is called, Python will execute the indented block under try . If there is an IndexError, none of the lines under try  will be executed; the line under except  will be executed, which is pass. The pass  statement means "do nothing". Therefore, the function will do nothing when there's an empty listbox.
+
 ## Clase 232
-###
+### 
+
+
 
 
 
