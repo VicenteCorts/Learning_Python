@@ -6233,10 +6233,53 @@ Debido a mi arbol de directorios he tenido que realizar la acción a parte en el
 
 # Section26
 ## Clase 233
+### What is Object Oriented Programming (OOP)?
+Entenderemos la OOP y las clases rehaciendo la aplicación de BookStore con Programación Orientada a Objetos. 
+
+## Clase 234
+### Using OOP in a Program, Part 1
+## Clase 235
+###
+## Clase 236
+###
+## Clase 237
+###
+## Clase 238
+###
+## Clase 239
+###
+## Clase 240
 ###
 
-
-
+# Section27
+## Clase 241
+###
+## Clase 242
+###
+## Clase 243
+###
+## Clase 244
+###
+## Clase 245
+###
+## Clase 246
+###
+## Clase 247
+###
+## Clase 248
+###
+## Clase 249
+###
+## Clase 250
+###
+## Clase 251
+###
+## Clase 252
+###
+## Clase 253
+###
+## Clase 254
+###
 
 
 
