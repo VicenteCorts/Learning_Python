@@ -6173,7 +6173,31 @@ list1.bind('<<ListboxSelect>>', get_selected_row)
 ```
 
 ## Clase 230
-###
+### Exercise: Fixing a Bug in Our Program
+If you haven't already noticed, the program has a bug. When the listbox is empty and the user clicks the listbox, an IndexError is generated in the terminal:
+<br>
+
+Why does this error happen? Well, everything starts with the user clicking on the listbox. Clicking the listbox executes the following code:
+```html
+list1.bind('<<ListboxSelect>>',get_selected_row) 
+```
+That code calls the get_selected_row  function:
+```html
+def get_selected_row(event):
+    global selected_tuple
+    index=list1.curselection()[0]
+    selected_tuple=list1.get(index)
+    e1.delete(0,END)
+    e1.insert(END,selected_tuple[1])
+    e2.delete(0,END)
+    e2.insert(END,selected_tuple[2])
+    e3.delete(0,END)
+    e3.insert(END,selected_tuple[3])
+    e4.delete(0,END)
+    e4.insert(END,selected_tuple[4])
+```
+Since the listbox is empty,  list1.curselection()  will be an empty list with no items. Trying to access the first item on the list with [0]  in line 3 will throw an error because there is no first item in the list.
+
 ## Clase 231
 ###
 ## Clase 232
