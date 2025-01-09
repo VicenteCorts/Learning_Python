@@ -6238,8 +6238,180 @@ Entenderemos la OOP y las clases rehaciendo la aplicación de BookStore con Prog
 
 ## Clase 234
 ### Using OOP in a Program, Part 1
+En el back end empleamos la sintaxis de Creación de Objeto y sustituimos el nombre de la función connection por **__init__**, haciendo que esta función se ejecute siempre y cuando se declare el objeto database:
+```html
+# Asi quedaría el backend:
+# PROGRAMACIÓN ORIENTADA A OBJETOS
+# Clase 234
+import sqlite3
+
+class Database:
+
+    def __init__(self):
+        conn=sqlite3.connect("section26-apps/books.db")
+        cur=conn.cursor()
+        cur.execute("CREATE TABLE IF NOT EXISTS book (id INTEGER PRIMARY KEY, title text, author text, year integer, isbn integer)")
+        conn.commit()
+        conn.close()
+
+    def insert(self, title, author, year, isbn):
+        conn=sqlite3.connect("section26-apps/books.db")
+        cur=conn.cursor()
+        cur.execute("INSERT INTO book VALUES (NULL, ?, ?, ?, ?)", (title, author, year, isbn))
+        conn.commit()
+        conn.close()
+
+    def view(self):
+        conn=sqlite3.connect("section26-apps/books.db")
+        cur=conn.cursor()
+        cur.execute("SELECT * FROM book")
+        rows=cur.fetchall()
+        conn.close()
+        return rows
+
+    def search(self, title="", author="", year="", isbn=""):
+        conn=sqlite3.connect("section26-apps/books.db")
+        cur=conn.cursor()
+        cur.execute("SELECT * FROM book WHERE title=? OR author=? OR year=? OR isbn=?", (title, author, year, isbn))
+        rows=cur.fetchall()
+        conn.close()
+        return rows
+
+    def delete(self, id):
+        conn=sqlite3.connect("section26-apps/books.db")
+        cur=conn.cursor()
+        cur.execute("DELETE FROM book WHERE id=?", (id,))
+        conn.commit()
+        conn.close()
+
+    def update(self, id, title, author, year, isbn):
+        conn=sqlite3.connect("section26-apps/books.db")
+        cur=conn.cursor()
+        cur.execute("UPDATE book SET title=?, author=?, year=?, isbn=? WHERE id=?", (title, author, year, isbn, id))
+        conn.commit()
+        conn.close()
+```
+Ha sido necesario añadir el parámetro **self** a cada función porque daba error de que entraban más parámetros de los solicitados.
+<br>
+
+Por otro lado, también debemos hacer modificaciones en el Frontend para poder hacer uso de esta nueva clase "Database()". instanciamos la clase y sustituimos las referencias al backend por **database.función_deseada**:
+```html
+# PROGRAMACION ORIENTADA A OBJETOS
+# Clase 234
+from tkinter import *
+from backend import Database
+
+database = Database()
+
+def get_selected_row(event): # Parámetro especial, para ejecutar un evento
+    try:
+        global selected_tuple
+        index=list1.curselection()[0]
+        selected_tuple=list1.get(index)
+        e1.delete(0, END)
+        e1.insert(END, selected_tuple[1])
+        e2.delete(0, END)
+        e2.insert(END, selected_tuple[2])
+        e3.delete(0, END)
+        e3.insert(END, selected_tuple[3])
+        e4.delete(0, END)
+        e4.insert(END, selected_tuple[4])
+    except IndexError:
+        pass
+
+def view_command():
+    list1.delete(0, END)
+    for row in database.view():
+        list1.insert(END, row)
+
+def search_command():
+    list1.delete(0, END)
+    for row in database.search(title_text.get(), author_text.get(), year_text.get(), isbn_text.get()):
+        list1.insert(END, row)
+
+def add_command():
+    database.insert(title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
+    list1.delete(0, END)
+    list1.insert(END, (title_text.get(), author_text.get(), year_text.get(), isbn_text.get()))
+
+def delete_command():
+    database.delete(selected_tuple[0])
+    view_command()  # Para refrescar las modificaciones de la lista tras borrar
+
+def update_command():
+    database.update(selected_tuple[0], title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
+    view_command()
+
+window = Tk()
+window.wm_title("BookStore")
+
+# Widgets de Texto
+l1 = Label(window, text="Title")
+l1.grid(row=0, column=0)
+
+l2 = Label(window, text="Author")
+l2.grid(row=0, column=2)
+
+l3 = Label(window, text="Year")
+l3.grid(row=1, column=0)
+
+l4 = Label(window, text="ISBN")
+l4.grid(row=1, column=2)
+
+# Widgets de Entrada
+title_text=StringVar()
+e1=Entry(window, textvariable=title_text)
+e1.grid(row=0, column=1)
+
+author_text=StringVar()
+e2=Entry(window, textvariable=author_text)
+e2.grid(row=0, column=3)
+
+year_text=StringVar()
+e3=Entry(window, textvariable=year_text)
+e3.grid(row=1, column=1)
+
+isbn_text=StringVar()
+e4=Entry(window, textvariable=isbn_text)
+e4.grid(row=1, column=3)
+
+# Widgets de Lista
+list1=Listbox(window, height=6, width=35)
+list1.grid(row=2, column=0, rowspan=6, columnspan=2)
+
+# Widgets de Scrollbar
+sb1=Scrollbar(window)
+sb1.grid(row=2, column=2, rowspan=6)
+
+# Widget de Binding
+list1.bind('<<ListboxSelect>>', get_selected_row)
+
+list1.configure(yscrollcommand=sb1.set)
+sb1.configure(command=list1.yview)
+
+# Widgets de Botones
+b1=Button(window, text="View all", width=12, command=view_command)
+b1.grid(row=2, column=3)
+
+b2=Button(window, text="Search entry", width=12, command=search_command)
+b2.grid(row=3, column=3)
+
+b3=Button(window, text="Add entry", width=12, command=add_command)
+b3.grid(row=4, column=3)
+
+b4=Button(window, text="Update selected", width=12, command=update_command)
+b4.grid(row=5, column=3)
+
+b5=Button(window, text="Delete selected", width=12, command=delete_command)
+b5.grid(row=6, column=3)
+
+b6=Button(window, text="Close", width=12, command=window.destroy)
+b6.grid(row=7, column=3)
+
+window.mainloop()
+```
 ## Clase 235
-###
+### Using OOP in a Program, Part 2
 ## Clase 236
 ###
 ## Clase 237
