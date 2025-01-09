@@ -17,7 +17,7 @@ class Account:
             file.write(str(self.balance))
 
 class Checking(Account):
-
+    """This class generates checking account objects"""
     def __init__(self, filepath, fee):
         Account.__init__(self, filepath)
         self.fee = fee
@@ -29,7 +29,7 @@ checking = Checking("section26-apps/account/balance.txt", 1)
 checking.transfer(100)
 print(checking.balance)
 checking.commit()
-
+print(checking.__doc__)
 '''
 account = Account("section26-apps/account/balance.txt")
 print(account.balance)

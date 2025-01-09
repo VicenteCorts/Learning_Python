@@ -6506,9 +6506,20 @@ checking.commit()
 ```
 La clase Checking tendrá los mismos métodos que la clase Account (de la cual hereda). Además puede tener otros métodos adicionales que se incluyan dentro de la declaración de la propia clase Checking; como el método transfer. 
 
-
 ## Clase 238
-###
+### OOP Glossary
+- Class: Estructura, Objeto que se va a crear
+- Object Instance: Objeto una vez declarado, instanciado
+- Instance Variables: variables definidas dentro de un método de una clase
+- Class Variable: variables que actúan como atributos dentro de la clase pero fuera de los métodos
+- Doc Strings: Facilita una explicación de la clase (va entre 3 "" y se declara como class.__doc__)
+- Data Member: se refiere a class variables o instances variables (...)
+- Constructores: métodos como __init__ ; sirver para construir la clase
+- Methods: funciones que puede ejecutar el objeto
+- Instantiation: Creación de un objeto a partir de una clase predefinida
+- Inheritance: Crear una clase a partir de otra clase basica, que comparta los métodos de la clase padre pero que además pueda tener métodos propios independientes.
+- Attributes: todo lo que va despues de clase.******
+
 ## Clase 239
 ###
 ## Clase 240
