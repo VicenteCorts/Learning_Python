@@ -6521,9 +6521,14 @@ La clase Checking tendrá los mismos métodos que la clase Account (de la cual h
 - Attributes: todo lo que va despues de clase.******
 
 ## Clase 239
-###
+### Exercise: Rewriting the App Using Classes and OOP
+Alter the frontend.py script containing the GUI code by changing its functional-oriented design into an OOP design. 
+<br>
+
+For your convenience, the files frontend.py, backend.py (in OOP style), and the book.db files are attached in this article's resources.
+
 ## Clase 240
-###
+### 
 
 # Section27
 ## Clase 241
