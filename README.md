@@ -6152,7 +6152,25 @@ b3.grid(row=4, column=3)
 ```
 
 ## Clase 229
-### 
+### Connecting the Frontend with the Backend, Part 2
+Continuamos con la clase anterior, dando funciones al resto de botones de la aplicación. Primero abordaremos la función "Bind" de Tkinter para asociar la selección de libro al hehco de mostrar sus datos en los apartados de texto:
+```html
+def get_selected_row(event): # Parámetro especial, para ejecutar un evento
+    global selected_tuple
+    index=list1.curselection()[0]
+    selected_tuple=list1.get(index)
+    e1.delete(0, END)
+    e1.insert(END, selected_tuple[1])
+    e2.delete(0, END)
+    e2.insert(END, selected_tuple[2])
+    e3.delete(0, END)
+    e3.insert(END, selected_tuple[3])
+    e4.delete(0, END)
+    e4.insert(END, selected_tuple[4])
+
+# Widget de Binding
+list1.bind('<<ListboxSelect>>', get_selected_row)
+```
 
 ## Clase 230
 ###
