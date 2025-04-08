@@ -6672,7 +6672,7 @@ class Database:
 ```
 
 # Section27
-## Clase 242
+## Clase 241
 ### Installing the Library
 We need the Python kivy library to build this GUI program. You can install kivy with:
 ```html
@@ -6680,13 +6680,16 @@ pip install kivy
 ```
 If you have issues with the installation, please check the kivy installation tips.
 
+## Clase 242
+### Creating a User Login Page
+
 ## Clase 243
-###
+### 
 ## Clase 244
 ###
 ## Clase 245
 ###
-## Clase 246
+## Clase 246 -descarga
 ###
 ## Clase 247
 ###
@@ -6694,15 +6697,15 @@ If you have issues with the installation, please check the kivy installation tip
 ###
 ## Clase 249
 ###
-## Clase 250
+## Clase 250 -descarga
 ###
 ## Clase 251
 ###
-## Clase 252
+## Clase 252 - enlaces
 ###
-## Clase 253
+## Clase 253 - descarga
 ###
-## Clase 254
+## Clase 254 - enlaces
 ###
 
 
