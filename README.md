@@ -6682,7 +6682,7 @@ If you have issues with the installation, please check the kivy installation tip
 
 ## Clase 242
 ### Creating a User Login Page
-
+CAMBIOS!!
 ## Clase 243
 ### 
 ## Clase 244
